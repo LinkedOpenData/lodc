@@ -85,7 +85,7 @@ body {
 	font-size: 77.5%;
 	/*font-family:Georgia,Times New Roman,Times,Meiryo,serif;*/
 	font-family: verdana,helvetica,arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif;
-	background: #ffffff url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/bg.gif) repeat-x 0 0;
+	background: #ffffff url(../img/bg.gif) repeat-x 0 0;
 	text-align:center;
 }
 
