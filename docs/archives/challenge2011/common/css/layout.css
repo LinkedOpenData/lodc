@@ -36,7 +36,7 @@ update:         2011/09/24
 	margin: 10px 0 0 0;
 	padding:0;
 	height:75px;
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/bg_nm.png) no-repeat 50% 100% transparent;
+	background: url(../img/bg_nm.png) no-repeat 50% 100% transparent;
 }
 
 #mainVisual {
@@ -65,7 +65,7 @@ update:         2011/09/24
 }
 
 #nav li.hmActive {
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/hn_pochi.png) no-repeat 0% 58% transparent;	
+	background: url(../img/hn_pochi.png) no-repeat 0% 58% transparent;	
 }
 
 #nav li ul {
@@ -146,7 +146,7 @@ update:         2011/09/24
 }
 
 #footerPankuzu ul li {
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/arrow.gif) no-repeat 0% 50% transparent;
+	background: url(../img/arrow.gif) no-repeat 0% 50% transparent;
 }
 
 #footerBody {
@@ -248,7 +248,7 @@ update:         2011/09/24
 }
 
 .withArrow {
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/arrow_dt.png) no-repeat 0% 50% transparent;
+	background: url(../img/arrow_dt.png) no-repeat 0% 50% transparent;
 	padding: 0 0 0 30px;
 	margin:1em 0 2em 0;
 	line-height: 18px;
@@ -371,15 +371,15 @@ update:         2011/09/24
 }
 
 .iconDataS {
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/icon_data_s.png) no-repeat 0% 50% transparent;
+	background: url(../img/icon_data_s.png) no-repeat 0% 50% transparent;
 }
 
 .iconIdeaS {
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/icon_idea_s.png) no-repeat 0% 50% transparent;
+	background: url(../img/icon_idea_s.png) no-repeat 0% 50% transparent;
 }
 
 .iconAppliS {
-	background: url(http://lod.sfc.keio.ac.jp/challenge2011/common/img/icon_appli_s.png) no-repeat 0% 50% transparent;
+	background: url(../img/icon_appli_s.png) no-repeat 0% 50% transparent;
 }
 
 .categoryBody {
