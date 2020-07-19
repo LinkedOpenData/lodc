@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="Content-Style-Type" content="text/css"/>
+		<meta name="description" content="Linked Open Data (LOD) の仕組み作りやデータづくりにチャレンジされている方々による活動の発表の場を提供します。"/>
+		<meta name="keywords" content="lod,linked data,linked open data,lod challenge,linked open data challenge japan,LODチャレンジ"/>
+		<link rel="shortcut icon" href="../challenge2014/favicon.ico"/>
+		<meta property="og:image" content="http://lod.sfc.keio.ac.jp/challenge2014/common/img/mainvisual2.png"/>
+		<meta property="og:url" content="http://lod.sfc.keio.ac.jp/challenge2014/"/>
+		<meta property="og:title" content="LOD Challenge Japan 2014"/>
+		<meta property="og:site_name" content="LOD Challenge Japan 2014"/>
+		<meta property="og:type" content="website"/>
+		<link rel="stylesheet" type="text/css" media="all" href="../challenge2014/common/css/import.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="../challenge2014/common/css/form.css"/>
+		<title>農業生産物の選択の幅を広げるノーバ（農場）～日本の農業を魅力あるものにするIT利活用～ - アイデアのエントリーシート | Linked Open Data Challenge Japan 2014</title>
+		<script type="text/javascript" src="../ajax/libs/jquery/1-4-4/jquery.min.js"></script>
+		<script type="text/javascript" src="../challenge2014/common/js/droppy.js"></script>
+		<script type="text/javascript" src="../challenge2014/common/js/image_select.js"></script>
+		<script type="text/javascript" src="../challenge2014/common/js/jShowOff/jquery.jshowoff.min.js"></script>
+		<!--[if IE 6]>
+		<script src="common/js/DD_belatedPNG.js"></script>
+		<script>
+		DD_belatedPNG.fix('img, .png');
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			$(function() {
+				$("#nav").droppy({speed:50});
+			});
+		</script>
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26316207-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body>
+		<div id="pageTop"><a id="pageTop" name="pageTop"></a></div>
+		<div id="wrapperAll">
+			<div id="mainBK">
+				<div id="header">
+				<h1><a href="/" title="Linked Open Data Challenge Japan 2014"><img src="../challenge2014/common/img/lod2014top.png" alt="LODチャレンジ Japan / Linked Open Data Challenge Japan 2014"/></a></h1>
+				</div>
+				<div id="mainMenu">
+                    <ul id="nav">
+                        <!--    以下は各ドキュメントが完成次第に蓋をあけていく -->
+						<li id="hm001"><a href="javascript:void(0);" title="開催情報">開催情報</a>
+						<ul>
+							<li><a href="../challenge2014/objective.html">開催趣旨</a></li>
+							<li><a href="../challenge2014/evaluate.html">審査について</a></li>
+							<li><a href="../challenge2014/faq.html">FAQ</a></li>
+						 <!-- 
+							//<li><a href="http://lod.sfc.keio.ac.jp/challenge2012/index.html" target="_blank">LODチャレンジJapan2012アーカイブ</a></li>
+							//<li><a href="http://lod.sfc.keio.ac.jp/challenge2011/index.html" target="_blank">LODチャレンジJapan2011アーカイブ</a></li>
+						-->
+						</ul></li>
+                        <li id="hm002"><a href="javascript:void(0);" title="応募情報">応募情報</a>
+                        <ul>
+							<li><a href="../challenge2014/outline.html">応募について</a></li>
+							<li><a href="../challenge2014/entry_terms.html">応募規定</a></li>
+							<li><a href="../challenge2014/category.html">エントリー部門情報</a></li>
+                            <!-- エントリー結果一覧はコメントアウトする -->
+                            <!--  <li><a href="../challenge2014/dataset.html">データセット部門</a></li>-->
+                            <!--  <li><a href="../challenge2014/idea.html">アイデア部門</a></li> -->
+                            <!--  <li><a href="../challenge2014/application.html">アプリケーション部門</a></li> -->
+                            <!--  <li><a href="../challenge2014/visualization.html">ビジュアライゼーション部門</a></li> -->
+                            <!--  <li><a href="../challenge2014/basetechnology.html">基盤技術部門</a></li> -->
+                        </ul></li>
+						<li id="hm003"><a href="javascript:void(0);" title="エントリー一覧">エントリー一覧</a>
+						<ul>
+							<!-- エントリー結果一覧はコメントアウトする -->
+							<li><a href="../challenge2014/dataset.html">データセット部門</a></li>
+							<li><a href="../challenge2014/idea.html">アイデア部門</a></li> 
+							<li><a href="../challenge2014/application.html">アプリケーション部門</a></li> 
+							<li><a href="../challenge2014/visualization.html">ビジュアライゼーション部門</a></li>
+							<li><a href="../challenge2014/basetechnology.html">基盤技術部門</a></li> 
+						</ul></li>
+                        <!--  スポンサーの要項などが決定次第に順次リンクしていく -->
+                        <li id="hm004"><a href="javascript:void(0);" title="スポンサー">スポンサー</a>
+                          <ul>
+                            <li><a href="../challenge2014/recommendation.html">LODチャレンジJapan2014への期待</a></li>
+                            <li><a href="../challenge2014/resource_usage.html">データ／基盤パートナーのリソース利用方法</a></li> 
+                            <!-- <li><a href="#sponsor">スポンサー一覧</a></li> -->
+                            <li><a href="../challenge2014/sponsorrecruit.html">スポンサー募集</a></li>
+                            <li><a href="../challenge2014/partner_platform_data.html">データ提供／基盤提供パートナー募集</a></li>
+                            <li><a href="../challenge2014/partner_media.html">メディアパートナー募集</a></li>
+                            <li><a href="../challenge2014/supporter.html">サポーター募集</a></li>
+                       </ul></li>
+                        <li id="hm005"><a href="../challenge2014/event.html" title="イベント">イベント</a>
+                        <!--  LODとはの具体的な内容を再構成した上でリンクを張ることとし、当分はアーカイブをリンクする -->
+                        <!--
+                        <li id="hm005"><a href="javascript:void(0);" title="LODチャレンジーアーカイブ">LODチャレンジ受賞作品</a>
+                            <ul>
+                                <li><a href="http://lod.sfc.keio.ac.jp/blog/?p=2109" target="_blank">LODチャレンジJapan2013受賞作品</a></li>
+                                <li><a href="http://lod.sfc.keio.ac.jp/blog/?p=1071" target="_blank">LODチャレンジJapan2012受賞作品</a></li>
+                                <li><a href="http://lod.sfc.keio.ac.jp/challenge2011/result2011.html" target="_blank">LODチャレンジJapan2011受賞作品</a></li>
+                            </ul>
+                        </li>
+                        -->
+                    <!-- 内容の修正後に順次公開する -->
+                    <!--
+                        //<li id="hm006"><a href="javascript:void(0);" title="LODとは">LODとは</a>
+                        //	<ul>
+                        //	<li><a href="aboutlod.html">LODとは？</a></li>
+                        //	<li><a href="slideresources2.html">技術解説</a></li>
+                        //	<li><a href="slideresources.html">分野別事例紹介</a></li>
+                        //	<li><a href="link.html">リンク集</a></li>
+                        //	</ul>
+                        //	</li>
+                    -->
+                    <li id="hm006"><a href="../blog.html" title="公式ブログ">公式ブログ</a></li>
+                    </ul>
+				</div><!--// mainMenu //--><div id="contents-form">
+	<h2>農業生産物の選択の幅を広げるノーバ（農場）～日本の農業を魅力あるものにするIT利活用～</h2>
+	<table id="entrysheet" class="application-form">
+		<tr class="info-row">
+			<th colspan="2">応募者の情報</th>
+		</tr>
+		<tr>
+			<th>ご氏名</th>
+			<td>庄司　昌彦</td>
+		</tr>
+		<tr>
+			<th>ご所属</th>
+			<td>スマートプラットフォーム・フォーラム　農業ITデータ・コンテンツ分科会</td>
+		</tr>
+		<tr>
+			<th>e-mailアドレス</th>
+			<td>segami <i>[at]</i> npo-ba.org</td>
+		</tr>
+		<tr class="info-row">
+			<th colspan="2">応募するアイデアの情報</th>
+		</tr>
+		<tr>
+			<th>アイデアの名称</th>
+			<td>農業生産物の選択の幅を広げるノーバ（農場）～日本の農業を魅力あるものにするIT利活用～</td>
+		</tr>
+		<tr>
+			<th>アイデアの概略説明</th>
+			<td>
+				農産物の生産者と消費者はともに欲しい情報を入手できず選択の幅を狭めている。そこで農産物の「品種」を識別し様々な情報を付加できるオープンな情報体系を提唱することで、食の流通の変革を目指す。			</td>
+		</tr>
+		<tr>
+			<th>アイデアの詳細説明</th>
+			<td>
+				農業生産物の選択の幅を広げる「ノーバ(Nober ,(農場))」
+<br>　～日本の農業を魅力あるものにするIT利活用～
+<br>１．表紙
+<br>２．ITによって農業のイノベーションを起こす
+<br>　　　2012年に農林水産省にて実施したモニター調査によると農業生産者の約80％はパソコンを所持し、約90％は携帯電話を所持している。さらに、農業経営にIT機器を活用している人も50％を超えている。　生産者は天気予報、政府･補助金情報、SNS等を農業経営に活用しているし、営農ノウハウ、農業ニュースについて半分以上がインターネットを利用して情報収集している。
+<br>しかし何故ITを活用しているという実感がないのか。
+<br>
+<br>我々は生産者、消費者の両者を結びつける仕組みに着目した。現在はその仕組みがないか、機能していないと考えた。
+<br>
+<br>原因のひとつには生産物に対する情報体系がないことである。流通段階では商品にコードがつけられているが、生産段階では、作物を性格づける重要な品種情報や、平成27年4月から開始される機能性野菜表示などを付加する情報体系がない。このため生産物のデータベースが形成されていない。
+<br>
+<br>生産者、消費者は各々の立場から食材に対する関心が高い。現在は物の流通のための一方通行の情報の流れである。両者にとって必要な情報とは評価を含めた双方向に情報が得られることである。そのことにより、生産者にはモチベーションが、消費者には食に対する付加価値が高まることになり、その結果好循環がもたらされることになる。
+<br>
+<br>このような仕組みが作られれば流通機構の変革をもたらし、また利用範囲が料理法や外食レストランの紹介サイトとの連携により、今まで以上の付加価値の高い情報を提供することができ、より多くの利用者を獲得することにより、ひいては農家の生産物の市場拡大へとつながるのである。
+<br>
+<br>３．生産者・消費者が得たい伝えたい情報とは
+<br>　　　生産者（農家）はITの何に不満を持っていてITに何を期待しているか。　
+<br>生産者から見てみると欲しい情報は自分の作った農作物に対する消費者の満足
+<br>度、味、大きさ、鮮度等の評価情報であり、それによって更に品種選定を行な
+<br>ったりブランド力を高めて生きたいとしている。
+<br>また、積極的に売り先を知り、販路の拡大に役立てたいと考えている。
+<br>消費者に対しては生産食材の産地ならではの食べ方や使い方を伝えることで発
+<br>信機能を駆使してブランド力を高め、販売増に役立てたいとしている。
+<br>
+<br>一方消費者は安くて安心な食材のありかはもとよりだが、特定の料理や用途等に適する食材や長持ちする食材など高付加価値のある食材を求めている。また、健康志向が高まるなかで低カロリ、抗アレルギなどの食材の情報も欲してきている。
+<br>
+<br>このような両者の食材に関する情報入手と食材入手に関する情報への期待は高
+<br>いのにそれに答える仕組みは無い。
+<br>今回はこれについて特に青果物について検討をしていく。　
+<br>
+<br>４．双方向評価の先進サービスへ
+<br>　　　最近の市場では、一般人の所有する空き部屋や空間を活用した宿泊予約サービス（AIRBｎB）で宿泊場所提供者と宿泊者を識別し、マッチングし、双方向評価をする宿を提供してその評価を双方で行なう人気サービスがある。また、スマホアプリによる予約システムや事前登録によるクレジットカード決済などを利用したタクシー配車サービスで、タクシの選択と評価を行なうフーバというサービスが大変人気がある。
+<br>　　　これらは、これまで十分に活用されていなかったものを識別（区別）し、それぞれ双方向に評価情報を付加することで、これまでにないマッチングを生んでいる。
+<br>　　　まさに、農産物も、いままで消費者の選択肢にはなっていなかった「品種」をより細かく識別し、消費者とマッチングし、双方向に評価情報を付加することで、新たな流通が生まれると期待される。　
+<br> 
+<br>５．作物情報の現状
+<br>まず、生産物に対する情報体系について、具体的にトマトを例に説明する。
+<br>生産段階では農家は品種に基づいて生産されているが、出荷に当たっては現在生産コードが無いため、いわゆるトマトとして扱われている。
+<br>（もちろん何々農協、収穫日等の情報は付与される）
+<br>品種Eは煮たきに適したトマトでパスタに適したものであるとする。
+<br>流通段階である地域（Z)市のあるスーパ（Y店）には品種A,B,Dのトマトだけがトマトとして納入されたとする。
+<br>Z市に住む消費者Xさんはトマトパスタをパーティの料理として考えているが、
+<br>お店にある品種A,B,Cの中からトマトを選んで購入することになる。
+<br>本来なら最適な品種Eのトマトを選んで買いたいところであるが、消費者Xさんはそのような情報は持っておらず、お店にもそれを意識して置いてはいないのでアンマッチな食材を買うことを余儀なくされている。
+<br>
+<br>６．品種情報の便利さ
+<br>　品種情報には開発の目的など生産関係の情報以外に用途に関する情報が含まれている。　ここには一部を紹介する。
+<br>トマトでは　生食用、ホール用、加工用、加熱料理向け、ジュース向け等
+<br>タマネギではケルセチンの高含有品種、味覚の改良（辛味を抑えて甘み強）、増収量品種など
+<br>なすでは長たまご型でてんぷら、炒め、煮炊きなど、また丸型で蒸しもの用。
+<br>などの用途に適した品種情報がある。
+<br>
+<br>７．生産と流通のデータ関連
+<br>　流通段階ではベジフルコードとして定められているが、現在生産段階での生産物を指定する情報体系はない。
+<br>　　新しい提案として
+<br>（１）．生産物の情報体系をつくる。
+<br>（２）．情報体系は流通しているベジフルコードに品種登録番号を追加する
+<br>　　とし、これを生産物情報と位置付ける。
+<br>
+<br>８．生産情報
+<br>　前項で説明した生産物情報に加え、生産者は生産物に対し、生産者情報（農家名、場所、連絡先等）、機能性表示、収穫・出荷時期、収穫量、販売価格等をタグでくくったメタ情報として持ち、生産物情報と合わせて生産情報とする。
+<br>
+<br>　流通コードと品種登録番号、それと種苗会社が開発した品種情報との間で品種番　
+<br>　号を紐付ける必要がある、
+<br>
+<br>９．生産者消費者直接コネクトする情報システムの新たな仕組み
+<br> 生産物に品種情報が加味され、生産情報として流通することにより、生産者、消費者、加工/外食事業者間で、生産物情報が直接コネクトすることが可能となる。
+<br>これを農業生産消費マッチングの仕組みであるノーバと名づける。
+<br>生産者は自分の作物の情報をノーバに登録する。
+<br>消費者・加工/外食事業者は食材の検索としてノーバを活用する
+<br>消費者は感想、口コミを直接生産者へ返すことも可能とする。
+<br>
+<br>システムを通して
+<br>生産者の期待
+<br>　・消費者ニーズが見えることによるマーケティング力の向上が図れること
+<br>　・販売機会の拡大による安定供給と収益増
+<br>　・消費者レスポンスによるブランド力・差別化の強化
+<br>　・評価によるやりがいの向上
+<br>消費者の期待
+<br>・安心・安全
+<br>・生産物の情報比較の充実（調理向け、味、）
+<br>・ブランド店使用と同じ作物の選択可能性
+<br>・農家からの情報提供による消費価値の高まり
+<br>　 加工・外食の期待
+<br>・安心・安全
+<br>・専門性のある食材の選択確保
+<br>・消費者への付加価値の提供
+<br>が想定される。
+<br>
+<br>１０．ノーバの主な機能
+<br>　ノーバの機能は以下のことを考えています。
+<br>　（１）生産情報の登録処理とデータベース化
+<br>　（２）品種番号、商標番号、標準コードとの紐付け
+<br>　（３）検索の受付と生産情報とのマッチィング処理と出力処理
+<br>　（４）検索ログの蓄積と生産者へのフィードバック
+<br>　（５）流通状況データの日々更新
+<br>　（６）流通業者、アプリケーション開発者への生産情報のオープン化
+<br>
+<br>１１．流通・小売におけるバイヤの新たな役割り（１/２）
+<br>　 取り引きしている農業生産者者は、システム上で日々の作業の記録(主に農薬・肥料の撒布履歴)の入力を義務付けられてはいるが、現システムは大手流通・小売サイドのトレーサビリティを意識したものであり、蓄積されたデータを農業生産者者が後に利活用することによるメリットまでは想定されていない。
+<br>バイヤとしての流通の役割は、農家の悩み＝売り先が無い、と消費者の悩み＝欲しいものが売って無いとの要望をマッチングすることであるが現状はそれが行なわれていない。
+<br>
+<br>１２．流通・小売におけるバイヤの新たな役割り（２/２）
+<br>ノーバは流通機構（バイヤ）の本来業務を補完する役割りを担うことができる。
+<br>多品種の商材を少量ロットではあるが多地域、多店舗へ品揃いする体制が流通の
+<br>差別化として必要となってくる。
+<br>ノーバを使ったITの機能で現行の流通網と違った新たなオーバレイの流通ネット
+<br>ワークが形成される。
+<br>
+<br>１３．各プレーヤのメリット
+<br>　本システムによる、生産者、消費者、流通・外食事業者のメリットは次のとおり。
+<br>　（１）生産者メリット
+<br>　　・消費者情報が見えることによるマーケットの拡大
+<br>　　・販売機会の新規発見による収入増
+<br>　　・消費者評価によるやりがいの向上
+<br>　（２）流通・外食のメリット
+<br>　　・少量、多品種、多方面流通ネットワークの誕生
+<br>　　・付加価値サービスの増加
+<br>　　・バリューチェーンの確立
+<br>　（３）消費者のメリット
+<br>　　・安心安全
+<br>　　・適切な食材・ブランド食材の選択が可能
+<br>　　・レシピの増加
+<br>
+<br>１４．cookpadとの連携
+<br>　更にマッチングシステムを既存の人気の料理サイトであるcookpadとの連携することにより、消費者の利便性の向上を図ることができる。
+<br>
+<br>cookpadでは献立を検索するとそこに構成品という項目が出てくる。
+<br>それをクリックすると材料が示される。
+<br>例えばトマトの和風サラダが構成品だとするとその材料にトマトが出てくる。
+<br>トマトをクリックすると「トマトの使い方」という説明があるが、
+<br>これは一般的な内容で食材の詳細（品種など）に関する内容がありません。
+<br>
+<br>ここに本マッチングシステムからのトマトに関する食材情報が開示されたAPIを使ってcookpadに反映されれば。料理に適したより詳細なトマトの情報が表示できるようになる。　消費者は自分の料理に適したトマトは何という品種で、どこととこの農家が生産していることが分かる。
+<br>更に流通システムとの連動で販売店情報が加わればより便利さが向上する。
+<br>
+<br>１５．ぐるナビとの連携
+<br>　 もう1つの食に関する人気サイトとしてぐるナビがある。
+<br>レストランを検索するサイトですが、
+<br>レストランがノーバから食材に関する生産情報を活用し、品種情報などでメニューに最適な野菜の食材を見つけ、購入する。これは他店と違う付加価値となる。
+<br>最適な食材を使ったメニュをぐるナビに登録すると共に、食材の説明を載せることにより、ぐるナビサイトに訪れた消費者に付加価値の高いメニューの関心を高め
+<br>顧客増につながる。　　
+<br>ぐるナビにしても新しいレストランの周知方法になるので顧客サービスの向上
+<br>　　につながります。
+<br>
+<br>１６．消費者同士の連携
+<br>　今までは生産者と消費者という軸であったが、ノーバが浸透していけば、ある消費者が選んでいることを他の消費者がフォロー出来ることが可能となる。消費者が消費者に対してフォローする仕組みへの発展です。この人の選び方はいいな。センスがいい、その人をフォローできたらよい。　他の人を見ても自分のレバートリが広がる。フォローすることでタイムライン的に情報が流れニュース性に富むことになり、スピード感が速まる。
+<br>
+<br>１７．食農インフラ　農産物分野におけるIT利活用による食のバリューチェーン構築
+<br>　　農家の方はIT武装している割りITに満足していないところから問題を検討し、。ノーバという農業生産者と消費者間の双方向情報流通の仕組みを提案してきました。この仕組みを作るためには生産物に情報体系を作る必要があることも指摘してきました。
+<br>ノーバの活用により、農業生産者と消費者だけでなく、流通（卸、小売、物流）、加工業者を含めたバリューチェーンでの食材情報の流通を図ることが可能になると期待されます。
+<br>今後は、農業生産者サイドと大手流通・小売サイドだけでなく、食のバリューチェーン全体のステークホルダーがそれぞれの立場で役立つ情報が得られるプラットフォーム形成が求められて来ます。
+<br>　
+<br>１８．参考資料　
+<br>Uberification（ウーバリフィケーション）／シェア経済とNober（ノーバ、農場）			</td>
+		</tr>
+		<tr>
+			<th>投稿したアイデア</th>
+			<td>
+									<a href="http://lod.sfc.keio.ac.jp/challenge2014/dat/idea/i015_20150117121512_LOD応募資料（ノーバ）.pptx" target="_blank">LOD応募資料（ノーバ）.pptx</a>
+							</td>
+		</tr>
+									<tr>
+			<th>アイコン</th>
+			<td>
+			</td>
+		</tr>
+		<tr class="info-row">
+			<th colspan="2">関連する作品の情報</th>
+		</tr>
+		<tr>
+			<th>関連するデータセット</th>
+			<td>
+				<a href="/" target="_blank">d005</a> <a href="../challenge2014/show_status_id_d019.html" target="_blank">d019</a> <a href="/" target="_blank">d020</a> <a href="/" target="_blank">d028</a> <a href="/" target="_blank">d080</a> <a href="../challenge2013/show_status_id_d019.html" target="_blank">2013-d019</a> 			</td>
+		</tr>
+		<tr>
+			<th>関連するアイデア</th>
+			<td>
+				<a href="/" target="_blank"></a> 			</td>
+		</tr>
+		<tr>
+			<th>関連するアプリケーション</th>
+			<td>
+				<a href="/" target="_blank">a009</a> 			</td>
+		</tr>
+		<tr>
+			<th>関連するビジュアライゼーション作品</th>
+			<td>
+				<a href="/" target="_blank"></a> 			</td>
+		</tr>
+		<tr>
+			<th>関連する基盤技術作品</th>
+			<td>
+				<a href="/" target="_blank"></a> 			</td>
+		</tr>
+	</table>
+<h3>登録情報の修正について</h3>
+修正の希望がある場合には実行委員会までご連絡下さい。lod-challenge[at]sfc.keio.ac.jp　＊メールアドレスの[at]を@としてお送り下さい。
+	</div>
+			</div><!--// #mainBK //-->
+		</div><!--// #wrapperAll //-->
+		<div id="footerPankuzu">
+			<ul>
+				<li><a href="/" title="ホーム">HOME</a></li>
+				<li>農業生産物の選択の幅を広げるノーバ（農場）～日本の農業を魅力あるものにするIT利活用～ - アイデアのエントリーシート</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<h1> <font size="4">LODチャレンジJapan2014 スポンサー、パートナー、サポータのご協力宜しくお願いします！！</font><font size="3"><br>各募集要項は本ページのスポンサー欄<br><a href="http://lod.sfc.keio.ac.jp/challenge2014/sponsorrecruit.html">「スポンサー募集ページ」</a><br><a href="http://lod.sfc.keio.ac.jp/challenge2014/partner_platform_data.html">「データ提供パートナー／基盤提供パートナー募集」</a><br><a href="http://lod.sfc.keio.ac.jp/challenge2014/partner_media.html">「メディアパートナー募集」</a><br><a href="http://lod.sfc.keio.ac.jp/challenge2014/supporter.html">「サポーター募集」</a>をご覧下さい</font></h1>
+				<a id="sponsor" name="sponsor"></a>
+			<div id="footerBody"> 
+			<div id="btmSponsorBK">
+					<!-- <h3><img src="common/img/headplatinum_wb.jpg" alt="platinum sponsors" /></h3> -->
+					<!-- 記入例 -->
+					<!-- 
+						//<ul class="platinum">
+						//<li><a href="http://www.goo.ne.jp/" target="_blank"><img src="common/img/sponsores/goo_p.png" alt="NTTレゾナント" width="180" height="180"></a></li>
+						//</ul>
+					-->				
+					<!-- <h3><img src="common/img/headgold_wb.jpg" alt="gold sponsors"></h3>-->
+					<!--  記入例 -->
+					<!--  
+						//<ul class="gold">
+						//<li><a href="http://www.imjp.co.jp/" target="_blank"><img src="common/img/sponsores/imj140.png" alt="株式会社アイ・エム・ジェイ"></a></li>
+						//</ul>
+					-->
+					<!-- <h3 class="footerDataPartner">データ提供パートナー</h3>-->
+					<!-- 記入例 -->
+					<!--  
+						//<ul class="gold">
+						//<li><a href="http://www.city.osaka.lg.jp/toshikeikaku/page/0000246527.html" target="_blank"><img src="common/img/sponsores/oosaka_city.png" alt="大阪市"></a></li>
+						//</ul>
+					-->
+					<!-- <h3 class="footerDataPartner">基盤提供パートナー</h3>-->
+					<!-- 記入例 -->
+					<!-- 
+					 	//<ul class="gold">
+						//<li><a href="http://monaca.mobi/" target="_blank"><img src="common/img/sponsores/Logo_Monaca.png" alt="アシアル株式会社"></a></li>
+						//</ul>			
+					-->
+					<!-- <h3 class="footerDataPartner">メディアパートナー</h3>-->
+					<!--  記入例 -->
+					<!-- 
+						//<ul class="gold">
+						//<li><a href="http://itpro.nikkeibp.co.jp/" target="_blank"><img src="common/img/sponsores/ITpro.png" alt="ITPro" width="140" height="140"></a></li>
+						//</ul>
+					-->
+					<!-- <h3 class="footerDataPartner">サポーター（後援団体）</h3>-->
+					<!-- 記入例 -->
+					<!--  
+						//<ul class="supporter">
+						//<li><a href="http://www.opendata.gr.jp/" target="_blank">オープンデータ流通推進コンソーシアム</a></li>
+						//</ul>
+					-->
+				</div>
+				<div id="footerMenu">
+					<ul>
+						<li><a href="../challenge2014/contact.html" title="お問い合わせ">お問い合わせ</a></li>
+						<li><a href="../challenge2014/committee.html" title="実行委員会">実行委員会</a></li>
+						<li><a href="../challenge2014/rules.html" title="会則">会則</a></li>
+						<li><a href="http://www.facebook.com/LOD.challenge.Japan" title="facebookページ" target="_blank">facebookページ</a></li>
+					</ul>
+					<!-- <p id="facebook"><a href="http://www.facebook.com/LOD.challenge.Japan#" title="LOD Challenge 2012 facebookページ"><img src="common/img/facebook.png" alt="Facebook" width="32" height="32" /></a></p> -->
+				</div>
+				<div id="credit">
+					<p>Copyright&copy;2014 Linked Open Data Challenge Japan 2014.</p>
+				</div><!--// credit //-->
+			</div>
+		</div><!--// footer //-->
+	</body>
+</html>

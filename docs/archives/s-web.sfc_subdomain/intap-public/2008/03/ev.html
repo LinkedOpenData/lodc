@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE ev [
+<!ENTITY ev "http://www.net.intap.org/INTAP/s-web/2008/03/ev#">
+<!ENTITY dex "http://www.net.intap.org/INTAP/s-web/2008/03/dex#">
+]>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dex="http://www.net.intap.or.jp/INTAP/s-web/2008/03/dex#">
+    xmlns="http://www.net.intap.or.jp/INTAP/s-web/2008/03/ev#"
+    xml:base="http://www.net.intap.or.jp/INTAP/s-web/2008/03/ev">
+<!-- 評価値のインスタンス定義 -->
+  <dex:Zero rdf:ID="One">
+    <rdf:type rdf:resource="&dex;Score"/>
+  </dex:Zero>
+  <dex:Plus1 rdf:ID="Two">
+    <rdf:type rdf:resource="&dex;Score"/>
+  </dex:Plus1>
+  <dex:Plus2 rdf:ID="Three">
+    <rdf:type rdf:resource="&dex;Score"/>
+  </dex:Plus2>
+  <dex:Plus3 rdf:ID="Four">
+    <rdf:type rdf:resource="&dex;Score"/>
+  </dex:Plus3>
+  <dex:Plus4 rdf:ID="Five">
+    <rdf:type rdf:resource="&dex;Score"/>
+  </dex:Plus4>
+  <dex:StrongPositive rdf:ID="Great">
+    <rdf:type rdf:resource="&dex;Balance"/>
+  </dex:StrongPositive>
+  <dex:WeakPositive rdf:ID="Good">
+    <rdf:type rdf:resource="&dex;Balance"/>
+  </dex:WeakPositive>
+  <dex:Neutral rdf:ID="Fair">
+    <rdf:type rdf:resource="&dex;Balance"/>
+  </dex:Neutral>
+  <dex:WeakNegative rdf:ID="Bad">
+    <rdf:type rdf:resource="&dex;Balance"/>
+  </dex:WeakNegative>
+  <dex:StrongNegative rdf:ID="Terrible">
+    <rdf:type rdf:resource="&dex;Balance"/>
+  </dex:StrongNegative>
+  <dex:Positive rdf:ID="Yes">
+    <rdf:type rdf:resource="&dex;Vote"/>
+  </dex:Positive>
+  <dex:Neutral rdf:ID="Void">
+    <rdf:type rdf:resource="&dex;Vote"/>
+  </dex:Neutral>
+  <dex:Negative rdf:ID="No">
+    <rdf:type rdf:resource="&dex;Vote"/>
+  </dex:Negative>
+  <dex:Positive rdf:ID="Valid">
+    <rdf:type rdf:resource="&dex;Flag"/>
+  </dex:Positive>
+  <dex:Neutral rdf:ID="Invalid">
+    <rdf:type rdf:resource="&dex;Flag"/>
+  </dex:Neutral>
+</rdf:RDF>

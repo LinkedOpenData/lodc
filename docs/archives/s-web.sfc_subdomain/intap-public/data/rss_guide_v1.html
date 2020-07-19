@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>RDFメタデータの設置場所ガイド</title>
+	<link rel="stylesheet" type="text/css" href="http://s-web.sfc.keio.ac.jp/intap-public/data/data.css"/>
+</head>
+<body>
+<div class="i1">
+<p class="title"><strong>RDFメタデータの設置場所ガイド （2004年5月）</strong></p>
+</div>
+<hr class="header"/>
+<div class="i4">
+	<dl>
+	<dt>本ガイドは、（財）情報処理相互運用技術協会のセマンティックWeb委員会が作成したものです。<br/>
+本ガイドでは、コンテンツ作成者がWebコンテンツに対してRDFメタデータを付与する際のRDFメタデータの設置場所について、様々な方法を紹介します。<br/>
+		また、RDFメタデータを収集・検索するエンジンによる参照順序について提案します。</dt>
+	<dt class="chapter">1．RDFメタデータの設置場所</dt>
+		<dd class="chapter">	まず、RDFメタデータの記述方法を以下の3つのタイプに分け、それぞれの場合の設置場所について順に紹介していきます。</dd>
+		<dd class="chapter">	A．1つのコンテンツに対応するRDFメタデータをコンテンツとは独立に記述する場合<br/>
+							B．複数のコンテンツのRDFメタデータをコンテンツとは独立に一括して記述する場合<br/>
+							C．コンテンツ内にRDFメタデータを埋め込む場合</dd>
+		<dd class="chapter"></dd>
+	<dt class="clause1">A．1つのコンテンツに対応するRDFメタデータをコンテンツとは独立に記述する場合</dt>
+	<dt class="clause2">A-1．拡張子を.rdfにする方法</dt>
+		<dd class="clause">	以下のように、元コンテンツの拡張子を.rdfとすることで、対応するRDFメタデータファイルのファイル名とします。<br/>
+							コンテンツ作成者がRDFメタデータも自由に作成してローカルに管理することができるので、当委員会として最も推奨する方法です。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>	</td><td>元コンテンツのURL						</td><td>RDFメタデータファイルのURL				</td></tr>
+							<tr class="fig"><td>例1	</td><td>http://www.intap.or.jp/s-web/file1.html</td><td>http://www.intap.or.jp/s-web/file1.rdf	</td></tr>
+							<tr class="fig"><td>例2	</td><td>http://www.intap.or.jp/s-web/file2.txt	</td><td>http://www.intap.or.jp/s-web/file2.rdf	</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		<dd class="clause">	例外として、同じディレクトリに拡張子を除いた部分のファイル名が同じコンテンツが複数ある場合、単に拡張子.rdfを追加します。これはRDFメタデータファイル名の重複を避けるためです。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>		</td><td>元コンテンツのURL																	</td><td>RDFメタデータファイルのURL																	</td></tr>
+							<tr class="fig"><td>例外1	</td><td>http://www.intap.or.jp/s-web/file.txt<br/>http://www.intap.or.jp/s-web/file.pdf	</td><td>http://www.intap.or.jp/s-web/file.txt.rdf<br/>http://www.intap.or.jp/s-web/file.pdf.rdf	</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+		<dd class="clause">	また、何かのコンテンツに対するメタデータではないが、拡張子.rdfを持つRDF文書（例えば、~/sample.rdfというファイル名でRDF記述の例を掲載している文書）に対するRDFメタデータファイルの場合も例外として、単に拡張子.rdfを追加します。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>		</td><td>元コンテンツのURL						</td><td>RDFメタデータファイルのURL					</td></tr>
+							<tr class="fig"><td>例外2	</td><td>http://www.intap.or.jp/s-web/sample.rdf</td><td>http://www.intap.or.jp/s-web/sample.rdf.rdf</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+		<dd class="clause">	ただし、プログラムで自動で拡張子を付けるような場合、~/sample.rdfが何かのコンテンツに対するメタデータか否かを判断することは難しいので、この場合は下記の（注1）の方法がシンプルと考えられます。</dd>
+		<dd class="clause">	（注1）<br/>上記で例外として挙げた方法をすべての場合に適用する方法も考えられます。以下のような方法です。この方法が最もシンプルで例外を設ける必要もありませんが、拡張子を2つ列記することへの抵抗から、当委員会ではA-1の方法を推奨します。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>	</td><td>元コンテンツのURL						</td><td>RDFメタデータファイルのURL					</td></tr>
+							<tr class="fig"><td>例1	</td><td>http://www.intap.or.jp/s-web/file1.html</td><td>http://www.intap.or.jp/s-web/file1.html.rdf</td></tr>
+							<tr class="fig"><td>例2	</td><td>http://www.intap.or.jp/s-web/file2.txt	</td><td>http://www.intap.or.jp/s-web/file2.txt.rdf	</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+		<dd class="clause">	ただし、以下のような事情もあるようです。<br/>「RDFメタデータを示すのに、HTML等のリソースのURIの最後に.rdfという拡張子を加える方法は、特別に定義されたものではありませんが、DCMI(Dublin Core Metadata Initiative)のサイトでも利用している、比較的普及した手段です。」<br/>（The Web KANZAKI<br/>　　　　　　　　<a href="http://www.kanzaki.com/docs/sw/dublin-core.html#rdf-html-link">http://www.kanzaki.com/docs/sw/dublin-core.html#rdf-html-link</a>）</dd>
+		<dd class="clause">	（注2）<br/>また、以下のようにディレクトリを区切ってRDFメタデータファイルを置く方法も考えられますが、ファイル名と同じディレクトリ名を作成することは一般的なファイルシステムではできないというデメリットがあります。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>	</td><td>元コンテンツのURL						</td><td>RDFメタデータファイルのURL						</td></tr>
+							<tr class="fig"><td>例1	</td><td>http://www.intap.or.jp/s-web/file.html	</td><td>http://www.intap.or.jp/s-web/file.html/meta.rdf</td></tr>
+							<tr class="fig"><td>例2	</td><td>http://www.intap.or.jp/s-web/file.pdf	</td><td>http://www.intap.or.jp/s-web/file.pdf/meta.rdf	</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+		<dd class="clause">	（注3）<br/>また、以下のようにRDFメタデータ用にmetaというディレクトリを用意する方法も考えられますが、RDFメタデータファイルの拡張子が.html等になってしまう（拡張子が.rdfでない）ためRDFファイルであることの見分けがつきにくいというデメリットがあります。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>	</td><td>元コンテンツのURL						</td><td>RDFメタデータファイルのURL					</td></tr>
+							<tr class="fig"><td>例1	</td><td>http://www.intap.or.jp/s-web/file.html	</td><td>http://www.intap.or.jp/s-web/meta/file.html</td></tr>
+							<tr class="fig"><td>例2	</td><td>http://www.intap.or.jp/s-web/file.pdf	</td><td>http://www.intap.or.jp/s-web/meta/file.pdf	</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+		<dd class="clause">	注2と注3に挙げた方法については、以下のURLを参照のこと。<br/><a href="http://lists.w3.org/Archives/Public/www-tag/2002Nov/0149.html">http://lists.w3.org/Archives/Public/www-tag/2002Nov/0149.html</a><br/><br/></dd>
+	<dt class="clause2">A-2．RDFメタデータ専用のサーバ（名）を作成する方法</dt>
+		<dd class="clause">	以下のように、RDFメタデータファイル専用のサーバ（名）を作成し、そこにすべてのRDFメタデータファイルを置く方法です。例2のような動的なコンテンツにも容易に対応が可能だというメリットがあります。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>	</td><td>元コンテンツのURL								</td><td>RDFメタデータファイルのURL							</td></tr>
+							<tr class="fig"><td>例1	</td><td>http://www.intap.or.jp/s-web/file.html			</td><td>http://rdf.www.intap.or.jp/s-web/file.html			</td></tr>
+							<tr class="fig"><td>例2	</td><td>http://www.intap.or.jp/s-web/abc.cgi?parml=abc	</td><td>http://rdf.www.intap.or.jp/s-web/abc.cgi?parml=abc	</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+	<dt class="clause1">B．複数のコンテンツのRDFメタデータをコンテンツとは独立に一括して記述する場合</dt>
+	<dt class="clause2">B-1．Webサイトのwell-knownな場所のファイルにRDFメタデータを一括して記述する方法</dt>
+		<dd class="clause">	あるサイト（例えばhttp://www.intap.or.jp/s-web）に含まれるコンテンツに対する全てのRDFメタデータを、サイトのwell-knownな場所に置いた単一のRDFメタデータファイル（例えばhttp://www.intap.or.jp/s-web/index.rdf）に一括して記述します。既存の大量のWebコンテンツに対してRDFメタデータを作成し一括管理するのに適している方法です。<br/>
+							ただし、その単一のRDFメタデータファイルのバージョン管理や変更権限などに注意を要するデメリットがあります。また、メタデータの収集・検索エンジンにRSSファイルだと誤って認識される可能性もあります。</dd>
+		<dd class="clause">	<table border="0" cellspacing="0" cellpadding="1" width="80%">
+							<tr><td bgcolor="#3765cd">
+							<table border="0" cellspacing="1" cellpadding="3" width="100%">
+							<tr class="fig"><td>	</td><td>元コンテンツのURL								</td><td>RDFメタデータファイルのURL							</td></tr>
+							<tr class="fig"><td>例	</td><td>http://www.intap.or.jp/s-web/file1.html<br/>http://www.intap.or.jp/s-web/file2.html<br/>http://www.intap.or.jp/s-web/file2.pdf</td><td>http://www.intap.or.jp/s-web/index.rdf			</td></tr>
+							</table>
+							</td></tr>
+							</table></dd>
+		</dd>
+	<dt class="clause1">C．コンテンツ内にRDFメタデータを埋め込む場合</dt>
+	<dt class="clause2">C-1．コンテンツ内に当該コンテンツのRDFメタデータを記述する場合</dt>
+		<dd class="clause">	元コンテンツが（X）HTML文書の場合、コンテンツ内に直接RDFメタデータを埋め込むことができます。コンテンツ本体とRDFメタデータとの結び付きが最も強い方法と言えます。<br/>
+							ただし、既存コンテンツに対して新たにRDFメタデータを付加する場合は、元コンテンツに手を加える必要があり、また、メタデータ情報を変更するのにコンテンツ自体の変更権限が必要になるというデメリットがあります。<br/>
+							また、RDF/XML記述をXHTML文書にそのまま埋め込むと、RDF/XML記述のXMLスキーマはXHTMLのスキーマには準拠していないため、ValidなXHTMLではなくなってしまうという問題があります。この問題に対してW3Cでは以下のようなタスクフォースを立ち上げて、上記の問題を回避するための方式を検討しています。<br/>
+							RDF in XHTML Task Force Document 27 May 2003<br/>
+							<a href="http://www.w3.org/2003/03/rdf-in-xml.html">http://www.w3.org/2003/03/rdf-in-xml.html</a></dd>
+		<dd class="clause">	また、以下のWebページが参考になります。<br/>
+							<a href="http://www.w3.org/TR/REC-rdf-syntax/#transport">http://www.w3.org/TR/REC-rdf-syntax/#transport</a><br/>
+							<a href="http://www.kanzaki.com/docs/sw/meta-in-xh.html">http://www.kanzaki.com/docs/sw/meta-in-xh.html</a></dd>
+		<dd class="clause">	その他、コンテンツを扱うアプリケーションによってはコンテンツ本体とRDFメタデータを区別できず、RDFメタデータを抽出できない場合があります。</dd>
+		<dd class="clause">	（注1）<br/>（X）HTML文書以外のWebコンテンツにRDFメタデータを埋め込む場合は、例えば、PDF文書の場合はAdobe XMP（Extensible Metadata Platform）を利用することができます。また、SVGなどのXML仕様はメタデータを入れるための要素を持っているようです<br/>（<a href="http://www.w3.org/TR/SVG-access/#Metadata">http://www.w3.org/TR/SVG-access/#Metadata</a>）。<br/>また、RDFPicという写真のメタデータ登録ツールを用いると、デジタル写真の画像内にRDFメタデータを埋め込むことができます<br/>（<a href="http://jigsaw.w3.org/rdfpic/">http://jigsaw.w3.org/rdfpic/</a>）。<br/><br/></dd>
+	<dt class="clause2">C-2．コンテンツ内に当該コンテンツのRDFメタデータの場所を記述する場合</dt>
+		<dd class="clause">	元コンテンツが（X）HTML文書の場合、元コンテンツ内の<link>タグを使用して、&lt;link rel="metadata" type="rdf/xml" href="http://www.intap.or.jp/s-web/file.rdf"&gt;のようにRDFメタデータファイルのURLを（自由に）指定することもできます。RDFメタデータファイル名やディレクトリの束縛がないというメリットがあります。<br/>
+							ただし、既存コンテンツに対して新たにRDFメタデータを付加する場合は、元コンテンツに手を加えないといけないというデメリットがあります。<br/>
+							また、rel="metadata"という属性値が、HTML4.0勧告で規定されていない属性値だという問題があります。これについては、以下のような対処法があります。<br/>
+							「HTML4の仕様書は、"仕様書に記載されているリンクタイプ以外のものを使う場合はhead要素のprofile属性でその定義を参照すること"、と定めています。この規定はほとんど有名無実と化してはいますが、厳密を期したい方は、Sean B. Palmerが提供しているプロファイルを用いて、次のように記述することができます。<br/>
+							&lt;head profile="http://purl.org/net/uriprofile/"&gt;<br/>
+							このプロファイルにより、大手を振ってrel="meta"というリンクタイプが使えるようになります。」<br/>
+							（The Web KANZAKI<br/>
+							　　　　　　　　<a href="http://www.kanzaki.com/docs/sw/dublin-core.html#rdf-html-link">http://www.kanzaki.com/docs/sw/dublin-core.html#rdf-html-link</a>）</dd>
+	<dt class="chapter">2．RDFメタデータの参照順序</dt>
+		<dd class="chapter">	当委員会では、RDFメタデータを収集・検索エンジンがRDFメタデータを在りかを探す際の参照順序として、「C→A→B」の順序が妥当と考えます。<br/>
+							Cについては、コンテンツ本体とメタデータとの結び付きが最も強い方法であるため、ここを最初に参照することとします。<br/>
+							Aについては、RDFメタデータのファイル名や設置場所に注意が必要ですが、コンテンツ作成者がRDFメタデータも自由に作成してローカルに管理できるという点ではBより優れています。ただし、メタデータの設置場所に関してコンテンツ作成者と参照者でコンセンサスがとれないと機能しないというデメリットがあります。<br/>
+							Bについては、既存の大量のコンテンツについてのRDFメタデータを作成し一括管理する際には最も優れた方法と言えますが、複数のコンテンツに対するRDFメタデータ（の場所）をまとめて記述したファイルは、そのバージョン管理や変更権限などに注意を要します。また、Aと同様にメタデータの設置場所に関するコンセンサスが必要ですが、Aよりも推測はしやすいと言えます。<br/>
+							既存コンテンツへの対応やRDFメタデータの効率的な集中管理を重視するならば、「B→A→C」という参照順序も考えられますが、当委員会ではコンテンツ作成者によるRDFメタデータ付与の容易さといったコンテンツのポータビリティを重視して、「C→A→B」の参照順序を提案します。</dd>
+</div>
+<br/><br/>
+<hr class="footer"/>
+</body>
+</html>

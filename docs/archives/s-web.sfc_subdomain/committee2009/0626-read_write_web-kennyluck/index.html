@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- modified from oshani's http://dig.csail.mit.edu/2009/Talks/0518-F2FLighteningTalk-os/ -->
+    <title>SPARQL Updateと読み書きウェブとTabulator</title>
+    <meta name="font-size-adjustment" content="-1"/>
+    <link rel="stylesheet" href="http://s-web.sfc.keio.ac.jp/committee2009/0626-read_write_web-kennyluck/dig-slideshow.css" type="text/css" media="screen, projection"/>
+    <style type="text/css">
+    .uri {
+      color:#CA6202;
+    }
+    a:hover { color: #c30; text-decoration: underline }
+    a:active { color: #c60; text-decoration: bold; }
+    a:link { color: #c30; text-decoration: bold; }
+    </style>
+    <script src="http://s-web.sfc.keio.ac.jp/committee2009/0626-read_write_web-kennyluck/slideshow.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+<!-- SLIDE -->
+    <div class="slide">
+      <h1>SPARQL Updateと読み書きウェブとTabulator</h1>
+<h3 style="margin-top: 4em; text-align: center;">第3回セマンティックWeb委員会<br/><br/>平成21年6月26日</h3>
+      <p style="margin-top:2.5em; margin-bottom: 2em; text-align: center;">呂康豪（ルー・カン・カオ）<br/>kennyluck@csail.mit.edu</p>
+            <div style="text-align: center;">
+	      <small><a href="../../../tom.sfc_subdomain/index.html">慶応大学　萩野・服部研究室</a></small><br/><br/>
+	<small><a href="http://dig.csail.mit.edu/">分散情報グルプ</a><a href="http://dig.csail.mit.edu/"></a><br/>
+	<a href="http://mit.edu/">MIT</a> <a href="http://csail.mit.edu/">コンピュータ科学・人工知能研究所</a></small>
+      </div>
+    </div>
+    <div class="background"> 
+      <a href="http://csail.mit.edu/"></a>
+    </div>
+<div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>概要</h1>
+	<ul>
+	  <li>Linked Dataの話</li>
+	  <li>書くことができるウェブの動機、歴史</li>
+	  <li>RDFとの関係、SPARQL Update</li>
+	  <li>Tabulator紹介、デモ
+	</ul> 
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>Linked Dataの話</h1>
+	<ul class="incremental">
+	  <li>Linked Dataは何？</li>
+	  <li>世の中にある物事を全てURIを与えること。</li>
+	  <li><center><a href="http://dig.csail.mit.edu/People/kennyluck#I">呂康豪</a>　は　<span class="uri">&lt;http://dig.csail.mit.edu/People/kennyluck#I&gt;</span></center></li>
+<li><center><a href="http://www.w3.org/People/Berners-Lee/card#i"> ティム・バーナーズ＝リー</a>　は　<span class="uri">&lt;http://www.w3.org/People/Berners-Lee/card#i&gt;</span></center></li>
+<li><center><a href="http://www.w3c.org/data#W3C">W3C</a>　は　<span class="uri">&lt;http://www.w3c.org/data#W3C&gt;</span></center></li>
+<li><center><a href="http://dig.csail.mit.edu/data#DIG"> 私たちの分散情報グルプ </a>　は　<span class="uri">&lt;http://dig.csail.mit.edu/data#DIG&gt;</span></center></li>
+<li><center><a href="http://dig.csail.mit.edu/2005/ajar/ajaw/data#Tabulator">Tabulator</a>　は　<span class="uri">&lt;http://dig.csail.mit.edu/2005/ajar/ajaw/data#Tabulator&gt;</span></li>
+<li>URIは何？<a href="http://people.csail.mit.edu/kennyluck/W3C/web_3.0">魔法の識別子</a>。（他の参考：<a href="/">萩野先生の授業講義</a>）</li>
+<li>皆さんはもうURI（WebID）を持っていらっしゃいますか？</li>
+<li>皆さんの組織は？プロジェクトは？</li>
+	</ul>
+    </div>    
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>ホームページがあるけど</h1>
+	<ul class="incremental">	  <li>情報はコンピューターさえ読めるように書いてあるんですか？（RDFaでできる）</li>
+<li>RDFをもっと作りましょう！</li>
+<li>矛盾のないウェブを建てたいですから、ページとページの内容の物事を区別した方がいいです。（例えば、<span class="uri">&lt;http://dig.csail.mit.edu/People/kennyluck&gt;</span>は二歳ぐらいで、<span class="uri">&lt;http://dig.csail.mit.edu/People/kennyluck#I&gt;</span>はもう二十一歳）</li>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>Linked Dataの現在状況</h1>
+	<ul class="incremental">	  
+<li>おすすめの<a href="http://www.w3.org/2009/Talks/0204-ted-tbl/">スライド</a>、ティムが作った。（他に、<a href="http://www-kasm.nii.ac.jp/papers/takeda/08/takeda08swim.files/frame.html">武田さんの技術的な日本語の説明スライド</a>）</li>
+<li>二十年前にウェブが始まった時の状況に似てると思う。でも、今回はHTMLじゃなく、RDFだ。</li>
+<li>これこそ本当のWeb 2.0だって、ティムが言ってた。</li>
+<li>米国政府とイギリス政府は政府資料をLinked Dataにすることに決めたそうだ。</li>
+<li>もう止まらない。</li>
+<li>日本からの資料やデータベースはもし公開できたら、Linked Dataにして、早く他のLinked Dataに連結しましょう。</li>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>書くことができるウェブの動機</h1>
+	<ul class="incremental">
+	  <li>役に立つ情報をあげるとき</li>
+	  <li>討論したり意見を述べたりするとき（例え：2ch）</li>
+	  <li>間違ったところを直してあげるとき（例え：ウィキ）</li>
+	  <li>とりあえず、共同制作っていうこと（Open sourceとかを考えてみよう）</li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>歴史　ー　少しだけ</h1>
+	<ul class="incremental">
+	   <li>最初のウェブブラウザは書くことができるのに、何で今はできなくなった？</li>
+	   <li><ul class="incremental">
+	       <li>書く機能を保つのは面倒くさい</li>
+	       <li>アップデートに用いられるプロトコルはまだ発展していない</li>
+	       <li>バージョン管理は未熟</li>
+	       <li>Authenticationとかの標準化はまだ</li>
+	       <li>それに、最大の原因は、、、</li>
+	   </ul></li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>HTMLのせいで</h1>
+	<ul class="incremental">
+	   <li>これはどう？</li>
+	   <li><center></img></center></li>
+	   <li>この人だけじゃなくて、他の人も迷惑かける。</li>
+	   <li>HTMLは表現のための言語だから、ちょっと自由すぎる。</li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>私たちの解決方法（その一）</h1>
+	<ul>
+	   <li>RDFを使う</li>
+	   <li> は </li>
+	   <li>HTML画面はRDF資料の通り作られた。</li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>私たちの解決方法（その二）</h1>
+	<ul class="incremental">
+	   <li>コメントしたいなら</li>
+	   <li><img src="../../../committee2009/0626-read_write_web-kennyluck/images/s-web.sfc_subdomain/Dennis_FOAF_commented.png"/></li>
+	   <li>新しいRDF三つ組（triple）をつける。</li>
+	   <li>HTML画面は<span style="color: blue">青い</span>三つ組だけで作られたから、新しい三つ組をつけてもHTML画面に影響しない。</li>
+	   <li>でも、使用者は新しく書いた情報を手に入れる可能性もある（RDFで）。
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>プロトコルについて</h1>
+	<ul class="incremental">
+	   <li>SPARQLの拡張のSPARQL Updateの使う</li>
+	   <li><pre>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+INSERT { &lt;http://example.org/Dennis#me&gt; rdfs:comment "最低"@ja . }</pre></li>
+	   <li>RDFの図の変化しか送らない。</li>
+	   <li><pre>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+DELETE { &lt;http://example.org/Dennis#me&gt; rdfs:comment "最低"@ja . }</pre></li>
+	  <li><code>SELECT</code>や<code>WHERE</code>
+	    と組み合わせることもできる。</li>
+	  <!--<li>SPARQL Updateの特有の長所　ー　<pre>DELETE</pre></ul>-->
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>HTTP プロトコルについて</h1>
+	<ul class="incremental">
+	  <li>全部HTTPで、かなり簡単。</li>
+	  <li><pre>POST /Dennis HTTP/1.1
+Content-Type: application/sparql-query
+INSERT { &lt;http://example.org/Dennis#me&gt; rdfs:comment "最低"@ja . }</pre></li>
+	   <li><center></center></li>
+	   <li>推論できれば、、</li>
+	   <li><center></center></li>
+	   <li>まだできていない。未来の話です。</li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>現在の実装状況</h1>
+	<ul>
+	  <li>情報は<a href="http://esw.w3.org/topic/EditingData">ここ</a>に載せるはず。</li>
+	   <li>SPARQL Updateを受けるサーバ：ARC2、Algae</li>
+	   <li>SPARQL Updateを送るクライアント：Tabulator</li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>Tabulatorのことについて</h1>
+	<ul class="incremental">
+	  <li>一番重要な述語はrdfs:label</li>
+	  <li> <img src="../../../committee2009/0626-read_write_web-kennyluck/images/s-web.sfc_subdomain/Name_labels.png"/></li>
+	  <li>URIは、コンピューターとしての概念の名前 。rdfs:label は人間としての概念の名前。</li>
+	  <li><center></center></li>
+	  <li>Tabulatorの信条の一つ、「人間は人間の名前を使うが良い」</li>
+	</ul>
+    </div>
+  <!-- SLIDE -->
+    <div class="slide">
+	<h1>未来へ、、、</h1>
+	<ul class="incremental">
+	  <li>自分は好きな言語を使っていいです。自動翻訳があったら、、</li>
+	  <li>RDFは「簡単な人間言語」と呼べます。</li>
+	  <li>（RDFは「アのイはウ」の構造だけありますから。名詞はURI、どの国かの言語じゃない）</li>
+	</ul>
+    </div>	
+   </body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>平成19年度　次世代Web委員会活動報告</title>
+<link href="http://s-web.sfc.keio.ac.jp/intap-public/data/19-semanticweb-report/s-web.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<a name="PAGETOP" id="PAGETOP"></a>
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="800" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th class="menu_bar" scope="col">平成19年度　次世代Web委員会活動報告</th>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="chapter2">
+	<dl>
+	        <dt class="emphasis2">目　次</dt>
+	        <dd>&nbsp;</dd>
+			<dd><a href="#MEMBER">次世代Web委員会メンバー</a></dd>
+	        <dd>&nbsp;</dd>
+			<dd><a href="#CHAPTER-1">第一章　程度表現オントロジ</a></dd>
+			<dd><a href="#CHAPTER-2">第二章　オントロジ・リポジトリ仕様の作成</a></dd>
+			<dd><a href="#CHAPTER-3">第三章　オントロジのバージョン管理</a></dd>
+			<dd><a href="#CHAPTER-4">第四章　オントロジーWikiサイトの構築　―集合知としてのオントロジー構築を目指して―</a></dd>
+	</dl>	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a name="MEMBER" id="MEMBER"></a></td>
+  </tr>
+  <tr>
+    <td class="chapter1">　次世代Web委員会メンバー</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="chapter2">
+<table width="600" border="0" cellspacing="5" cellpadding="3">
+  <tr>
+    <td>委員長</td>
+    <td>清水　　昇</td>
+    <td>慶應義塾大学　SFC研究所</td>
+  </tr>
+  <tr>
+    <td>顧問</td>
+    <td>斎藤　信男</td>
+    <td>駒澤大学　グローバル・メディア・スタディーズ学部</td>
+  </tr>
+  <tr>
+    <td>顧問</td>
+    <td>萩野　達也</td>
+    <td>慶應義塾大学　環境情報学部</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>森田　幸伯</td>
+    <td>沖電気工業(株)　研究開発本部</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>乙守　信行</td>
+    <td>(株)ジャストシステム　イノベーションテクノロジー研究開発部</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>岡部　雅夫</td>
+    <td>東京電力(株)　システム企画部</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>川村　隆浩</td>
+    <td>(株)東芝　研究開発センター</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>内藤　　求</td>
+    <td>(株)ナレッジ・シナジー</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>細見　　格</td>
+    <td>日本電気(株)　サービスプラットフォーム研究所</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>佐藤　宏之</td>
+    <td>日本電信電話(株)　NTT情報流通プラットフォーム研究所</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>齊藤　孝広</td>
+    <td>(株)富士通研究所　ナレッジ研究センター</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>福重　貴雄</td>
+    <td>松下電器産業(株)　ネットワーク開発センター</td>
+  </tr>
+  <tr>
+    <td>委員</td>
+    <td>渡邉　圭輔</td>
+    <td>三菱電機(株)　情報技術総合研究所</td>
+  </tr>
+  <tr>
+    <td>オブザーバ</td>
+    <td>飯島　　正</td>
+    <td>慶應義塾大学　理工学部</td>
+  </tr>
+  <tr>
+    <td>オブザーバ</td>
+    <td>武田　英明</td>
+    <td>国立情報学研究所　実証研究センター</td>
+  </tr>
+  <tr>
+    <td>オブザーバ</td>
+    <td>白石　展久</td>
+    <td>日本電気(株)　R&Dユニット</td>
+  </tr>
+  <tr>
+    <td>事務局</td>
+    <td>小島　富彦</td>
+    <td>(財)情報処理相互運用技術協会</td>
+  </tr>
+  <tr>
+    <td>事務局</td>
+    <td>横山　昌典</td>
+    <td>(財)情報処理相互運用技術協会</td>
+  </tr>
+  <tr>
+    <td>事務局</td>
+    <td>香取　良和</td>
+    <td>(財)情報処理相互運用技術協会</td>
+  </tr>
+</table>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="top_link"><a href="/#PAGETOP">△TOP</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a name="CHAPTER-1" id="CHAPTER-1"></a></td>
+  </tr>
+  <tr>
+    <td class="chapter1">　第一章　程度表現オントロジ</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="chapter2">
+2007年度ワーキング・グループ・メンバー： 
+<ul>
+	<li>細見　　格（NECサービスプラットフォーム研究所） </li>
+	<li>佐藤　宏之（NTT情報流通プラットフォーム研究所）</li>
+	<li>渡邉　圭輔（三菱電機(株)情報技術総合研究所）</li>
+</ul>
+<br/>	
+　　「程度表現オントロジ （Degree Expression Ontology、以下DEXと略）」は、物事についての評価を表す値（程度値）の表現方法を規定したものである。さまざまなリソースに対する程度値を、ユーザが単純かつ簡易に表現することを可能にし、さらに記述された異なる程度表現間でリソースやその特性毎に柔軟に程度値の比較や集計、相互運用性のあるマッピングを自動化することを目的として設計されている。<br/>
+<br/>
+　2007年度のINTAP次世代Web委員会では、DEXにおいて程度値間の順序関係を定義するプロパティisSubsequentToの用法を改善し、新たにisSubsequentToDirectlyプロパティを導入することで、潜在的な矛盾を解消すると共に新たな程度値クラスの追加を容易にしている。また、程度値クラスとそのインスタンスである程度値自体との語彙の紛らわしさを低減するため、定義済みインスタンスの名前空間をクラスとは独立させた。これらを含む多くの修正を施したホワイトペーパーの改訂版およびDEXのOWL形式での記述をそれぞれバージョン0.8として公開している。同様に、名前空間を独立させた程度値クラスのインスタンス定義（OWL形式）も公開している。各ドキュメントは以下のリンク先から入手できる。<br/>
+<br/>
+<a href="../../../INTAP/s-web/dex/dex200803.pdf">程度表現オントロジ（Degree Expression Ontology - DEX）ホワイトペーパー　バージョン 0.8</a><br/>
+<a href="http://www.net.intap.or.jp/INTAP/s-web/2008/03/dex">程度表現オントロジ（Degree Expression Ontology - DEX) ver.0.8</a><br/>
+<a href="http://www.net.intap.or.jp/INTAP/s-web/2008/03/ev">程度値クラスのインスタンス定義（OWL形式）</a><br/><br/>
+　また、2007年度の更新内容を含むDEXの簡単な説明と想定している用途、および課題について述べたセマンティックWebコンファレンス2008のスライド資料も、以下のリンク先で公開している。<br/><br/>
+<a href="../../../INTAP/s-web/swc2008/4-1_Hosomi.pdf">程度表現オントロジ～改良点と普及への課題～</a> <br/>
+<br/>
+　さらに、上記スライド資料でも述べているように、microformatsのhReviewによる評価記述をDEXの表現に変換する方法についても検討した。GRDDLに基づく変換用XSLTは現在準備中である。 <br/><br/>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="top_link"><a href="/#PAGETOP">△TOP</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a name="CHAPTER-2" id="CHAPTER-2"></a></td>
+  </tr>
+  <tr>
+    <td class="chapter1">　第二章　オントロジ・リポジトリ仕様の作成</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="chapter2">
+2007年度ワーキング・グループ・メンバー： 
+<ul>
+	<li>岡部　雅夫（東京電力(株)システム企画部）</li>
+	<li>森田　幸伯（沖電気工業(株)研究開発本部）</li>
+	<li>福重　貴雄（松下電器産業(株)ネットワーク開発センター）</li>
+</ul>
+<br/>	
+　オントロジの整備が進むにつれて、オントロジは必ずしも安定的なものではなく、永続的に進化するものであることが明らかになってきた。例えば、本委員会で制定している「程度表現オントロジ」も、ver. 0.7, ver. 0.8 へと進化してきている。また、ＳＰＩＡフォーラムで制定した「情報家電オントロジー」では、各メーカーが「メーカ依存語彙」を逐次追加していくことが前提になっている。<br/><br/>
+　そのため、日々進化するオントロジの中から適切な語彙およびその定義を容易に見いだせ、また、語彙の追加、意味の進化等、オントロジの部分的な追加・更新が容易にできることが求められるようになり、従来のようなRDF/XML形式でのオントロジー全体の提供では不十分になってきている。また、オントロジの日々の進化に伴い、新旧複数のバージョンのオントロジが並行して利用される状況も増大し、オントロジに対するバージョン管理機能の強化も求められている。<br/><br/>
+　このような状況をふまえ、本委員会では、上記要件を実現するためのオントロジ・リポジトリの仕様を作成することになった。<br/><br/>
+　策定にあたっては、以下を基本的な方針とした。<br/>
+<ul>
+<li>まずは、最もニーズの大きいOWL-DLのオントロジを対象とすること。</li>
+<li>実装の自由度を確保するために、仕様は、ハイレベルなメタモデルおよびサービスの規定の範囲とすること。</li>
+<li>メタモデルは、OWLのAbstarct Synatx と整合のとれたものとすること。</li>
+<li>セマンティックWeb に限定されない汎用的なオントロジ・レジストリの国際標準であるISO/IEC 19763-3 MFI Ontology registrationと相補完しあうものとすること。</li>
+</ul>
+<br/>
+　今年度は、上記の方針に基づき、概ねメタモデルの仕様を定め、現在、サービスの規定の途上段階にあり、来年度は、バージョン管理機能の仕様も定め、一応の完成を目指している。<br/><br/>
+　詳細は、セマンティックWebコンファレンス2008での発表資料「<a href="../../../INTAP/s-web/swc2008/4-2_Okabe.pdf">IOO リポジトリ(仮称)の概要</a>」を参照されたい。<br/><br/>
+　なお、併せて、簡単な解説付きの「<a href="http://www.net.intap.or.jp/INTAP/s-web/portal/index.html">オントロジ関連リンク集</a>」も公開した。<br/><br/>
+　今後は、RDFaなどを使ってメタデータも埋め込んでいく予定である。
+<br/><br/>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="top_link"><a href="/#PAGETOP">△TOP</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a name="CHAPTER-3" id="CHAPTER-3"></a></td>
+  </tr>
+  <tr>
+    <td class="chapter1">　第三章　オントロジのバージョン管理</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="chapter2">
+2007年度ワーキング・グループ・メンバー： 
+<ul>
+	<li>乙守　信行（(株)ジャストシステム　イノベーションテクノロジー研究開発部）</li>
+	<li>清水　　昇（慶應義塾大学　SFC研究所）</li>
+	<li>岡部　雅夫（東京電力(株)システム企画部）</li>
+</ul>
+<br/>	
+1.オントロジバージョン管理ワーキンググループの目的<br/><br/>
+　一昨年から程度表現オントロジの設計と公開を次世代Web委員会で、またSPIAフォーラムでは情報家電オントロジの公開を開始した。<br/>
+　このオントロジの公開に伴い「オントロジの開発」から「オントロジの共有」「オントロジの管理」が委員会において現実な課題となってきた。<br/>
+　そこで本年度より「オントロジの共有」としてはオントロジリポジトリの構築(オントロジリポジトリワーキンググループ)と、「オントロジの管理」をテーマとしては本ワーキンググループが委員会内に設置されることとなった。<br/>
+　最初に本テーマに関して委員会内で議論を行ったが「オントロジバージョニング」に関して、現在公開している各オントロジの開発・公開の前提などから各メンバーの注目する問題点や課題は多岐にわたることがわかった。（表１）<br/>
+　そこで初年度として「オントロジバージョニング」の対象について整理することを目標として活動を行った。<br/><br/>
+<a href="/">＞＞続きはコチラ</a><br/>
+<br/>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="top_link"><a href="/#PAGETOP">△TOP</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a name="CHAPTER-4" id="CHAPTER-4"></a></td>
+  </tr>
+  <tr>
+    <td class="chapter1">　第四章　オントロジーWikiサイトの構築　―集合知としてのオントロジー構築を目指して―</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="chapter2">
+2007年度ワーキング・グループ・メンバー： 
+<ul>
+	<li>川村　隆浩　(*1,2,3)</li>
+	<li>沈　　　煒　(*2)</li>
+	<li>大須賀昭彦　(*2)<br/><br/>
+	(*1)　(株)東芝　研究開発センター 知識メディアラボラトリー<br/>
+	(*2)　電気通信大学　大学院情報システム学研究科<br/>
+	(*3)　情報処理相互運用技術協会　次世代Web委員会</li>
+</ul>
+<br/>	
+近年、メタデータの利用促進と共に、Lightweightオントロジーの重要性が高まっている。多くのオントロジーにおいて“is-a” が全relationの内、80-90%を占めているとの調査結果もある。そこで、non expertユーザが集合知としてLightweightオントロジーを容易に構築していけることを目的して、オントロジーのWikiサイトを構築した。<br/><br/>
+具体的には、以下の3つを主目的とし、
+<ul>
+	<li>平易なユーザインターフェースで一般ユーザを対象に、主にオントロジーのノード（インスタンスなど）を増やしてもらう（スキーマ変更は制限）</li>
+	<li>一般ユーザにノードを追加してもらうモチベーションの設定する（Wikipediaや価格.comなどと連動したサンプルアプリを作ることでユーザに面白さ(?)を提示）</li>
+	<li>構築されたオントロジーを参照できるAPIを提供、産学での活用促進を狙う</li>
+</ul>
+フロントエンドにおいて、ブラウザベースのオントロジー簡易編集機能を持ち、そのサンプルアプリケーションとして、編集したオントロジーを即座に反映し、結果が変わるアプリケーションを提供する。また、併せてバックエンドにおいてWebサービスによるオントロジーDB参照機能を提供する。<br/><br/>
+以下のスライドでは電気通信大学で公開したサイトの概要を示す。<br/><br/>
+<a href="../../../INTAP/s-web/swc2008/4-4_Kawamura.pdf">オントロジーWikiサイトの構築</a> 
+<br/><br/>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="top_link"><a href="/#PAGETOP">△TOP</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><hr/></td>
+  </tr>
+  <tr>
+    <td class="copyright">Copyright&copy; Interoperability Technology Association for Information Processing, Japan
+All rights reserved.;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

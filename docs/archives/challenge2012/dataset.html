@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="Content-Style-Type" content="text/css"/>
+		<meta name="description" content="Linked Open Data (LOD) の仕組み作りやデータづくりにチャレンジされている方々による活動の発表の場を提供します。"/>
+		<meta name="keywords" content="lod,linked data,linked open data,lod challenge,linked open data challenge japan,LODチャレンジ"/>
+		<link rel="shortcut icon" href="../challenge2012/favicon.ico"/>
+		<meta property="og:image" content="http://lod.sfc.keio.ac.jp/challenge2012/common/img/mainvisual2.png"/>
+		<meta property="og:url" content="http://lod.sfc.keio.ac.jp/challenge2012/"/>
+		<meta property="og:title" content="LOD Challenge Japan 2012"/>
+		<meta property="og:site_name" content="LOD Challenge Japan 2012"/>
+		<meta property="og:type" content="website"/>
+		<link rel="stylesheet" type="text/css" media="all" href="../challenge2012/common/css/import.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="../challenge2012/common/css/form.css"/>
+		<title>データセット部門 | Linked Open Data Challenge Japan 2012</title>
+		<script type="text/javascript" src="../ajax/libs/jquery/1-4-4/jquery.min.js"></script>
+		<script type="text/javascript" src="../challenge2012/common/js/droppy.js"></script>
+		<script type="text/javascript" src="../challenge2012/common/js/image_select.js"></script>
+		<script type="text/javascript" src="../challenge2012/common/js/jShowOff/jquery.jshowoff.min.js"></script>
+		<!--[if IE 6]>
+		<script src="common/js/DD_belatedPNG.js"></script>
+		<script>
+		DD_belatedPNG.fix('img, .png');
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			$(function() {
+				$("#nav").droppy({speed:50});
+			});
+		</script>
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26316207-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body>
+		<div id="pageTop"><a id="pageTop" name="pageTop"></a></div>
+		<div id="wrapperAll">
+			<div id="header">
+				<h1><a href="../challenge2012/index.html" title="Linked Open Data Challenge Japan 2012"><img src="../challenge2012/common/img/logo2012.png" alt="LODチャレンジ Japan / Linked Open Data Challenge Japan 2012" width="335" height="26"/></a></h1>
+			</div><!--// #header //-->
+			<div id="mainBK">
+				<div id="mainMenu">
+					<ul id="nav">
+						<li id="hm001"><a href="../challenge2012/objective.html" title="開催情報">開催情報</a>
+						<ul>
+							<li><a href="../challenge2012/objective.html">開催趣旨</a></li>
+							<li><a href="../challenge2012/outline.html">応募について</a></li>
+							<li><a href="../challenge2012/category.html">エントリー部門</a></li>
+							<li><a href="../challenge2012/evaluate.html">審査について</a></li>
+							<li><a href="../challenge2012/entry_terms.html">応募規定</a></li>
+							<li><a href="../challenge2012/faq.html">FAQ</a></li>
+							<li><a href="../challenge2011/index.html" target="_blank">LODチャレンジJapan2011アーカイブ</a></li>
+						</ul></li>
+						<li id="hm002"><a href="javascript:void(0);" title="エントリー">エントリー</a>
+						<ul>
+							<li><a href="../challenge2012/dataset.html">データセット部門</a></li>
+							<li><a href="../challenge2012/idea.html">アイデア部門</a></li>
+							<li><a href="../challenge2012/application.html">アプリケーション部門</a></li>
+							<li><a href="../challenge2012/visualization.html">ビジュアライゼーション部門</a></li>
+						</ul></li>
+						<li id="hm003"><a href="javascript:void(0);" title="スポンサー">スポンサー</a>
+						<ul>
+							<li><a href="../challenge2012/resource_usage.html">データ／基盤パートナーのリソース利用方法</a></li>
+							<li><a href="#sponsor">スポンサー一覧</a></li>
+							<li><a href="../challenge2012/sponsorrecruit.html">スポンサー募集</a></li>
+							<li><a href="../challenge2012/partner_platform_data.html">データ提供／基盤提供パートナー募集</a></li>
+							<li><a href="../challenge2012/partner_media.html">メディアパートナー募集</a></li>
+							<li><a href="../challenge2012/supporter.html">サポーター募集</a></li>
+						</ul></li>
+						<li id="hm004"><a href="../challenge2012/event.html" title="イベント">イベント</a>
+						<li id="hm005"><a href="javascript:void(0);" title="LODとは">LODとは</a>
+							<ul>
+								<li><a href="../challenge2012/aboutlod.html">lodとは？</a></li>
+								<li><a href="../challenge2012/slideresources2.html">技術解説</a></li>
+								<li><a href="../challenge2012/slideresources.html">分野別事例紹介</a></li>
+								<li><a href="../challenge2012/link.html">リンク集</a></li>
+							</ul>
+						</li>
+						<li id="hm006"><a href="../blog.html" title="公式ブログ">公式ブログ</a></li>
+					</ul>
+				</div><!--// mainMenu //-->				<a id="category" name="category"></a>
+				<div id="contentsBK">
+					<h2 class="iconDataS">データセット部門</h2>
+					<div class="entry-container">
+						<p>あなたの作品をデータセット部門に応募しよう！</p>
+						<a href="../challenge2012/apply_dataset_category.html" title="応募する"></a>
+					</div>
+					<p class="withArrow"><a href="../challenge2012/category.html#categoryData" title="データセット部門の詳細">データセット部門の詳細はコチラ</a></p>
+					<h3>応募作品一覧</h3>
+					
+					<table id="entry-list" class="application-form">
+						<thead>
+							<tr class="column-definition">
+								<th style="width:110px;">エントリー番号</th>
+								<th style="width:120px;">作品の名称</th>
+								<th style="width:100px;">応募者</th>
+								<th>応募概要</th>
+								<th style="width:185px;">エントリー情報</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td><a href="../challenge2012/show_status_id_d001.html">d001</a></td><td>DATA MAP 住所・駅・寺神社・学校等座標情報（横浜市・京都市）</td><td>リッツ総合研究所　岩場</td><td>ＧＩＳマーケティング用データとして、住所・駅・寺社・学校等
+<br>各データの名称およびそれに対応する緯度・経度の座標情報
+<br>提供エリア：横浜市・京都市
+<br>※　ただし、データ利用に際しましては、非営利利用を前提にデータをご活用ください。なお、その場合でも「データ：ＲＩＴＳ総合研究所提供」とクレジットをご明記ください。また、有償でのビジネスに本データをご活用の場合、別途弊社にご連絡願います。（tel 006-4706-6644）</td><td><img src="../challenge2012/image/cc_licence/by-nc-nd.png"/> </td></tr><tr class="even-row"><td><a href="../challenge2012/show_status_id_d002.html">d002</a></td><td>青空文庫 形態素解析データ集</td><td>河原　翔</td><td>2012年12月時点で青空文庫で公開されている作品中で、作品著作権フラグがない作品のうち11,176件分のデータを形態素解析し、その解析結果を公開しています。</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d003">d003</a></td><td>relation_table</td><td>L</td><td>友人関係を表現しました</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d004">d004</a></td><td>jojo</td><td>木村勇気</td><td>ジョジョについての図を示した</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d005">d005</a></td><td>声優関係</td><td>田中　太郎</td><td>課題です</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d006">d006</a></td><td>firiend_list</td><td>五十嵐団十郎</td><td>友人関係</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d007">d007</a></td><td>people_list</td><td>高橋孝彦</td><td>周りの人々との人間関係を示した。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d008">d008</a></td><td>チームメイト</td><td>松崎しげる</td><td>人間関係を表している</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d009">d009</a></td><td>別名義でのキャラ名</td><td>名無しさん</td><td>同年での別名義でのキャラをあげてみました</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d010">d010</a></td><td>教師と生徒の関係</td><td>稲葉凌太</td><td>教師と生徒の関係をRDFで作成しました。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d011">d011</a></td><td>プレミアリーグ得点ランキング上位の関係</td><td>ふーま</td><td>2013年1月19日現在のプレミアリーグの得点ランキング上位者の所属チームと過去の所属していたチームの人間関係を繋いだ。得点ランキング上位層の現在と過去に所属していたチームメイトを結ぶことでそのチームの強さや現在の順位と関係があるかわかるのではないかと思い、このデータセットを作成した</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d012">d012</a></td><td>MGS_CV</td><td>松田翔平</td><td>とあるゲームの声優</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d013">d013</a></td><td>family</td><td>仲田　翔</td><td>家族構成について</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d014">d014</a></td><td>seiyu_list</td><td>qurail</td><td>女性声優の交友関係をまとめたもの</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d015">d015</a></td><td>ライトノベル作家一覧と作品・イラストレーター・レーベル</td><td>菊池 尚也</td><td>ライトノベル作家の代表作、その代表作のイラストレーター、主に活躍するレーベルをまとめた。 作家と作品はfoaf:publications関係、作家とイラストレーターはfoaf:knows関係。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d016">d016</a></td><td>2012年サッカー日本代表選手同士の所属関係</td><td>taka</td><td>2012年にサッカー日本代表に招集された全50名と同じクラブチームに所属している もしくは 所属していた選手（2012年に招集された他の49選手の中から選出）をfoaf:knowsで関連付けました。</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d017">d017</a></td><td>犬神家の一族 （1977年）・主要登場人物と俳優の関係</td><td>大家 史裕</td><td>1977年に放送された古谷一行主演、横溝正史シリーズ・犬神家の一族を関連付けた</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d018">d018</a></td><td>ソクラテス以前の哲学者の人間関係</td><td>江上周作</td><td>ソクラテス以前の哲学者の師弟関係や知人関係を表現しました。</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d019">d019</a></td><td>ゲーム開発会社と有名ゲーム</td><td>tatsuya_hs</td><td>ゲーム開発会社と有名ゲームの関係</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d020">d020</a></td><td>LSJ2013</td><td>ほえほえ</td><td>【LOD作品の目的】<br/>
+<br>LSJ（Location Site of Japanimation）はサブカル作品（アニメ, ゲーム, 漫画）舞台の情報データベースです. これまで同人ソフトウェア開発者間でのデータ流通, 共有化による生産性の向上, LODを利用したクロスオーバー作品の創発などを目的にLSJのLOD化を進めてきました.<br/>
+<br>【LSJ2012からのアップデート情報】<br/>
+<br>本年は舞台探訪アプリに必要なデータの追加・修正を行いました. 特にNTTレゾナント様の『おでかけルートナビ PinQA』のLOD API を活用し, より高精度な舞台探訪データを従来のLSJ2012とリンクしたところが新しいです.<br/>
+<br>また, 二次利用しやすいようLSJ2013 LOD中で使用した語彙のオントロジーを整備. データのダウンロードに加えSPARQLエンドポイントの提供. 開発ノウハウを共有するためのドキュメント整備を行いました.
+<br><br/>
+<br>【データ特性】<br/>
+<br>サブカル（アニメ・ゲーム・漫画）作品の登場舞台をDBpediaやPinQAとリンク. 昨年度の投稿作品LSJ2012からデータの追加・修正. 表形式/TSV/RDFデータ, オントロジー（OWL）, SPARQL endpoint, アプリケーションの提供. <br/>
+<br><br/>
+<br>LSJ2013は下記サイトからご利用いただけます.<br/>
+<br>http://cheese-factory.info
+<br><br/></td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d021">d021</a></td><td>ツタンカーメンの一族</td><td>yuki</td><td>DNA鑑定で明らかになった、ツタンカーメンの一族の関係を示しました。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d022">d022</a></td><td>ゲーム作品Fateに登場するキャラの主従関係</td><td>白土寛之</td><td>ゲーム作品Fateに登場するマスターとサーヴァントの関連を記述した。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d023">d023</a></td><td>ドラえもんの主要人物の人間関係</td><td>奥田　裕樹</td><td>ドラえもんに登場する主要キャラクターの人間関係を表現しました。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d024">d024</a></td><td>YukariTamura_CharacterList</td><td>itumono</td><td>田村ゆかりさんが演じたアニメキャラクターをまとめたもの</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d025">d025</a></td><td>NTTの系列会社</td><td>takashi muramatsu</td><td>NTTの系列会社をまとめました</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d026">d026</a></td><td>スタジオジブリ劇場公開作品一覧</td><td>遠藤稜典</td><td>スタジオジブリ劇場公開作品一覧とその監督</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d027">d027</a></td><td>名探偵コナンの登場人物リスト</td><td>MASAKI.S</td><td>人気コミック「名探偵コナン」に登場する主な人物のリストです。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d028">d028</a></td><td>Boeing_list</td><td>KATSUTOSHI IWAI</td><td>ボーイング航空機とその初飛行年</td><td><img src="../challenge2012/image/cc_licence/by-nc.png"/> </td></tr><tr><td><a href="show_status.php?id=d029">d029</a></td><td>Amagasaki_Serial_Killer_Suspected</td><td>Yudai</td><td>尼崎コンクリート事件の主要人物（名前の掲載されている人物のみ）を取り上げ、角田美代子との関係・年齢・生死について記述しました。</td><td><img src="../challenge2012/image/cc_licence/by-nc-nd.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d030">d030</a></td><td>２ちゃんねる掲示板のスレッドデータ</td><td>吉田光男</td><td>2006年以降に投稿された「２ちゃんねる掲示板」のスレッドデータです。3500万件以上のスレッドタイトルと700件以上の掲示板とを関連づけています。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d031">d031</a></td><td>市内避難所</td><td>鯖江市役所情報統計課</td><td>鯖江市内の避難所の施設名、位置情報</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d032">d032</a></td><td>消火栓情報</td><td>鯖江市役所情報統計課</td><td>鯖江市内の消火栓の名称と位置情報</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d033">d033</a></td><td>コミュニティバスの位置情報</td><td>鯖江市役所情報統計課</td><td>鯖江市が運営するコミュティバス”つつじバス”の運行情報</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d034">d034</a></td><td>日本さくら名所100選</td><td>菊池 尚也</td><td>財団法人日本さくらの会が1990年（平成2年）に、全国各地の桜の名所から100か所を選定したものです。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d035">d035</a></td><td>青空文庫 Linked Open Data</td><td>落合香織</td><td>青空文庫で公開されている作品の書誌情報を新たにRDFの形式に変換を行いました。また、国立国会図書館が提供する国立国会図書館サーチ、典拠データ検索・提供サービスであるWeb NDL Authorities、Wikipediaのデータを持つDBPedia（Japanese）と連携を行いました。</td><td><img src="../challenge2012/image/cc_licence/by-nc.png"/> </td></tr><tr class="even-row"><td><a href="../challenge2012/show_status_id_d036.html">d036</a></td><td>国会会議録データセット（対話コーパス）</td><td>中村聡史</td><td>国会会議録システム（http://kokkai.ndl.go.jp/SENTAKU/index.htm）から衆議院，参議院，両院協議会の1947年から2012年末日まで65年にわたる会議録から，
+<br>・発言日
+<br>・会議録上の発言者名
+<br>・名寄せした発言者名
+<br>・名寄せした発言者の役職名
+<br>・発言内容（句点までを1区切りの発言として扱っています）
+<br>・会議録のURL
+<br>をタブ区切りで整形したデータです．総発言数は約4840万（総発言長は約35億文字．展開後のファイルサイズは16GB程度）になります．
+<br>会議録上の発言者名は略記されるうえ，元データはまったく構造化されていないベタ書きのHTMLデータ（空白や改行によりなんとなく構造化されています）であり，国会会議録は議事録作成者にかなり左右されることがあるため，名寄せでかなり工夫しています．
+<br>実際には，会議録上の発言者名をもとに，会議録内で参加者一覧と思われる場所を発見し，会議録上の発言者名の部分一致で最適合する名前らしき部分を人物名として抜き出すようにしております．（元データ（特に参加者一覧）はかなり作成者依存なので一度ご覧になる事をおすすめします）．
+<br>なお，一部会議録作成者のタイプミスなどによって正常に名寄せできていないものもあります．ただ，その数は総量から考えるととても少ないので，分析上無視出来るレベルであると考えています．</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d037">d037</a></td><td>横浜歴史フィールド・ミュージアムAR</td><td>横浜歴史フィールド・ミュージアムAR</td><td>＜メンバー＞
+<br>上野直樹、関口昌幸、秋元慶太、 谷杉歩音、大崎 敬志朗、
+<br>朝香貴裕、藤川恵一、嘉門保夫、杉浦裕樹、広田盛一、生島高裕
+<br>＜作成データ＞
+<br>　「横浜歴史フィールド・ミュージアムAR」データ
+<br>　DBpediaからデータをSPARQL検索して作成する。
+<br>＜元データ＞
+<br>歴史関連データ
+<br>(1) 歴史的建造物、サンプル、当時の絵葉書から
+<br>   横浜道のオーバーレイしたjunaioサンプル
+<br>(2) 歴史的建造物
+<br>http://ja.wikipedia.org/wiki/%E6%A8%AA%E6%B5%9C%E5%B8%82%E8%AA%8D%E5%AE%9A%E6%AD%B4%E5%8F%B2%E7%9A%84%E5%BB%BA%E9%80%A0%E7%89%A9
+<br>(3) 発祥地
+<br>前田サイト、wikipediaの馬車道の項目にあるリスト
+<br>前田サイト
+<br>http://yokohamamap.blogspot.jp/
+<br>wikipediaの馬車道の項目
+<br>http://ja.wikipedia.org/wiki/%E6%A8%AA%E6%B5%9C%E9%81%93
+<br>(4) 開港前後
+<br>・1854 日米和親条約、開港資料館のあたり、横浜市中区日本大通（横浜港開港広場）
+<br>現横浜開港資料館所在地）に応接所
+<br>http://ja.wikipedia.org/wiki/%E6%97%A5%E7%B1%B3%E5%92%8C%E8%A6%AA%E6%9D%A1%E7%B4%84
+<br>・1863 海岸通り（バンド）
+<br>・1859 横浜道
+<br>http://ja.wikipedia.org/wiki/%E6%A8%AA%E6%B5%9C%E9%81%93
+<br>・吉田橋、前田橋、関所、1959
+<br>・馬車道　1967前後
+<br>下岡蓮杖　吉田橋わきに成駒屋という乗合馬車を作る。
+<br>http://ja.wikipedia.org/wiki/%E9%A6%AC%E8%BB%8A%E9%81%93_(%E6%A8%AA%E6%B5%9C%E5%B8%82)
+<br>日本初が多い。
+<br>歴史的建造物も多い。
+<br>・港崎遊郭、横浜公園
+<br>http://ja.wikipedia.org/wiki/%E6%B8%AF%E5%B4%8E%E9%81%8A%E9%83%AD
+<br>・日本大通り　大火
+<br>・英一番館
+<br>・イギリス波止場、フランス波止場
+<br>・大さん橋、象の鼻
+<br>http://ja.wikipedia.org/wiki/%E5%A4%A7%E3%81%95%E3%82%93%E6%A9%8B
+<br>・神奈川運上所　wikipediaなし
+<br>その西側を日本人町、東側を居留地とした。
+<br>マップ
+<br>http://www.timeslip-y.jp/kannai/unzyo-map.html
+<br>http://www.timeslip-y.jp/kannai/unzyosyo.html</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="../challenge2012/show_status_id_d038.html">d038</a></td><td>日本語Wikipediaオントロジー</td><td>玉川奨，香川宏介，森田武史，山口高平</td><td>Wikipediaは語彙網羅性および即時更新性に優れており，半構造情報資源であることからオントロジー構築のための情報資源として非常に優れています．DBpediaもWikipediaのInfoboxと呼ばれる構造からLODを構築していますが，Infoboxは記事全体の3分の1程度しか存在していません．私たちはこれまで，日本語版Wikipediaの様々な構造を利用し，日本語に特化した大規模で汎用的なオントロジーを構築する手法の研究を行ってきました．
+<br>本年度はLODとしての利便性の向上を図り，様々な標準語彙とプロパティの対応付けや他のLODとのリンクを追加しています．関係数も1500万を超え，非常に大規模なオントロジーとなっています．
+<br>
+<br>下記サンプルを参照すると，WikipediaやDBpediaだけでなく，LODAC(http://lod.ac/)，saveMLAK(http://savemlak.jp/wiki/saveMLAK)，青空文庫(http://www.aozora.gr.jp/)と対応付けされていることがわかります．
+<br>
+<br>福澤諭吉:http://www.wikipediaontology.org/instance/福澤諭吉
+<br>吾輩は猫である:http://www.wikipediaontology.org/instance/吾輩は猫である
+<br>ギアナウズラ:http://www.wikipediaontology.org/instance/ギアナウズラ
+<br>慶應義塾普通部:http://www.wikipediaontology.org/instance/慶應義塾普通部
+<br>
+<br>さらに，いくつかのプロパティについてはschema.org，GoodRelationsといった有名な標準語彙と対応付けされていることがわかります．
+<br>
+<br>周辺情報プロパティ:http://www.wikipediaontology.org/property/周辺情報
+<br>国籍プロパティ:http://www.wikipediaontology.org/property/国籍
+<br>
+<br>下記URLから検索が可能です．
+<br>検索:http://www.wikipediaontology.org/search.html
+<br>エンドポイント:http://www.wikipediaontology.org/query/</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d039">d039</a></td><td>デジタル台風</td><td>北本朝展</td><td>デジタル台風は、台風に関する現在から過去の多種多様なデータを検索可能なウェブサイトです。1978年以来の気象衛星画像、1951年以来の台風経路データ、1976年以来のアメダスデータなどの気象データを中心に、気象災害データや数値予報モデルデータ、オンラインニュースデータ、ソーシャルメディアデータなどのデータが、それぞれ何らかのリソースを介してつながる形でアーカイブされています。またデータの一部はKMLやRSS、Atom等の機械可読データとして提供しており、これを使って他のサービスを構築することもできます。実際に、我々が構築したブログパーツ「台風画報」だけではなく、他者が開発したiOSアプリやchumbyアプリなどでも、これらの機械可読データを用いて動作しているものが既にあります。現状ではRDF形式で提供するデータはありませんが、サイトの概念構造は台風番号など各種のリソースを核としたリンク構造として実装しているため、これをLODとして利用しやすい形式で出力することは、語彙さえ定めれば実施可能であると考えています。なおライセンスについては、将来的にはよりオープンなライセンスに移行したいとは考えていますが、現状では最終判断を下せないため「全ての権利を主張」に設定しています。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d040">d040</a></td><td>オープンデータ活用事例</td><td>東　富彦</td><td>オープンデータ活用した事例を集めたデータセットです。オープンデータとは、公的機関が保有するデータを民間に開放し、社会的課題解決からビジネスまで幅広く活用することによって、より良い社会の実現を目指す世界的な運動です。本事例集には、32ヶ国401事例について、事例の詳細、開発者、ビジネスモデルなどのデータが収録されています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d041">d041</a></td><td>Namespaces and Vocabularies</td><td>本間維</td><td>prefix.ccで公開されている名前空間リストと，実際の語彙定義ファイルとを関連付けたデータです．
+<br>メタデータ記述語彙を調べるためのSPARQLエンドポイントを構築したい場合などに，語彙定義ファイル収集先の一覧として利用できます．
+<br>詳細は http://mdlab.slis.tsukuba.ac.jp/lodc2012/vocab/ と https://github.com/tsunagun/vocab を参照してください．</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d042">d042</a></td><td>「SmartTown」実現のための自治会町内会予算分類基準COFOT</td><td>竹内久知</td><td>データセット部門 「SmartTown」実現のための自治会町内会予算分類基準COFOT
+<br>(Classification of the functions of town)
+<br>データセットの名称のURL  http://linkdata.org/work/rdf1s570i
+<br>
+<br>その他のデータセット
+<br>cofot.xlsx http://goo.gl/GG134
+<br>hodogaya.xlsx http://goo.gl/uo4Df
+<br>yosan_kanren.xlsx http://goo.gl/YmNnL
+<br>yosan_kesan.xlsx http://goo.gl/fdcQw
+<br>dataset.csv http://goo.gl/6TO3p
+<br>データセットの解説http://goo.gl/vBM1d
+<br>
+<br>「SmartTown」では、予算関連データをよりよく理解するための手始めとして、自治会町内会予算の分類コード体系と自治会町内会収入・支出科目分類表を組み合わせ、全国地域の自治会町内会の標準としての自治会町内会予算分類基準COFOT(Classification of the functions of town)原案を策定し、トライアル後に完成版に仕上げていく計画で作業を進めています。このCOFOT分類基準は国連の策定したグローバルスタンダード政府決算統計用国際標準COFOG(Classification of the functions of government)の３階層構造を解析し、集約して、準拠させています。COFOT原案策定と同時に、地方自治体予算に関して約3,000事業を超える横浜市事業計画書のデジタル化を終え、解析・データマイニングによりデファクト・スタンダードを目指した国際自治体予算比較基準COFOLG(local government)の原案作りを始めており、COFOTはCOFOL等への上位互換性を備えた体系となっています。
+<br>
+<br>「SmartTown」では、財政的な基盤の充実のために、地方自治体(横浜市)と地域(自治会町内会)の財政に関するデータのオープンデータ化を進め、予算関連データの可視化により地域住民がより解りやすく、学習し、理解し、地方自治体、自治会町内会、地域住民が対話するための手段としてICTを活用し、地方自治体予算の意義・意味(どのように市民に有効か)と効果(一人ひとりが実感できること)が市民に理解できるようにする手段と、さらに市政の広報活動を担っている自治会町内会単位でその地域で予算がどのように使われ、市民がそれらをどのように評価しているかを知る手段の提供により、行政に対して社会を良くすること、私達の町も良くするための地域(自治会町内会)財源充実のための提言を行えるソリューションを提供します。</td><td><img src="../challenge2012/image/cc_licence/by-nc.png"/> </td></tr><tr><td><a href="show_status.php?id=d043">d043</a></td><td>Linked Paper</td><td>三宅明日香</td><td>「Linked Paper」は論文間の内容の類似度を分析することで、関連性の高い論文を表示させるシステムです。
+<br>研究を行うためには、ある研究テーマを設定し、それに関連する論文を探し続ける必要があります。通常はCiNiiなどを使ってキーワード検索を行いますが、それだけでは関連する論文を探し出すのは難しいと考えられます。そこで、論文の内容に基づいて論文をリンクさせ、内容が近いものをランキングで表示し、たどっていけるシステムを提案しました。これによって、関連性の高い論文を探し出すのが簡単になります。また自分が検索してきたキーワードでは出てこなかった、意外な関連論文も読むことができるので、考えも膨らむのではないかと考えられます。このシステムは、研究を行う学生や学者にとって有用なものになるだろうと考えています。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d044">d044</a></td><td>ご当地グルメ</td><td>日吉健人</td><td>各地域のご当地グルメの概要、味覚、温度、主成分と地域名をまとめたもの。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d045">d045</a></td><td>JAXA宇宙航空データリスト</td><td>データ利用環境整備チーム(U-USE)</td><td>宇宙航空研究開発機構(JAXA)が所有する宇宙および航空に関連するデータのうち、地球観測衛星を中心として外部機関と何らかの形で共有しているデータの一部をリスト化し公開します。（2013年1月時点）。今後宇宙航空データのオープン化を促進するきっかけにしていきたいと思います。</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d046">d046</a></td><td>Ranking of Author and Journal</td><td>梶浦美咲</td><td>【概要】
+<br>「Ranking of Author and Journal」はCiNiiでの論文検索結果から、その検索キーワードと関連性の高い重要な著者・刊行物のランキングを生成するシステムです。
+<br>
+<br>【研究における問題点】
+<br>本来、自分の研究における重要なキーワードが分かったとしても、そのキーワードにおける重要な著者や刊行物が分からず、研究に関連しそうな重要な論文を読むことは困難です。
+<br>CiNiiでの現状として、関連著者・関連刊行物を示すカラムが既に存在しますが、そこからは関連性の高いものでのランキングは行われていません。
+<br>
+<br>【解決策】
+<br>そこで、キーワードによって検索されたものの中から、そのキーワードに関連性の高い重要な著者・刊行物のランキングを生成するシステムを提案します。関連性の高い著者や刊行物が分かれば、自分の研究に関係しそうな他の論文も読むことが可能になります。
+<br>それにより、自分の研究分野に対する理解を更に深めることができると考えられます。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d047">d047</a></td><td>2010年度 国勢調査</td><td>白山英一</td><td>平成22年国勢調査から、人口等基本集計（男女・年齢・配偶関係，世帯の構成、外国人（地域別総数、男性数、女性数、世帯人員(7区分)，65歳以上世帯員の有無別一般世帯数，一般世帯人員及び65歳以上世帯人員 ）、また、都道府県別医療施設数、都道府県別医療関係者数、都道府県別地域保健活動状況、都道府県別生活保護法による被保護実世帯数と実人員、都道府県別農家数と農家人口（販売農家）、都道府県別主要家畜・鶏の飼養戸数，飼養頭羽数と生乳・鶏卵生産量　等々。
+<br>
+<br>平成22年度の国勢調査の調査結果データを自由に簡単に２次利用を可能にすることが目的。　境域年次は2010年のものを抽出した。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d048">d048</a></td><td>CiNii 拡張プロジェクト</td><td>山口貴弘</td><td>論文検索サイト CiNii の機能を拡張し、利便性を高めることを提案します。 
+<br>・CiNii に登録されている論文を、予め分類しておき、国会図書館のように検索できるようにする。 
+<br>・CiNii の RDF データを利用して論文同士の関連性を可視化する。 
+<br>・他の論文ベースとの接続し、LOD として拡張する。 
+<br>・(ユーザーが) OpenSearch の結果を 4store などの RDF ストレージに蓄積して再利用する。 
+<br>・論文検索結果から関連した論文をレコメンドするサービスを行う。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d049">d049</a></td><td>Astro Database</td><td>山口貴弘</td><td>オープンになっている天体観測結果のデータベースを RDF 化したもの。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d050">d050</a></td><td>SUBA RDF</td><td>重光 俊亮</td><td>シロイヌナズナのタンパク質の細胞内局在化部位をまとめたデータベースであるSUBAをRDF化しました。また、SUBAとBioLODなどへのリンクも作成しました。<br/>
+<br>引用文献：Tanz, S. K. et al. SUBA3: a database for integrating experimentation and prediction to define the SUBcellular location of proteins in Arabidopsis. Nucleic Acids Research 41, D1185–91 (2012).</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d051">d051</a></td><td>depicts.azurewebsites.net</td><td>松澤有三</td><td>既存の地理ポリゴンデータをオープンデータとして使いやすいように加工・配信する試みです。
+<br>
+<br>【データセット】
+<br>加工成果として地球観測ポリゴン (14), 国ポリゴン（238), 都道府県ポリゴン(47) を CC-BY で公開します。市区町村ポリゴン(1,907) は元著作の利用規約に従い、All Rights Reserved として参考公開します。
+<br>
+<br>http://depicts.azurewebsites.net/
+<br>
+<br>【課題】
+<br>地理データは Shape や KML といったフォーマットのファイルとして、オープン
+<br>ライセンスで公開されることも多くなってきました。
+<br>しかしこのようなファイルはデスクトップアプリでの利用を前提としたり、特定のオンラインサービスで使ったり、といった使用方法が一般的です。それ自体の URL が顧みられることは少ないのではないでしょうか？
+<br>「リンクして使うデータ」としては心もとなく、FiveStar の評価は 2～3 あたりでしょうか。もったいない。
+<br>
+<br>【データ】
+<br>地理データのポリゴンデータを小さな単位の SVG 形式に加工して配信します。SVG には以下のメタデータが含まれます
+<br>・加工元への参照
+<br>・ライセンス
+<br>・GeoNames への参照
+<br>・地球観測ボキャブラリを使ったトピックの記述
+<br>
+<br>また、データとしての再利用性を重視して、SVG の構造は単純化しています。ルート svg 要素の直下に polygon 要素がおかれ、座標値として経度緯度が無加工で設定されています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d052">d052</a></td><td>平成24年度横浜市予算【部局別主要事業明細】データ</td><td>「税金はどこへ行った？」チームメンバ</td><td>Where Does My Money Go? 日本語版プロジェクトで構築したWebサイト http://spending.jp/ で利用している横浜市の主要事業の予算データを Linked Open Data (LOD) にしたものです。
+<br>主要事業に対応した横浜市の部局の情報もLOD化し、主要事業の部局とspending.jpの予算カテゴリ(分野)とをリンクさせています。
+<br>http://linkdata.org/work/rdf1s187i/apps (投稿データとは別のデータです。)
+<br>データモデルについては以下のスライド(p.4)をご覧ください。
+<br>http://www.slideshare.net/HiroyukiSato1/lod-for-yokohama-city-budget-plan</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d053">d053</a></td><td>藤沢市のオープンデータLOD</td><td>藤澤伸</td><td>藤沢市に関する情報、現在は主に施設・スポットの情報をLOD化しています。具体的には、藤沢市のグルメスポット情報・避難場所の情報・幼稚園の情報が、RDFファイルおよびsparql検索で取得可能です。 (sparql end point: http://data.sfc.keio.ac.jp/sparql )</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d054">d054</a></td><td>参議院議員リスト</td><td>黒川奈桜子</td><td>2013/1/29現在の参議院議員情報をCSV形式でまとめたファイルです。
+<br>http://www.sangiin.go.jp/japanese/joho1/kousei/giin/183/giin.htm　以下にある情報を元にしました。
+<br>以下の項目が含まれています。
+<br>・ID No.（参議院による議員紹介ページのURLから抽出したものです。ユニークですが連番ではありません）
+<br>・氏名（苗字と名前の間を半角スペースで区切ってあります）
+<br>・出馬エリア（都道府県名もしくは比例）
+<br>・次回選挙日程（H28.7.25もしくはH25.7.28）
+<br>・所属政党
+<br>・当選した年度（複数回当選の場合には\</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d055">d055</a></td><td>函館まちあるきルート情報</td><td>公立はこだて未来大学 高度ICT演習観光系プロジェクト</td><td>高度ICT演習観光系プロジェクト
+<br>M1：高橋正輝、坂井麻里恵
+<br>B3：岸野亜理沙、佐藤正徳、武田泰典、似内勇太、前田実優、松田隼士、山田亜美
+<br>B2：安藤大岳、伊林謙太、小野美郁、工藤卓也、西本光司、兵藤允彦
+<br>アドバイザー M2：永峰和弘　指導教員：奥野拓
+<br>
+<br>函館まちあるきルート情報
+<br>函館市が提供している「函館まちあるきマップ」（http://www.city.hakodate.hokkaido.jp/kankou/hako_machi/）のRDFデータを作成しました。「函館まちあるきマップ」とは、 函館の街並みを歩きながら楽しむことできるルートを掲載した紙媒体の地図です。このRDFデータには、「函館まちあるきマップ」全22コース分の、それぞれのコース名、所要時間、距離、消費カロリー、ルート上にある観光スポット名を含めました。</td><td><img src="../challenge2012/image/cc_licence/by-nd.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d056">d056</a></td><td>函館映画ロケ地情報</td><td>公立はこだて未来大学 高度ICT演習観光系プロジェクト</td><td>高度ICT演習観光系プロジェクト
+<br>M1：高橋正輝、坂井麻里恵
+<br>B3：岸野亜理沙、佐藤正徳、武田泰典、似内勇太、前田実優、松田隼士、山田亜美
+<br>B2：安藤大岳、伊林謙太、小野美郁、工藤卓也、西本光司、兵藤允彦
+<br>アドバイザー M2：永峰和弘　指導教員：奥野拓
+<br>
+<br>函館映画ロケ地情報
+<br>函館市が提供している「はこだてフィルムコミッション」（http://www.hakodate-fc.com/）のRDFデータを作成しました。「はこだてフィルムコミッション」とは、函館で撮影された映画のロケ地情報を掲載したWebサイトです。このRDFデータには、映画タイトル、監督、主演、ロケ地となったスポット名、ロケ地で撮影されたシーンの内容を含めました。</td><td><img src="../challenge2012/image/cc_licence/by-nd.png"/> </td></tr><tr><td><a href="show_status.php?id=d057">d057</a></td><td>2009年～2012年に刊行されたライトノベル一覧</td><td>黒川奈桜子</td><td>「ラノベの杜」http://ranobe-mori.net/に掲載された情報を元に2009年1月から2012年12月までに刊行されたライトノベルをCSV形式でまとめたファイルです。以下の情報が含まれています。
+<br>・発売日（yyyy/(m)m/(d)d）
+<br>・レーベル
+<br>・書名
+<br>・著者
+<br>・イラストレーター
+<br>・価格
+<br>・ISBN</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d058">d058</a></td><td>函館土木遺産情報</td><td>公立はこだて未来大学 高度ICT演習観光系プロジェクト</td><td>高度ICT演習観光系プロジェクト
+<br>M1：高橋正輝、坂井麻里恵
+<br>B3：岸野亜理沙、佐藤正徳、武田泰典、似内勇太、前田実優、松田隼士、山田亜美
+<br>B2：安藤大岳、伊林謙太、小野美郁、工藤卓也、西本光司、兵藤允彦
+<br>アドバイザー M2：永峰和弘　指導教員：奥野拓
+<br>
+<br>函館土木遺産情報
+<br>「函館近代化遺産ポータルサイト」（http://hnct-pbl.jimdo.com/ ）のRDFデータを作成しました。「函館近代化遺産ポータルサイト」とは、函館の歴史ある土木建築物(ダムや堤防など)の情報を掲載したWebサイトです。このWebサイトは函館工業高等専門学校のPBLで株式会社ノース技研の指導の下に作成されました。このRDFデータには、土木建築物の名前、概要、住所、緯度・経度、施工者、竣工年を含めました。</td><td><img src="../challenge2012/image/cc_licence/by-nd.png"/> </td></tr><tr><td><a href="show_status.php?id=d060">d060</a></td><td>マウス・フェノーム</td><td>理研BRC マウス表現型知識化ユニット</td><td>生物の表現型を、生命科学分野のオントロジーを用いて、網羅的に表現するRDFの形式を策定しました。これを用いて、バイオリソースセンターに寄託されているマウスの表現型をまとめています。このデータは、https://database.riken.jp/sw/ja/表現型アノテーション/cria315s5i/　において、表形式でブラウズできる他、前回投稿したマウス系統そのものと組み合わせて、https://database.riken.jp/sw/ja/C57BL_6-KitW-v__/cria315s1ria315u100000000142i/　のように、同じ表現型のマウス情報を収集することにも役立っています。</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d061">d061</a></td><td>地方自治体Facebookページ</td><td>庄司昌彦</td><td>国際大学GLOCOM地域SNS研究会として、庄司昌彦、林雅之、菊地映輝が作成した２０１３年１月時点の日本国内の地方自治体Facebookページのリストです。都道府県、政令指定都市、県庁所在地＋αをカバーしています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d062">d062</a></td><td>横浜市ごみ分別情報LOD</td><td>藤澤貴智,清水たくみ,小林巌生</td><td>ゴミ分別は地方自治体毎に独自のルールがあり、引越をするたびに学習必要がありますが、横浜では他の地域と比較しても複雑です。横浜市のごみと資源の分別情報を整理し、回収区分、回収日情報とともにLOD化を実施しました。今回、ごみ品目の情報や分別ルールをLOD化することでよりこれまで出来なかった柔軟な問い合わせが可能になりました。
+<br>
+<br>出典元は横浜市資源循環局です。本データ作成にあたり使用許可を頂き作成しました。また、ごみ品目の例外的な出し方の情報の抽出などの編集については、藤澤貴智（横浜市在住）によって行なわれました。
+<br>
+<br>エンドポイントにはSPARQLEPCUを使わせてもらいました。
+<br>http://lodcu.cs.chubu.ac.jp/SparqlEPCU/project.jsp?projectID=gomi_yokohama</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d063">d063</a></td><td>京都国際マンガミュージアム書誌情報LOD</td><td>カ ブンリン</td><td>京都国際マンガミュージアムから提供いただいた所蔵マンガの書誌データをLOD化し、一冊一冊のマンガの本のデータから作品シリーズのデータとして利用できるように再構成しました。また作品シリーズをDBpedia Japaneseと紐付けしました。
+<br>
+<br>協力：京都精華大学 国際マンガ研究センター http://imrc.jp/</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d064">d064</a></td><td>横濱写真アルバムLOD</td><td>肥田野正輝、伊藤宗太、荒木泰介、小林巌生</td><td>横浜開港150周年 みんなでつくる 横濱写真アルバム（http://www.yokohama-album.jp）は横浜商工会議所の横浜開港150周年事業として公開されました。地元の企業や市民より1万枚を超える写真が投稿されており、中には横浜の歴史を映した古写真も多く、興味深いコンテンツを数多く有しています。ウェブサイト自体に検索APIも備わっていますが、今回、横濱写真アルバムの存在を広く知ってもらい、また、写真を活用してもらうためにLOD化にチャレンジしました。横浜オープンデータハッカソンの場を借り、Linkdata.orgを活用することで、短時間でデータの作成を終えることができました。
+<br>
+<br>＜データの内容＞
+<br>クリエイティブ・コモンズ　ライセンスが指定してあるもののみ、2756枚をLOD化しました。
+<br>メタ情報としてタイトルや説明文の他、緯度経度、撮影日時、なども含まれます。
+<br>
+<br>＜ライセンス＞
+<br>データのライセンスはCC-BYとしますが、写真自体のライセンスは個々にCCライセンスが設定されています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d065">d065</a></td><td>公共施設マップ</td><td>会津若松市 情報政策課</td><td>市及び公共的な施設の連絡先及び地図データ</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d066">d066</a></td><td>毎月1歳毎年齢別人口</td><td>会津若松市 情報政策課</td><td>住基人口の月毎の年齢別、男女別の人数</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d067">d067</a></td><td>毎月大字別人口</td><td>会津若松市 情報政策課</td><td>住基人口の年齢毎、大字毎の男女別の人数</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d069">d069</a></td><td>西山動物園の動物情報</td><td>鯖江市役所情報統計課</td><td>西山動物園の動物一覧です。鯖江市生まれのレッサーパンダは全国の動物園にいます。これらの動物の戸籍につながるような個体情報を目指しています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d070">d070</a></td><td>鯖江市文化財情報</td><td>鯖江市役所情報統計課</td><td>鯖江市内の文化財の写真、説明などの情報です。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d071">d071</a></td><td>Genia Event Extraction Task Set 2013</td><td>金進東、王悦、山本泰智</td><td>本データセットはアプリケーション部門に応募しているPubAnnotationシステムを使って開発された論文アノテーションのデータセットである。下記の背景は、アプリケーション部門に応募している a037、PubAnnotationについての記述と同じ内容である。
+<br>
+<br>【背景】 
+<br>・論文に書かれた膨大な生命科学知識 
+<br>生命科学分野では、研究の成果は主に自然言語で書かれた論文という形で出版されるが、そこに記述されている様々な知識の量は膨大で、特定の分野の専門家ですら関連する全ての論文を読み、把握することは非常に困難な状況である。そこで、機械的な処理により、論文中から、生命科学において重要な概念である遺伝子やたんぱく質に関する記述を自動的に抽出する技術が開発されている。 
+<br>
+<br>・機械を用いた解決策 
+<br>より良い精度を得るために、まず最初に領域の専門家が、それらの概念を表す語(領域固有語)を特定し、機械はそれを手本として同じ結果を出すべく動作するようプログラムされる、という手法が取られている。この、領域固有語を特定する作業をここではアノテーションと呼ぶが、これは、航空写真に写る駅やレストランなどの建物にラベル付けしていく作業と似ている。現在、世界各地の様々な研究機関がアノテーションを行い、独自の形式で公開しているため、複数のアノテーションデータを集めて統合し、利用することが困難であるという問題点がある。また、アノテーションおよびそれに必要な準備の双方ともに非常に手間ひまのかかる作業である。 
+<br>
+<br>・アノテーションデータの構築
+<br>人間の免疫機能に深く関係するたんぱく質であるNFkBの制御に関する最新の論文を集め、領域の専門家が、論文中に書かれているたんぱく質名とその他の物質名を特定し、それらの物質間で起こる様々な生物的現象(たんぱく質の相互作用や遺伝子発現の制御等)を細かく構造化した形式で記述した。
+<br>本データセットはそれ自体でLODセットとして公開されており、また、同様のアノテーションを自動化するシステム開発の国際チャレンジ会議であるBioNLP Shared Taskの一つのべンチマークデータとしても使われている。今後は、上記の分野以外の論文に対しても同様のアノテーションデータが様々な組織で構築され、公開されることを期待している。
+<br>
+<br>・統計
+<br>論文数：20本
+<br>アノテーションされたデータの量：128,776 triples</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d072">d072</a></td><td>地域SNS参考文献リスト</td><td>菊地 映輝</td><td>国際大学GLOCOM地域SNS研究会として、庄司昌彦、菊地映輝が作成した２０１1年１2月末時点での地域SNS参考文献リストです。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d073">d073</a></td><td>Girls Fashion Data</td><td>中尾 京子，洞渕 彩未</td><td>【 ファッションについてのデータセット 】
+<br>
+<br>BrandList
+<br>女性ファッションブランドについてまとめたデータセット
+<br>
+<br>BrandListByMagazine
+<br>雑誌に掲載されているブランドリストをもとに分類した女性ファッションブランドのデータセット
+<br>
+<br>magazineType
+<br>雑誌をファッションスタイルごとに分類したデータセット
+<br>
+<br>photo_to_magazine
+<br>ファッションスタイルを表現している写真と写真に近いスタイルが掲載されている雑誌を分類したデータセット</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d074">d074</a></td><td>鯖江市農産物直売所</td><td>鯖江市役所情報統計課</td><td>市内の農産物直売所</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d075">d075</a></td><td>鯖江市議会議員情報</td><td>鯖江市役所情報統計課</td><td>鯖江市議会議員の情報</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d076">d076</a></td><td>九州の温泉地一覧</td><td>日高 雄介</td><td>九州にある温泉地の一覧です。それぞれの温泉地の効能や泉質、最寄り駅などの情報を含んでいます。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d077">d077</a></td><td>温泉の効能一覧</td><td>日高 雄介</td><td>温泉の泉質別効能の一覧です。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d078">d078</a></td><td>Open DATA METI</td><td>経済産業省</td><td>経済産業省自身（所管の独立行政法人等を含む）の保有データを対象にデータ公開の環境整備を図り、実際に公開を進めるとともに、公開データを利活用したビジネスが展開する社会基盤を整えていくことで、オープンデータによる経済活性化の促進を図る目的で推進されるDATA METI構想。その取り組みの一環でデータカタログサイト「Open DATA METI」を公開しました。現在は統計データと白書データを登録しています。
+<br>本サイトはオープンソースであるCKANを応用し構築しており、データセットに関するメタ情報はLODとして取得できる他、APIを利用することでもデータにアクセスすることが可能です。
+<br>登録されているデータはクリエイティブ・コモンズ・ライセンスを採用しており、自由に利用していただけます。
+<br>詳しくはOpen DATA METIのウェブサイトをご覧ください。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d079">d079</a></td><td>ダジャレで世界旅行♡</td><td>佐藤 貴未</td><td>　従来のLODデータにはない「地名に関連するダジャレ」のデータ化という新たな分野にチャレンジしました。
+<br>　本データは、1,066種のダジャレを有しています。うち約750件は「地名ダジャレ chakuwiki」を参考にさせていただいており、その他のものはオリジナルもしくは、様々なホームページ上から引用しました。
+<br>　また、データの中には、地名の緯度・経度の情報が含まれています。これにより、Google Mapと関連づけることで、地図上にその地に関連したダジャレを表示させることが可能となりました。また、緯度・経度は、その土地の中央値だけではなく、その地名の範囲を示すべく領域の左上の座標の緯度・経度、そして右下の座標の緯度・経度も入力しました。本データの応用には、地理空間情報が含まれるゲームや、GPS機能を有した端末を所持した者に対して、その地に関連するダジャレを再生する音声アプリケーションなどが考えられます。
+<br>　多くの人々に、ダジャレを通じてユーモアを寄与できる作品だと考えています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d080">d080</a></td><td>セマンティックWebコンファレンス講演情報</td><td>s3works</td><td>セマンテックWeb委員会が開催した「セマンティックWebコンファレンス」での講演情報をLinked Open Data化したものです．SPARQLによる検索も可能です．講演者の所属は，開催当時のものです．現在，2012年の講演情報のみです．</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d081">d081</a></td><td>日本のデータカタログサイト</td><td>CKAN日本語コミュニティ</td><td>本サイトは日本のデータカタログをまとめるという目的で，有志のコミュニティが運営しています．サイトにはデータポータルソフトウェアであるCKAN(http://ckan.org)を用いています．2013年1月31日現在，オープンガバメントを推進している地方公共団体のデータを中心に，125のデータセットがまとめられています．
+<br>
+<br>データカタログは三通りの方法で利用可能です．一つはLinked Data，もう一つはデータダンプ，最後はCKAN APIです．まず，個々のデータカタログはLinked Dataとして提供されています．現在はCKANを改造してあり，RDF/XMLとN3形式で取得可能です．例えば鯖江市人口，気温のRDF/XMLはhttp://data.linkedopendata.jp/dataset/sabae-tokei.rdf, N3はhttp://data.linkedopendata.jp/dataset/sabae-tokei.n3になります．curl -iH \'Accept text/n3\' http://data.linkedopendata.jp/dataset/sabae-tokei のようにContent-negotiationにも対応しています．  
+<br>
+<br>次に，データカタログ全体については，データダンプとして http://data.linkedopendata.jp/dump/ でCSVとJSON形式にて提供されています．これは毎日更新されています．
+<br>
+<br>最後に，APIについての詳しい説明はCKANのドキュメント (http://docs.ckan.org/en/latest/api.html) をご参考ください．サイトのアカウントを作成し，API keyを取得すれば誰でも利用可能です．
+<br>ライセンスはODbL (オープンデータベースライセンス, http://opendatacommons.org/licenses/odbl/1.0/) になります．ODbLはOpen DefinitionのConformant License  (http://opendefinition.org/licenses/)として認められているライセンスです．クレジット表記は CKAN Japanese Community でお願いします．</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d082">d082</a></td><td>Google Trends meets DBpedia Japanese</td><td>s3works</td><td>DBpedia Japanese に登録されていないトレンドワードを収集したデータセットです．ScraperWiki を利用して Google Trends 日本語版を毎日1回スクレイピングして，トレンドワード上位20件を取得．各ワードを DBpedia Japanese に完全一致で問い合わせし，登録語にはIRIを付与しています．</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="../challenge2012/show_status_id_d083.html">d083</a></td><td>疾患連鎖LOD</td><td>古崎晃司，加藤敦丈，今井健，大江和彦，溝口理一郎</td><td>「異常状態の因果連鎖」に基づいた疾患定義と，その患者に典型的に見られる異常状態（原因や症状）の因果連鎖に関するデータセットです．6つの診療科の代表的な約1,800の疾患に含まれる，約15,000の異常状態について，臨床医によって記述された因果関係がデータ化されており，
+<br>・各疾患がどのような原因で発症し，どのような症状を引き起こすか？
+<br>・ある異常がどのような因果連鎖を経て，どのような状態を引き起こし，どのような疾患となるか？　…
+<br>といった情報を得ることが出来ます．
+<br>　データセットの公開方法としては，下記の２つのWebサービスを提供しています．（共にiOS，Android端末にも対応）．
+<br>・疾患連鎖LOD Viewer
+<br>疾患連鎖（疾患定義に含まれる因果連鎖）の可視化システムです．
+<br>-「疾患の分類（is-a）階層」から表示する疾患を選択
+<br>-「疾患名」，「その疾患に含まれる異常状態名」から疾患定義を検索
+<br>の何れかで選択した疾患連鎖を可視化して表示します．
+<br>・SPARQL Endpoint
+<br>簡易クエリ入力支援機能付きのSPARQL Endpointです．
+<br>通常のSPARQLクエリによる検索に加え，
+<br>- 検索結果から選択したリソースの可視化
+<br>- 検索結果が疾患の場合は，上述の「疾患連鎖LOD Viewer」と連携して疾患連鎖を可視化
+<br>ができます．
+<br>　　
+<br>※なお，本データセットは「厚生労働省医療知識基盤研究開発事業」の助成を受けて開発中の成果である「疾患オントロジー」の一部を公開しているものです．
+<br>今後，データセットの更新，利用方法の詳細などにつきましては，公開サイトにて随時，ご案内する予定です．</td><td><img src="../challenge2012/image/cc_licence/by-nc-nd.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d084">d084</a></td><td>落語家LOD</td><td>本間維</td><td>落語家の名跡の変化や，落語家間での名跡の継承などを表現したデータセット．</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=d085">d085</a></td><td>LODC Works</td><td>本間維</td><td>LOD作品のLOD．
+<br>
+<br>LODチャレンジ2011と2012で公開された作品の情報をRDF化したデータセットです．
+<br>各作品のエントリーシートに記述された内容を元にデータを作成しています．
+<br>「関連するデータセット」などの項目も利用して，年度や部門を超えた作品の参照関係を記述できました．
+<br>エントリー〆切後に再度データの更新を行う予定です．</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d086">d086</a></td><td>2012年の衆院選に関するメディア情報LOD</td><td>越川兼地（学生）</td><td>メディア情報から事象情報を抽出し，Linked Dataで事象情報を表現する手法を用いて，2012年12月に行われた衆院選に関するマスメディア(大手ニュースサイト)及びソーシャルメディア(Twitter)の情報をLinked Dataにしたものです。
+<br>
+<br>詳しくは
+<br>http://benzaiten.ohsuga.is.uec.ac.jp/k-koshikawa/MediaLinkedData/media_lod.pdf 
+<br>を参照して下さい。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=d087">d087</a></td><td>MPLOD &amp; MPO</td><td>川島秀一、岡本忍</td><td>本データセットは、微生物のいくつかの表現型に関する情報をLOD化したものである。
+<br>表現型とは、外部から観察可能な生物の示す形態や生理等の形質を意味し、遺伝情報とともに、生命現象を研究する上で重要なデータである。しかし、遺伝情報が、ゲノム配列情報として急速に蓄積されている一方で、表現型の情報は主として文献に記載されていることから、網羅的な電子化は遅れている。DBCLSでは、ゲノム配列のRDF化を進めており、表現型の情報が同じくRDF化されれば、これまで困難であった遺伝情報および表現型情報を統合したデータ検索が可能になる。幸い、微生物に関しては、ゲノムプロジェクトのメタデータを整理したGOLDデータベースにGOLDデータベースに表現型情報が蓄積されつつある。今回我々は、微生物表現型情報を記載するのに必要なオントロジー、MPO: Microbial Phenotype Ontology を開発し、さらにMPOを利用して、GOLDデータベースに記載された表現型情報のうち、細胞の形態、酸素要求性と生育温度による分類に関してRDF化を行った。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=d088">d088</a></td><td>鯖江観光LOD</td><td>鯖江観光LODチーム</td><td>第3回LODチャレンジデー「オープンデータハッカソンin鯖江」の成果をまとめたものです． 
+<br>公開されている鯖江の観光関係のLODに相互リンクを追加することで，観光LODとしての価値を高めることを狙いました． 
+<br>作業内容は， http://goo.gl/cA5xO をご覧ください．</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=d089">d089</a></td><td>ギリシャ神話の相関図</td><td>Aya_Igarashi</td><td>複雑なギリシャ神話の相関図を示した。 foaf:knowsは自身の子供に対して関係となっている。 同じ子を持つ親は夫婦であり、子は親を2柱持つ。 また、子の親が1柱であった場合1柱の神から生まれてきていることが分かる。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr>						</tbody>
+					</table>
+					
+				</div>
+			</div><!--// #mainBK //-->
+		</div><!--// #wrapperAll //-->
+
+		<div id="footerPankuzu">
+			<ul>
+				<li><a href="index.html" title="ホーム">HOME</a></li>
+				<li>データセット部門</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<a id="sponsor" name="sponsor"></a>
+			<div id="footerBody">
+			<div id="btmSponsorBK">
+					<h3><img src="../challenge2012/common/img/headplatinum_wb.jpg" alt="platinum sponsors"/></h3>
+					<ul class="platinum">
+						<li><a href="http://www.goo.ne.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores/goo_p.png" alt="goo" width="180" height="180"></a></li>
+						<li><a href="http://www.ibm.com/jp/ja/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/ibm180.png" alt="日本アイ・ビー・エム株式会社" width="180" height="180"></a></li>
+						<li><a href="http://www.microsoft.com/japan" target="_blank"><img src="../challenge2012/common/img/sponsores2012/microsoft180.png" alt="日本マイクロソフト株式会社" width="180" height="180"></a></li>
+						<li><a href="http://jp.fujitsu.com/" target="_blank"><img src="../challenge2012/common/img/sponsores/fujitsu_p.png" alt="fujitsu" width="180" height="180"></a></li>
+						<li><a href="http://citydata.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/citydata.png" alt="LinkData
+独立行政法人　理化学研究所" width="180" height="180"></a></li>
+					</ul>
+					<h3><img src="../challenge2012/common/img/headgold_wb.jpg" alt="gold sponsors"></h3>
+					<ul class="gold">
+						<li><a href="http://www.imjp.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/imj140.png" alt="株式会社アイ・エム・ジェイ"></a></li>
+						<li><a href="http://www.indigo.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/indigo.png" alt="インディゴ株式会社"></a></li>
+						<li><a href="http://www.jst.go.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/jst.png" alt="独立行政法人　科学技術振興機構"></a></li>
+						<li><a href="http://live.cybozu.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/cybozulive280140.png" alt="サイボウズ株式会社"></a></li>
+						<li><a href="http://www.zenrin.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/zenrin.png" alt="株式会社ゼンリン"></a></li>
+						<li><a href="http://www.saltlux.com/jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/saltlux.png" alt="株式会社ソルトルックス"></a></li>
+						<li><a href="http://virtualtech.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/virtualteck280140.png" alt="日本仮想化技術株式会社"></a></li>
+						<li><a href="http://biosciencedbc.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/nbdc.png" alt="バイオサイエンスデータベースセンター"></a></li>
+						<li><a href="http://www.machi-j.net/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/rits.png" alt="ＮＰＯまちづくりジャパン事務局 リッツ総合研究所"></a></li>
+					</ul>
+					<h3 class="footerDataPartner">データ提供パートナー</h3>
+					<ul class="gold">
+						<li><a href="http://www.osmf.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/osmf.png" alt="オープンストリートマップ・ファウンデーション・ジャパン"/></a></li>
+						<li><a href="http://kaken.nii.ac.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/kaken.png" alt="国立情報学研究所 KAKEN: 科学研究費助成事業データベース"/></a></li>
+						<li><a href="http://ci.nii.ac.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/Cinii.png" alt="国立情報学研究所 CiNii（NII論文情報ナビゲータ[サイニィ]）"/></a></li>
+						<li><a href="http://www.city.sabae.fukui.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/sabae.png" alt="鯖江市役所"/></a></li>
+						<li><a href="http://aigid.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/agid.png" alt="社会基盤情報流通推進協議会"/></a></li>
+						<li><a href="http://www.csis.u-tokyo.ac.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/Csis.png" alt="東京大学 空間情報科学研究センター"/></a></li>
+						<li><a href="http://www.editoria.u-tokyo.ac.jp/dias/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/dias.png" alt="東京大学　地球観測データ統融合連携研究機構"/></a></li>
+						<li><a href="http://www.yaf.or.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/yaf.png" alt="公益財団法人　横浜市芸術文化振興財団"/></a></li>
+						<li><a href="http://lod.ac/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/lodac.png" alt="LODAC: Linked Open Data for Academia"/></a></li>
+					</ul>
+					<h3 class="footerDataPartner">基盤提供パートナー</h3>
+					<ul class="gold">
+						<li><a href="http://www.asial.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/asial140.png" alt="アシアル株式会社"></a></li>
+						<li><a href="http://www.microsoft.com/japan" target="_blank"><img src="../challenge2012/common/img/sponsores2012/microsoft140.png" alt="日本マイクロソフト株式会社"></a></li>
+						<li><a href="http://linkdata.org/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/linkdata140.png" alt="LinkData 独立行政法人　理化学研究所"></a></li>
+					</ul>			
+					<h3 class="footerDataPartner">メディアパートナー</h3>
+					<ul class="gold">
+						<li><a href="http://itpro.nikkeibp.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/ITpro.png" alt="ITPro" width="140" height="140"></a></li>
+						<li><a href="http://www.atmarkit.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/atIT.png" alt="at mark IT" width="140" height="140"></a></li>
+					</ul>	
+					<h3 class="footerDataPartner">サポーター（後援団体）</h3>
+					<ul class="supporter">
+						<li><a href="http://okfn.jp/" target="_blank">Open Knowledge Foundation 日本グループ</a></li>
+						<li><a href="http://creative-city.jp/" target="_blank">クリエイティブ・シティ・コンソーシアム</a></li>
+						<li><a href="http://www.meti.go.jp/" target="_blank">経済産業省</a></li>
+						<li><a href="http://www.g-contents.jp/" target="_blank">gコンテンツ流通推進協議会</a></li>
+						<li><a href="http://www.ipa.go.jp/" target="_blank">独立行政法人　情報処理推進機構</a></li>
+						<li><a href="http://www.ipsj.or.jp/" target="_blank">一般社団法人　情報処理学会</a></li>
+						<li><a href="http://sigdd.sakura.ne.jp/" target="_blank">一般社団法人　情報処理学会　デジタルドキュメント研究会</a></li>
+						<li><a href="http://www.ai-gakkai.or.jp/jsai/" target="_blank">社団法人　人工知能学会</a></li>
+						<li><a href="http://sigswo.org/" target="_blank">社団法人　人工知能学会　セマンティックウェブとオントロジー研究会</a></li>
+						<li><a href="../s-web.sfc_subdomain/index.html" target="_blank">セマンティックWeb委員会</a></li>
+						<li><a href="http://www.soumu.go.jp/" target="_blank">総務省</a></li>
+						<li><a href="http://www.jeita.or.jp/" target="_blank">一般社団法人　電子情報技術産業協会</a></li>
+						<li><a href="http://linkedopendata.jp/" target="_blank">特定非営利活動法人　リンクト・オープン・データ・イニシアティブ</a></li>
+						<li><a href="http://linkeddata.jp/" target="_blank">LinkedData勉強会</a></li>
+					</ul>
+				</div>
+				<div id="footerMenu">
+					<ul>
+						<li><a href="../challenge2012/contact.html" title="お問い合わせ">お問い合わせ</a></li>
+						<li><a href="../challenge2012/committee.html" title="実行委員会">実行委員会</a></li>
+						<li><a href="../challenge2012/rules.html" title="会則">会則</a></li>
+						<li><a href="http://www.facebook.com/LOD.challenge.Japan" title="facebookページ" target="_blank">facebookページ</a></li>
+					</ul>
+					<p id="facebook"><a href="http://www.facebook.com/LOD.challenge.Japan" title="LOD Challenge 2012 facebookページ"><img src="../challenge2012/common/img/facebook.png" alt="Facebook" width="32" height="32"/></a></p>
+				</div>
+				<div id="credit">
+					<p>Copyright&copy;2012 Linked Open Data Challenge Japan 2012.</p>
+				</div><!--// credit //-->
+			</div>
+		</div><!--// footer //-->
+	</body>
+</html>

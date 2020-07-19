@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="Content-Style-Type" content="text/css"/>
+		<meta name="description" content="Linked Open Data (LOD) の仕組み作りやデータづくりにチャレンジされている方々による活動の発表の場を提供します。"/>
+		<meta name="keywords" content="lod,linked data,linked open data,lod challenge,linked open data challenge japan,LODチャレンジ"/>
+		<link rel="shortcut icon" href="../challenge2012/favicon.ico"/>
+		<meta property="og:image" content="http://lod.sfc.keio.ac.jp/challenge2012/common/img/mainvisual2.png"/>
+		<meta property="og:url" content="http://lod.sfc.keio.ac.jp/challenge2012/"/>
+		<meta property="og:title" content="LOD Challenge Japan 2012"/>
+		<meta property="og:site_name" content="LOD Challenge Japan 2012"/>
+		<meta property="og:type" content="website"/>
+		<link rel="stylesheet" type="text/css" media="all" href="../challenge2012/common/css/import.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="../challenge2012/common/css/form.css"/>
+		<title>アプリケーション部門 | Linked Open Data Challenge Japan 2012</title>
+		<script type="text/javascript" src="../ajax/libs/jquery/1-4-4/jquery.min.js"></script>
+		<script type="text/javascript" src="../challenge2012/common/js/droppy.js"></script>
+		<script type="text/javascript" src="../challenge2012/common/js/image_select.js"></script>
+		<script type="text/javascript" src="../challenge2012/common/js/jShowOff/jquery.jshowoff.min.js"></script>
+		<!--[if IE 6]>
+		<script src="common/js/DD_belatedPNG.js"></script>
+		<script>
+		DD_belatedPNG.fix('img, .png');
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			$(function() {
+				$("#nav").droppy({speed:50});
+			});
+		</script>
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26316207-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+	<body>
+		<div id="pageTop"><a id="pageTop" name="pageTop"></a></div>
+		<div id="wrapperAll">
+			<div id="header">
+				<h1><a href="../challenge2012/index.html" title="Linked Open Data Challenge Japan 2012"><img src="../challenge2012/common/img/logo2012.png" alt="LODチャレンジ Japan / Linked Open Data Challenge Japan 2012" width="335" height="26"/></a></h1>
+			</div><!--// #header //-->
+			<div id="mainBK">
+				<div id="mainMenu">
+					<ul id="nav">
+						<li id="hm001"><a href="../challenge2012/objective.html" title="開催情報">開催情報</a>
+						<ul>
+							<li><a href="../challenge2012/objective.html">開催趣旨</a></li>
+							<li><a href="../challenge2012/outline.html">応募について</a></li>
+							<li><a href="../challenge2012/category.html">エントリー部門</a></li>
+							<li><a href="../challenge2012/evaluate.html">審査について</a></li>
+							<li><a href="../challenge2012/entry_terms.html">応募規定</a></li>
+							<li><a href="../challenge2012/faq.html">FAQ</a></li>
+							<li><a href="../challenge2011/index.html" target="_blank">LODチャレンジJapan2011アーカイブ</a></li>
+						</ul></li>
+						<li id="hm002"><a href="javascript:void(0);" title="エントリー">エントリー</a>
+						<ul>
+							<li><a href="../challenge2012/dataset.html">データセット部門</a></li>
+							<li><a href="../challenge2012/idea.html">アイデア部門</a></li>
+							<li><a href="../challenge2012/application.html">アプリケーション部門</a></li>
+							<li><a href="../challenge2012/visualization.html">ビジュアライゼーション部門</a></li>
+						</ul></li>
+						<li id="hm003"><a href="javascript:void(0);" title="スポンサー">スポンサー</a>
+						<ul>
+							<li><a href="../challenge2012/resource_usage.html">データ／基盤パートナーのリソース利用方法</a></li>
+							<li><a href="#sponsor">スポンサー一覧</a></li>
+							<li><a href="../challenge2012/sponsorrecruit.html">スポンサー募集</a></li>
+							<li><a href="../challenge2012/partner_platform_data.html">データ提供／基盤提供パートナー募集</a></li>
+							<li><a href="../challenge2012/partner_media.html">メディアパートナー募集</a></li>
+							<li><a href="../challenge2012/supporter.html">サポーター募集</a></li>
+						</ul></li>
+						<li id="hm004"><a href="../challenge2012/event.html" title="イベント">イベント</a>
+						<li id="hm005"><a href="javascript:void(0);" title="LODとは">LODとは</a>
+							<ul>
+								<li><a href="../challenge2012/aboutlod.html">lodとは？</a></li>
+								<li><a href="../challenge2012/slideresources2.html">技術解説</a></li>
+								<li><a href="../challenge2012/slideresources.html">分野別事例紹介</a></li>
+								<li><a href="../challenge2012/link.html">リンク集</a></li>
+							</ul>
+						</li>
+						<li id="hm006"><a href="../blog.html" title="公式ブログ">公式ブログ</a></li>
+					</ul>
+				</div><!--// mainMenu //-->				<a id="category" name="category"></a>
+				<div id="contentsBK">
+					<h2 class="iconAppliS">アプリケーション部門</h2>
+					<div class="entry-container">
+						<p>あなたの作品をアプリケーション部門に応募しよう！</p>
+						<a href="../challenge2012/apply_application_category.html" title="応募する"></a>
+					</div>
+					<p class="withArrow"><a href="../challenge2012/category.html#categoryAppli" title="アプリケーション部門の詳細">アプリケーション部門の詳細はコチラ</a></p>
+					<h3>応募作品一覧</h3>
+					
+					<table id="entry-list" class="application-form">
+						<thead>
+							<tr class="column-definition">
+								<th style="width:110px;">エントリー番号</th>
+								<th style="width:120px;">作品の名称</th>
+								<th style="width:100px;">応募者</th>
+								<th>応募概要</th>
+								<th style="width:185px;">エントリー情報</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td><a href="../challenge2012/show_status_id_a001.html">a001</a></td><td>SparqlEPCU</td><td>年岡晃一、藤本椋也（学生）、安江翔平（学生）</td><td>SparqlEPCUはLODアプリケーションサイトの構築支援を行うフレームワークであり、クラウドとしてのRDF格納サイトとなります。
+<br>LODアプリケーションサイトの作成時に、RDFを格納するデータベースを用意する必要がなくなります。
+<br>RDF格納サイトへアクセスするJavaScriptライブラリを使うことで、LODアプリケーションの開発がJavaScriptのみで実現できます。
+<br>
+<br>このサイトに登録されたデータには検索・更新・削除それぞれの実行権限が設定できます。
+<br>
+<br>SPARQL検索ページ、アプリ開発のチュートリアル、サンプルコード、デモサイトへのリンクを含みます。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a002">a002</a></td><td>WebDocManager</td><td>藤本椋也（学生）、安江翔平（学生）、年岡晃一</td><td>一般のweb文書をエンドユーザが好みに応じてカテゴリツリーの形でまとめられるツールです。
+<br>カテゴリの上下関係を含むメタデータが、リアルタイムでRDFStoreに反映される他、
+<br>ドラッグ&amp;ドロップでツリーの関係をいつでも自由に変更できます。
+<br>
+<br>これらの機能をSparqlEPCUを使い、全てJavaScriptのコードで実現しています。サーバー機の都合上同一ドメインとなっていますが、別ドメインでも動作します。
+<br>このツールで使用しているRDFは、SparqlEPCUの「WEB文書管理LOD」というタイトルで公開しています。
+<br>
+<br>サンプルとしてRDFの解説ページなどを登録してあります。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=a003">a003</a></td><td>ヨコハマ・アート・ガイド</td><td>大和田健一</td><td>Android用のアプリです
+<br>横浜で開催されるアート関係のイベントを紹介します。
+<br>アプリを起動すると、データのダウンロードが始まります。
+<br>ダウンロードが終了すると、本日開催されているイベント一覧が表示されます。
+<br>イベント一覧にタッチすると、イベントの詳細が表示されます。
+<br>
+<br>Google Play からダウンロードしてください。
+<br>誰でも無料で使用できます。
+<br>https://play.google.com/store/apps/details?id=jp.ohwada.android.yag1
+<br>
+<br>使い方はこちらをご覧ください。
+<br>http://android.ohwada.jp/apr/yag
+<br>
+<br>ソースコードをApacheライセンスで公開しています。
+<br>http://code.google.com/p/ohwada/wiki/YokohamaArtGuide1
+<br>
+<br>ライセンスの表記に関して。
+<br>一度 登録すると、修正できないようなので、追記しておきます。
+<br>右欄の表記は、Apache になっていますが、これはソースコードのライセンスです。
+<br>アプリの利用に関しては、Google Play に準拠したいのですが、無料アプリのライセンス規定が分かりません。
+<br>ひとまず、他の応募作品に参考に、 CC-BY-NC-SA とします。</td><td>Apache</td></tr><tr class="even-row"><td><a href="show_status.php?id=a004">a004</a></td><td>サバエディタ：：トイレシュラン</td><td>上原　貴之</td><td>サバエディタ::トイレシュランは、鯖江市のトイレ情報XMLをトイレ検索サイト「トイレシュラン」にインポートするツールです。本ツールの利用により、自治体が提供する身障者用・ベビーベッド・オストメイト等の各種情報を、スマートフォン・PC等で現在地に近いトイレを探せるトイレシュランから閲覧できるようになります。
+<br>
+<br>関連情報：http://goodsite.cocolog-nifty.com/uessay/2013/01/sabaeditor_toil.html</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a005">a005</a></td><td>もっと残念な日本地図β - LSJ2013を使った舞台探訪アプリの高制度化 -</td><td>ほえほえ</td><td>【概要】<br/>
+<br>LSJ（Location Site of Japanimation）はサブカル作品（アニメ, ゲーム, 漫画）舞台の情報データベースです. これまでにLSJ2012（昨年度の投稿作品）のLODデータを使った, 舞台探訪の地図アプリ『残念な日本地図』を公開してきました. しかしながら, 作品登場舞台を市町村レベルでマッピングしたものであったため, 真のロケ地とは離れた役場を指している問題がありました.
+<br><br/>
+<br>LSJ2013ではNTTレゾナント様のPinQA LODの舞台探訪データをリンクすることで, いくつかのタイトルについて高精度なマッピングを実現しました. このWebアプリケーションを『残念な日本地図』（全国版）に対して『もっと残念な日本地図β』（作品別・高精度版）として公開します. 作品中のInfoboxのTitle, Cityの情報はDBpedia, SpotはPinQAへリンクしています.
+<br><br/>
+<br>Webアプリケーションは下記サイトからご利用いただけます.<br/>
+<br>http://cheese-factory.info
+<br><br/></td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a006">a006</a></td><td>ピンポイント・リマインダー</td><td>山口琢、山形巧哉、山本康伸、小野寺豊、藤原哲、大場みち子</td><td>ピンポイント・リマインダーは、参照しているWebページが事前に指定した興味に関連していることを、エンド・ユーザーに思い出させてくれるシステムのデモ・アプリです。
+<br>「興味」はハブと思い出し対象の組合せで指定します。興味と思い出し対象とはハブで関連づけられます。
+<br>エンド・ユーザーは、参照しているWebページが、事前に指定した興味に関連していることを思い出させてもらいます。
+<br>ハブ作成者は、エンド・ユーザーの関心と、思い出し対象の品揃えを考慮することで、双方に喜んでもらいます。
+<br>思い出し対象となる情報は、ハブによる関連づけによって、直接は探していないエンド・ユーザーにも、情報を思い出してもらえる可能性が増します。
+<br>
+<br>使用しているデータセットは、
+<br>ハブとして: DBpedia Japanese;
+<br>思い出し対象として: 青空文庫 Linked Open Data、ヨコハマ・アートLOD、PinQA、函館まちあるきルート情報、函館映画ロケ地情報、函館土木遺産情報;</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a007">a007</a></td><td>LINKAGE</td><td>大友翔一</td><td>現状ではJAXA/ISAS,JSpecで公開されている月のデータを加工、可視化して一般の方が月惑星を身近に感じられるようなwebサービスとして構築されている。
+<br>KMLを選択することでselene(かぐや)の軌道や、ある時点における位置情報、撮影した写真、写真が撮影されたエリアが閲覧できる。
+<br>
+<br>さらに、論文と動画を検索するをクリックすると、関連するCiNii上の論文とYoutubeの動画をtimeline形式で表示する。
+<br>
+<br>だが、将来的にはこの他に太陽・地球・惑星・衛星などに関しての画像やX線、dem、等各種データをデータ公開元認可の下で横断的に包括する大規模データーベース、及びそれらから簡便に各種データを検索することを可能とするシステムにしたい。
+<br>
+<br>また、データを動的に生成する機能や、公官庁や研究機関の公開データを横断的に検索結果として表示にするだけではなく、一般の天文愛好家等からの投稿動画や画像のアップロード機能を持ち、観測データ以外にも検索対象に関連する論文等を紐づけられたデータとして扱い検索結果として表示することを目標としたい。</td><td><img src="../challenge2012/image/cc_licence/by-sa.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a008">a008</a></td><td>「SmartTown」にLOD連結する「ModelHouse3D」アプリケーション</td><td>竹内久知</td><td>アプリケーション部門 「SmartTown」にLOD連結する「ModelHouse3D」アプリケーション
+<br>竹内久知 「俺のゼニはどこへ行った」プロジェクト所属
+<br>
+<br>応募作品の内訳
+<br>アプリケーションの名称 「SmartTown」にLOD連結する「ModelHouse3D」アプリケーション
+<br>アプリケーションのURL http://goo.gl/ckYHX
+<br>アプリケーションの解説http://goo.gl/PTKNp
+<br>参考資料.pdf http://goo.gl/FRVrh
+<br>ModelHouse3DによるLOD活用事例.wmv http://youtu.be/5hnD3P6RQvs
+<br>
+<br>詳細はアプリケーションの解説と参考資料を参照
+<br>
+<br>「SmartTown」は地方自治体(横浜市)と地域(自治会町内会)と地域住民とが連携して、予算情報、行政サービス情報、地域情報、所帯・個人情報、天気情報等の住みよい町造りに必要なLODデータを市民行政参画情報ハブ(地域メッシュ)に連結させ活用し、「オープンデータ活用ビジネスにより市民が行政に参画し、社会を良くすること、私達の町も良くすること、予算の効果を身近なところで実感してもらうこと」を目的とし、地域から始め、地方自治体へ、さらに全国規模へと市民参画ネットワークを広めていくトータル・ソリューションです。
+<br>
+<br>「SmartTown」では市民行政参画情報ハブの基にLOD【自治体予算】【地域】【自治会予算】【行政】【気象】【ソーシャルネットワーク】【住宅】【産業】を連結します。
+<br>【地域】にLOD【ライフスタイル】[ライフブラン]、その下層に[家族構成][収入][生活費][貯蓄][住まい][子供][リタイアメント]を連結します。
+<br>[ライフプラン]のなかで高額、長期ローン、候補地選択等で一番負担が大きく、プランも難しく、重要なのが【住まい】LODです。
+<br>【住まい】LODの下層として[今住んでいる家][賃貸家賃][住宅ローン金額][住宅ローン期間][購入予定][購入時期][購入時予算]が連結しています。
+<br>この【住まい】LODに取り組むのが、総務省 産業分類 [D建設業]分野に属し、建築工事に係る全建築工程写真LOD、全使用建築資材・設備器機写真LOD、建築関連書類LODとその活用方法の具体例を示した「ModelHouse3D」アプリケーションです。
+<br>
+<br>「ModelHouse3D」の【住まい】LODの全建築工程写真LODは工程毎の建物3Dモデル全面にテクスチャとして貼り付けられる写真アルバムで、最少限の工事現場での直接施工管理で、どんな工事瑕疵も発見可能で欠陥・手抜き・過剰工事を起さない安心と安全な住宅建築を提供できます。
+<br>建築工事の工事工程、建築資材、設備機器、２Ｄ及び３Ｄのデジタル写真及び動画データ、撮影時の画像情報、付加情報、コード体系を標準化することにより、中小建設業者のコスト削減を可能とし、施工者の熟練度を高め、工事発注者(施主)、設計者、建築施工業者、施工管理者が共に、プランから設計、建築施工、施工管理までに参加し、希望どうりの家の建築を可能とします。
+<br> 
+<br>「ModelHouse3D」は建設業でのLOD活用方法の具体例を示したアプリケーションす。この具体例を参考に建設業、不動産業、その他さまざまな分野用途に応用し、さまざまなソリューション開発に役立ててもらうためのAndroid tabletアプリケーションです。
+<br>「ModelHouse3D」の活用方法の具体例は以下のメニューのように構成されており、詳細は詳細はアプリケーションの解説を参照。
+<br>[Web3Dモデルハウス建築工事][部屋毎立体模型3D(ExpandPanorama)][建物立体構造調査3D][Webアルバムから3Dアルバムへ][設備機器設置シュミレーション][鉄筋配筋施工AR検証][設計図整合性AR検証][建物納め指図AR納め][建築基準法3D解説][3Dワイヤーフレームワーク][終了]</td><td>パブリックドメイン</td></tr><tr><td><a href="show_status.php?id=a009">a009</a></td><td>LOD年表による歴史圧縮カレンダー</td><td>望月正弘</td><td>　本アプリは、LinkData.org上のLOD年表データを読み込み、その時代を1年間に圧縮して『歴史圧縮カレンダー』として表現します。地質学的・天文学的なタイムスケールで進行する長大な歴史であっても、『歴史圧縮カレンダー』に落としこむことで、スケジュール帳感覚で全体像を把握できるようになります。</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a010">a010</a></td><td>おしえて！れはっち</td><td>上田 洋</td><td>「おしえて！れはっち」は、Twitterのつぶやきを解析してそのつぶやきに関連するレファレンス事例（図書館員が作成した資料に関するQ&A;）を返信するTwitter BOTです。
+<br>
+<br>「おしえて！れはっち」では過去のつぶやきからユーザの興味を読み取り、検索結果の中からもっとも良いと思われるものを自動的に選びます。普段の何気ないつぶやきからユーザが興味のあるレファレンス事例を知ることができます。
+<br>
+<br>レファレンス事例に加え、国立国会図書館サーチAPIを利用して国立国会図書館が持つ書籍やCD・DVDなどの資料も検索することができます。将来的には、Web NDL Authorities や DBPedia、CiNiiなどに対応したいと思います。
+<br>
+<br>「おしえて！れはっち」の利用には、Twitterアカウントが必要です。Twitterにログイン後、「@referty_bot」をフォローしてください。「れはっち」がなにか探してきてくれるかも？ すぐに探してほしいときは、「@referty_bot」宛てにキーワードをつぶやいてください。
+<br>
+<br>「れはっち」は、国立国会図書館レファレンス協同データベース事業のマスコットキャラクターです。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a011">a011</a></td><td>トイレこんしぇる鯖江版</td><td>福野泰介</td><td>データシティ鯖江のトイレ情報を使って、かわいく、すばやく、トイレを探せます。
+<br>Designed by Miho Yamamori</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a012">a012</a></td><td>横浜歴史フィールド・ミュージアムAR</td><td>横浜歴史フィールド・ミュージアムAR</td><td>＜メンバー＞ 
+<br>上野直樹、関口昌幸、秋元慶太、 谷杉歩音、大崎 敬志朗、 
+<br>朝香貴裕、藤川恵一、嘉門保夫、杉浦裕樹、広田盛一、生島高裕 
+<br>＜コンセプト＞
+<br>横浜文化観光というテーマで、DBpediaからデータをSPARQL検索する。
+<br>junaioというARプラットフォーム（ARブラウザー）でAR的に表示する。
+<br>＜具体的テーマ＞
+<br>「横浜歴史フィールド・ミュージアムAR」
+<br>4つのテーマ＝4つのARチャンネル
+<br>・横浜浮世絵と現在の場所の見えのオーバーレイ
+<br>・歴史的建造物
+<br>　　DBpedia、wikipedia
+<br>・横浜が発祥の地
+<br>　　DBpedia、wikipedia、一部自作
+<br>・開港前後の横浜の歴史的な場所
+<br>　　DBpedia、wikipedia、一部自作
+<br>＜今後＞
+<br>浮世絵に著作権はないが、開港資料館、市や県の図書館の了解を得る作業を行いたい。
+<br>例えば、県立図書館の以下のサイト
+<br>開港前後の豊富な浮世絵のデータある。
+<br>http://www.klnet.pref.kanagawa.jp/digital_archives/yokohamae.htm
+<br>第一段階として、独自サイト作り、そこにいくつかのテーマでコンテンツ載せる。
+<br>第二段階としてwikipediaにアップする。
+<br>wikipediaの各項目は、必ずしも、開港前後の横浜の歴史、その場所というテーマで
+<br>まとめられていないので、現状、手作業で項目探す。
+<br>＜長期的展望＞
+<br>・横浜の歴史のコンテンツの充実ということに関して、ネットワーク、コラボの形成
+<br>　　横浜シティガイド協会
+<br>　　客船とみなとの遺産の会
+<br>　　開港資料館
+<br>　　市立、県立図書館など
+<br>内容を深める、データのオープン化へのコラボ</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=a013">a013</a></td><td>LGD Viewer</td><td>大和田健一</td><td>LGD Viewer は、 Open Street Map に登録されているノードの情報を取得するWEBアプリケーションです。
+<br>
+<br>指定された緯度経度から1km以内のノードを取得します。
+<br>HTML形式で表示する他に、JSON形式で情報を返送するAPIを持っています。
+<br>スマートフォンのアプリケーションが利用することを想定しています。
+<br>
+<br>ノード情報の取得には、 Linked Geo Data を利用しました。
+<br>地理データの利用に関しては Open Database License (ODbL) が適用されます
+<br>http://linkedgeodata.org/
+<br>
+<br>使い方はこちらをご覧ください。
+<br>http://lgd.ohwada.jp/about.html 
+<br>
+<br>ライセンス
+<br>WEBアプリの利用は、CC-BY-NC-SA が適用されます。
+<br>http://creativecommons.org/licenses/by-nc-sa/2.1/jp/
+<br>地理データの利用は Open Database License (ODbL) が適用されます。
+<br>http://opendatacommons.org/licenses/odbl/</td><td>CC-BY-NC-SA</td></tr><tr class="even-row"><td><a href="show_status.php?id=a014">a014</a></td><td>OSM Node Viewer</td><td>大和田健一</td><td>Android用のアプリです 
+<br>Open Street Map に登録されているノードの情報を地図に表示します。
+<br>アプリを起動すると、データのダウンロードが始まります。 
+<br>ダウンロードが終了すると、地図の中心から1km以内にあるノードが表示されます。
+<br>マーカーにタッチすると、ノードの情報が表示されます。 
+<br>
+<br>ノード情報の取得には、 Linked Geo Data を利用しました。
+<br>http://linkedgeodata.org/
+<br>応募作品 a013 「LGD Viewer」 をキャッシュサーバーとして利用しています。
+<br>
+<br>Google Play からダウンロードしてください。 
+<br>誰でも無料で使用できます。 
+<br>https://play.google.com/store/apps/details?id=jp.ohwada.android.osm1 
+<br>
+<br>使い方はこちらをご覧ください。
+<br>応募作品 a003 「ヨコハマ・アート・ガイド」 とアプリ連携しています。 
+<br>http://android.ohwada.jp/apr/osm1 
+<br>
+<br>ソースコードを Apache ライセンスで公開しています。 
+<br>http://code.google.com/p/ohwada/wiki/OsmNodeViewer1</td><td>CC-BY-NC-SA</td></tr><tr><td><a href="show_status.php?id=a015">a015</a></td><td>みんなで創る音声アシスタント「花之声」 ～あなたのつぶやきがオープンデータになる～</td><td>川村 隆浩，大須賀 昭彦</td><td>オープンデータをコンシューマ向けサービスに広く普及させるためには，簡単にデータを検索・登録できるサービスが必要だと考えています．
+<br>そこで，オープンデータを知識ベースとする音声アシスタントを開発しました．
+<br>ここでは，ユーザFBを用いた検索精度向上に加え，ユーザ参加型の未知データ獲得の仕掛けに特徴があります．
+<br>サイトでは，応用事例としてフィールドワーク支援向けアプリ「花之声」を紹介しています．是非，一度ご来訪ください．</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a016">a016</a></td><td>ANii</td><td>snowy</td><td>「ANii」は日本語論文検索サイトです。論文情報は「CiNii API」から取得しています。
+<br>
+<br>
+<br>*****  基本的な機能  *****
+<br>
+<br>* 結果一覧ページ 
+<br>　・検索キーワードに関連した言葉を「Web NDL Authoritie」と「Google suggestions」から取得して表示させています。
+<br>　・Yahoo! JAPANの校正支援APIを使って文字の入力ミスをチェックする機能を付けました。
+<br>　・詳細ページに行かずに、論文情報を文献管理ツールにエクスポートしたり、SNSで情報を共有したりできます。
+<br>
+<br>* 論文詳細ページ
+<br>　・同じ巻号の論文リスト、その著者が同雑誌に執筆した他の論文が表示されます。
+<br>　・論文を収録している雑誌の所蔵図書館リストをページ遷移することなく見ることができます。
+<br>　・論文に付けられたコメント（はてなブックマーク）を読むことができます。</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=a017">a017</a></td><td>MMapp</td><td>松村 冬子，加藤 文彦，大向 一輝</td><td>MMappは，イベント情報および場所情報をSPARQLで取得しそれらを組み合わせることで，
+<br>参加者に有意義な時間を過ごしてもらうための情報提供をを行う学会支援システムです．
+<br>
+<br>これまで，以下の国際会議において運用いたしました．
+<br>・ACM Multimedia 2012 (ACMMM12) 
+<br>　http://www.acmmm12.org/（2012/10/29 - 2012/11/2）
+<br>　ACMMM12における本システムのURL：http://lod.ac/acmmm2012/
+<br>　
+<br>・The 2nd Joint International Semantic Technology Conference (JIST2012) 　
+<br>　http://www.ei.sanken.osaka-u.ac.jp/jist2012/（2012/12/2 - 2012/12/4）
+<br>　JIST2012における本システムのURL：http://lod.ac/jist2012/
+<br>
+<br>
+<br>[データ]
+<br>このアプリケーションでは，学会情報および会場周辺地域の情報を
+<br>大きく分けて場所情報とイベント情報としてSPARQLで取得し，利用します．
+<br>ACMMM12 SPARQL Endpoint: http://lod.ac/acmmm2012/sparql
+<br>JIST2012 SPARQL Endpoint: http://lod.ac/jist2012/sparql
+<br>
+<br>イベント情報は，スケジュール，セッション，発表など
+<br>学会のプログラムの情報がメインで，
+<br>Semantic Web Conference Ontology に基づいてRDF化しています．
+<br>Semantic Web Conference Ontology:
+<br>http://data.semanticweb.org/ns/swc/swc_2009-05-09.html
+<br>
+<br>場所情報は，会場（フロアマップ），部屋，寺社仏閣，文化財，
+<br>飲食店，土産物店，交通機関，ATM，インフォメーションセンター，ホテルなどの情報を
+<br>DBpedia (http://dbpedia.org)，Nara Explorer (http://www.naraexplorer.jp/) から
+<br>取得し，RDF化しています．
+<br>なお，イベントのリソースは場所のリソースにリンクされています．
+<br>
+<br>[アプリケーション]
+<br>前述のイベント情報と場所情報のRDFを利用することで，
+<br>以下の機能を実装しています．
+<br>
+<br>・プログラム表示
+<br>　施設，部屋ごとにセッションのタイムテーブルを表示します．
+<br>　セッションをクリックすると，その中に含まれる講演，
+<br>　口頭発表やポスターなどの情報が表示されます．
+<br>　例：　http://lod.ac/jist2012/timetable/show?id=3
+<br>
+<br>・イベント詳細表示
+<br>　各講演や各発表の詳細が表示されます．
+<br>　そのイベントのURIを含めてTweetし，そのイベントに関する体験を共有することもできます．
+<br>　例：http://lod.ac/jist2012/event/32
+<br>　
+<br>・地図表示
+<br>　場所データから，会場周辺の飲食店，土産物店，文化財，
+<br>　交通機関などの情報を地図上に提示します．
+<br>　（注：現在地を中心にしますが，場所情報は奈良付近にしかないので，
+<br>　　　　奈良付近まで移動していただければ閲覧できます）
+<br>　例：http://lod.ac/jist2012/home
+<br>
+<br>・場所リスト表示
+<br>　場所リソースのリスト化し，カテゴリごとに奈良の場所情報を閲覧できます．
+<br>　例：http://lod.ac/jist2012/home　（画面下部のListをクリック）
+<br>
+<br>・写真表示
+<br>　場所リソースの写真をタイル状に表示し，写真から奈良の情報を探索できます．
+<br>　例：http://lod.ac/jist2012/home　（画面下部のPhotoをクリック）
+<br>
+<br>・場所詳細表示
+<br>　各場所の情報の詳細，その場所への現在地からのルートを表示します．
+<br>　例：http://lod.ac/jist2012/place/1</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a018">a018</a></td><td>LOD Browser</td><td>安江翔平（学生）、藤本椋也（学生）、年岡晃一</td><td>SparqlEPCU上に格納されている緯度経度情報が付加されたRDFをGoogleマップ上にマッピングして表示します。
+<br>このサイトを利用することでLODやRDFに関する知識がなくとも簡単にRDFを編集することができます。
+<br>
+<br>右上のセレクトボックスからクラスを指定すると左メニューにデータが展開、Googleマップが表示され、メニューから個別のデータを確認できます。
+<br>また登録された内容の編集機能、新規登録機能も用意してあります。緯度、経度は位置情報を用いて簡単に登録可能です。
+<br>
+<br>スマートフォン向けページも用意してあり、PC版サイトと同様閲覧登録編集が可能です。
+<br>http://lodcu.cs.chubu.ac.jp/lod_browser/sp/
+<br>
+<br>このサイトはSparqlEPCUのAPIであるRDFmgrを用い、HTMLとJavaScriptで構築されています。
+<br>
+<br>以下機能一覧
+<br>・クラスを指定して検索
+<br>・各データを地図にマッピングして表示
+<br>・各データの編集
+<br>・プロパティの追加
+<br>・新規データ登録
+<br>・スマートフォン向けページ
+<br>
+<br>このサイトを作成するにあたりデータ提供パートナーの鯖江市役所様が公開されておりますLODおよびLINKDATAにて公開されておりますLODを利用させていただきました。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=a019">a019</a></td><td>横浜Maps</td><td>上田洋、小林巌生、高橋徹、中川貴滋</td><td>「横浜Maps」は、年代やテーマの異なる様々な横浜の地図を集めた街歩き地図アプリです。
+<br>地域で活動する個人、企業、行政組織など多くの方々がからの協力を得ながら、地図を含むコンテンツを収集してアプリへ収録しており、リリースから２年が経った現在では、日本国内のみならず、世界中で約3万件のダウンロードを頂いた人気アプリとなっています。
+<br>
+<br>この度のアップデートでは、新たにイベントお知らせ機能を追加しました。
+<br>アプリを利用しているその日、または数日内に開催されるイベントがある場合、開催場所に「YAN」ピンを表示してお知らせします。当日イベントがある施設には赤い「YAN」ピンを表示しますので、街歩き中に思いがけないイベントと出会えるかもしれません。
+<br>表示するイベントデータは、公益財団法人横浜市芸術文化振興財団がオープンデータとして公開しているヨコハマ・アート・LOD※のイベント情報（300件以上が毎月更新）を利用しています。
+<br>
+<br>イベントお知らせ機能は、標準ではOFFになっています。ONにするには、各地図のツールバーにある「ピン」アイコンをタップし、「周辺のイベント情報」をタップして青色の(↓）ボタンをタップしてください。
+<br>「横浜Maps」は、iPhone/iPad アプリです。アプリは、App Storeから無料でダウンロードできます。
+<br>「横浜Maps」を使って一人でも多くの方に横浜の魅力を感じてもらえれば幸いです。
+<br>
+<br>※ヨコハマ・アート・LOD（Linked Open Data）では過去に登録されたイベント情報も含め約2万件のイベント情報、および、イベントの開催場所となる情報情報約180件を公開しており、SPARQLエンドポイントより簡単に取り出すことが可能となっています。
+<br>
+<br>【App Store「横浜Maps」】
+<br>https://itunes.apple.com/jp/app/id454685074
+<br>
+<br>【「横浜Maps」Facebookページ】
+<br>http://www.facebook.com/yokohama.maps</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a020">a020</a></td><td>藤沢市幼稚園検索</td><td>猪飼大志、塙幾惠、日向野優輔、三浦学夫</td><td>藤沢市の幼稚園を条件別に検索してマッピングされます。</td><td>パブリックドメイン</td></tr><tr><td><a href="show_status.php?id=a021">a021</a></td><td>さばえぶらり</td><td>上田洋,高橋徹,松村冬子,加藤文彦,藤田実紀,中川貴滋</td><td>「さばえぶらり」は、福井県鯖江を中心に描かれたイラストマップや古地図の上で街歩きが楽しめる地図アプリです。地図の上では、観光情報やグルメ情報、Wi-Fi設置場所などをアイコンでわかりやすく表示します。「さばえぶらり」で鯖江の新たな魅力を発見してみてください。
+<br>
+<br>【「さばえぶらり」とオープンデータ】
+<br>
+<br>「さばえぶらり」は、鯖江市が公開するさまざまなオープンデータがなければ実現できませんでした。
+<br>
+<br>収録地図は、鯖江市が公開するイラストマップと古地図で構成されます。地図上に表示されるPOI(Point Of Interest)には、鯖江市が Linked Open Data(LOD) として公開した観光スポット、公共施設、トイレの場所など位置情報付きの情報を利用しました。「さばえぶらり」では、これらの情報を収集・データベース化してSPARQLエンドポイントを介し、POIとして地図上に動的に表示するようにしました。
+<br>
+<br>「さばえぶらり」が、地方自治体のオープンデータ化推進が観光振興や地域活性化、町おこしに寄与する一例となれば幸いです。
+<br>
+<br>【収録地図】
+<br>
+<br>・さばえ街なかぶらりＭＡＰ
+<br>・住居表示実施前の町名（昭和３８年１０月１日施行）
+<br>・平成14年現在の町名
+<br>・間部家入封以前の鯖江圖
+<br>・間部家入封經營落成後の鯖江圖
+<br>・明治維新前の鯖江圖
+<br>・大正三年頃の鯖江圖
+<br>
+<br>【地図上に表示されるPOI】
+<br>
+<br>・鯖江市市内公園等のトイレ情報
+<br>・鯖江百景
+<br>・鯖江市内AED設置場所
+<br>・鯖江市避難施設
+<br>・鯖江市公共施設
+<br>・鯖江市内WIFI設置場所
+<br>・鯖江市営駐車場情報
+<br>・鯖江市西山動物園
+<br>・鯖江バリアフリーマップ
+<br>・コミバスバス停
+<br>・SABAEグルめぐり（非公式）
+<br>
+<br>【利用方法】
+<br>
+<br>「さばえぶらり」は、iPhone/iPad/iPod Touchアプリです。アプリは、App Storeから無料でダウンロードできます。詳しくは App Store 「さばえぶらり」のページをご覧ください。
+<br>
+<br>https://itunes.apple.com/jp/app/id595859507</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a022">a022</a></td><td>depicts.azurewebsites.net</td><td>松澤有三</td><td>d051 のデータセットを使ったとてもとても簡単なオンライン GIS アプリです。
+<br>
+<br>d051 のデータセットは RDF を含んだ SVG ファイルですが、人間向けの見栄えは考慮されていません。SVG に対応した Web ブラウザで表示したときに、いくつかの機能を追加しています。
+<br>
+<br>・操作機能
+<br>マウスによるドラッグ、ホイールによるズームに対応します。SVG ならではの劣化のない表示で、細部を劣化なく表示できます
+<br>
+<br>・投影機能
+<br>URL パラメータの設定で、投影方法を変更します。通常は世界全体を表示しますが、南極・北極を中心とした正距方位図法も選択可能です。極圏の地球観測データの表示に適しています。
+<br>
+<br>・マッシュアップ機能
+<br>URL パラメータの設定で、別のポリゴンを指定の色で追加することができます。
+<br>
+<br>
+<br>具体的なアプリケーションの事例として http://depicts.azurewebsites.net/ にていくつかのサンプルを公開しています。
+<br>
+<br>・南極を中心とした陸地と凍結地域
+<br>・世界地図上での国家の図示
+<br>・都道府県別統計データによる塗り分け
+<br>
+<br>これらの表示は iframe を使って Web ページに直接埋め込んで使用することを想定しています。統計データや検索アプリケーションと連動した図示などのフロントエンドとしてご利用ください。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=a023">a023</a></td><td>Where Does My Money Go? 日本語版</td><td>「税金はどこへ行った？」チームメンバ</td><td>Where Does My Money Go? β版（2012年7月1日稼働）は、横浜市民が横浜市に納めている市税を対象として構築したものです。自分の年間総収入をスライドで設定し、単身世帯か扶養一人世帯かを選択すると、給与所得者であるという前提で、横浜市に納めている市税年総額と10分野毎に一日当たり支払っている市税額が表示されます。
+<br>現在このβ版は、横浜市税だけを対象としたものですが、今後、利用者の皆さんや日本政府や全国の自治体の皆さんのご意見、ご要望を踏まえて、特別会計や公営企業会計も含めたり、市債発行額・償還額を含めたり、神奈川県税や国税を含めたりなど、ニーズに応じて、成長させて行きたいと考えております。
+<br>なお、このアプリケーションは、イギリスの Open Knowledge Foundation が開発した Where Does My Money Go? (英語版) をベースに開発されています。Where Does My Money Go? プロジェクトは、公共データのオープン化を進める有志に支えられています。
+<br>詳細は以下をご覧ください。
+<br>http://spending.jp/about.html
+<br>http://spending.jp/sources.html</td><td>open definition</td></tr><tr class="even-row"><td><a href="show_status.php?id=a024">a024</a></td><td>tomrdf</td><td>藤澤伸</td><td>node.jsによるrdf storeサーバー実装です。
+<br>
+<br>サーバーにRDFファイル(.rdf | .ttl)をアップロードするだけで、そのファイル自体の公開・sparqlエンドポイントの提供ができます。
+<br>
+<br>バックエンドにデータベースを使っていないので、シンプルにデータの管理・修正・バックアップが可能です
+<br>
+<br>また、npmモジュールとして公開しているので、比較的簡単に導入できるような気がします。
+<br>
+<br>まだ頑張って開発しています。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=a025">a025</a></td><td>fujisawa holiday</td><td>藤澤伸</td><td>藤沢市のグルメデータのLODを検索して、食べ歩きマップを作成してくれます。
+<br>
+<br>左側のチェックボックスで、食べたいジャンルにチェックを入れて「Search」を押すと、そのジャンルの中から3件のお店を提案して、地図上で場所も表示してくれます。
+<br>
+<br>また左下の「Nearest 3 Restaurant」にチェックを入れると、現在の位置から近い3件の店を提案してくれるので、いま藤沢市にいる方はぜひ使ってみて下さい。
+<br>
+<br>【利用しているデータのスキーマ】
+<br>
+<br>名前: http://www.w3.org/2000/01/rdf-schema#label
+<br>夜の予算: http://data.tom.sfc.keio.ac.jp/property/gourmet_dinner_budget
+<br>昼の予算: http://data.tom.sfc.keio.ac.jp/property/gourmet_lunch_budget
+<br>緯度: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<br>経度: http://www.w3.org/2003/01/geo/wgs84_pos#long
+<br>ジャンル http://data.tom.sfc.keio.ac.jp/property/gourmet_genre</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a026">a026</a></td><td>どこでもPinQA</td><td>大和田健一</td><td>Android用のアプリです 
+<br>PinQA に登録されている情報を地図に表示します。 
+<br>アプリを起動すると、データのダウンロードが始まります。 
+<br>ダウンロードが終了すると、地図の中心から1km以内にある情報が表示されます。 
+<br>マーカーにタッチすると、情報の内容が表示されます。 
+<br>
+<br>ノード情報の取得には、  PinQA LOD API を利用しました。 
+<br>https://pinqa.com/lod_applications
+<br>
+<br>Google Play からダウンロードしてください。 
+<br>誰でも無料で使用できます。 
+<br>https://play.google.com/store/apps/details?id=jp.ohwada.android.pinqa1 
+<br>
+<br>使い方はこちらをご覧ください。 
+<br>応募作品 a003 「ヨコハマ・アート・ガイド」 とアプリ連携しています。 
+<br>http://android.ohwada.jp/apr/pinqa1</td><td>CC-BY-NC-SA</td></tr><tr><td><a href="show_status.php?id=a027">a027</a></td><td>消火栓レスキュー鯖江編</td><td>福野泰介</td><td>雪に埋まった消火栓は一刻を争う消火活動の大きな障害です。
+<br>近所の消火栓をスマホのGPSなどを使って見つけ、掘り出しにいこう！
+<br>データシティ鯖江、消火栓XMLデータを使用しています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a028">a028</a></td><td>volvox</td><td>堤量輝</td><td>ドキュメント指向開発環境volvoxに、SPARQLモジュールを加えました。
+<br>
+<br>LOD を広く浸透させるには、その裾野を中小の会社や自治体に広げる必要があります……わたくしたちは、たくさんの小さな組織でドキュメントエンジニア（機械可読な文書の設計者〜Glushko &amp; McGrath による）が生まれるよう、啓蒙とツールの提供を行っています。
+<br>
+<br>じっさいドキュメントをRDF で公開するには、バックエンドの知識資産があらかじめ二項関係などで整理されている必要があります。そのためには文書管理の環境整備はもちろんのこと、文書を適切に設計できる人が不可欠です。
+<br>
+<br>ツールvolvoxは、文書管理に重点をおいたアプリケーション開発環境です。だれもが独自のやり方で知識資産を再編できるように、仕様には最大限の拡張性をもたせています（UNIXのパイプラインモデルをXML で表現し、それをXSLTなどで制御できます）。またできるかぎり標準技術（W3C 標準であるXML/XSLT/RDFなど）を採用することも、このツールの設計方針のひとつです。
+<br>
+<br>ひとつの部署にひとりのドキュメントエンジニアを……機械可読なドキュメントを適切に設計できる人を増やすことで、わたくしたちはLOD の拡大に寄与したいと考えています。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a029">a029</a></td><td>はこだてMap+</td><td>公立はこだて未来大学 高度ICT演習観光系プロジェクト</td><td>高度ICT演習観光系プロジェクト
+<br>M1：高橋正輝、坂井麻里恵
+<br>B3：岸野亜理沙、佐藤正徳、武田泰典、似内勇太、前田実優、松田隼士、山田亜美
+<br>B2：安藤大岳、伊林謙太、小野美郁、工藤卓也、西本光司、兵藤允彦
+<br>アドバイザー：M2 永峰和弘　指導教員：奥野拓
+<br>
+<br>はこだてMap+
+<br>はこだてMap+は、函館を訪れる観光客のまちあるきを支援するWebアプリケーションです。このアプリは、地図上に観光ルートや観光スポットの情報を表示します。住所や電話番号などの基本的な観光情報はもちろん、他の観光アプリにはない+αな情報（映画ロケ地情報、土木遺産情報）を得ることで新たな発見が生まれます。観光前にこのアプリを利用すると、効率的に観光プランをたてることができます。アイデア部門には、観光中に利用するiPhoneアプリ版のはこだてMap+もエントリーしました。
+<br>
+<br>【機能】
+<br>画面左の選択バーからコースを選択すると、観光ルートが表示されます。緑色のピンはコース内の観光スポット、赤色のピンはコース外の観光スポットです。ピンをクリックすると観光スポットの詳細情報を見ることができます。タブを切り替えることで、映画ロケ地の情報や、土木遺産情報が表示されます。画面右にあるチェックボックスで、カテゴリ（食べる・遊ぶ・見るなど）からスポットの絞り込みができます。
+<br>
+<br>【使用するLODデータ】
+<br>(1)函館まちあるきルート情報
+<br>・函館まちあるきマップ(http://www.city.hakodate.hokkaido.jp/kankou/hako_machi/)
+<br>函館市が提供している、函館の街並みを歩きながら楽しむことができるルートを掲載した地図です。この地図から、まちあるきのルート情報を取得しています。
+<br>
+<br>(2)映画ロケ地情報
+<br>・はこだてフィルムコミッション(http://www.hakodate-fc.com/)
+<br>函館市が運営している、函館で撮影された映画のロケ地情報を掲載したWebサイトです。このサイトから、ロケ地となったスポット名、その映画タイトル、ロケ地で撮影されたシーンの内容を取得しています。
+<br>
+<br>(3)土木遺産情報
+<br>・函館近代化遺産ポータルサイト(http://hnct-pbl.jimdo.com/)
+<br>函館の歴史ある土木建築物(ダムや堤防など)の情報を掲載したWebサイトです。このWebサイトは函館工業高等専門学校のPBLで株式会社ノース技研の指導の下に作成されました。このサイトから、土木建築物の概要を取得しています。
+<br>
+<br>【その他のデータ】
+<br>観光スポット情報
+<br>・函館市公式観光情報サイトはこぶら(http://www.hakobura.jp/)
+<br>函館市が運営している、函館の観光スポット情報を掲載したWebサイトです。Web APIから観光地の住所、電話番号、詳細情報を取得してます。</td><td><img src="../challenge2012/image/cc_licence/by-nd.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a030">a030</a></td><td>あれ？れこ</td><td>藤原哲、大場みち子、山口琢、山形巧哉、山本康伸、小野寺豊</td><td>あれ？れこは、ユーザーが検索している情報と関連する別の情報を推薦するアプリです。
+<br>ユーザーは、たくさんの情報発信者から情報を集めて作られた様々な知識や経験から新たな発見をさせてもらいます。
+<br>情報発信者は、アプリに参加することで、自身の知識が誰かとリンクし、ユーザーに情報を与えるきっかけを増やすことができます。
+<br>本アプリでは、推薦対象の情報としてWordpressの記事を扱っています。
+<br>
+<br>[機能]
+<br>1.記事検索
+<br>ユーザーは、キーワードを含む記事とその記事を書いた情報発信者が薦める関連キーワードを含む記事を検索することができます。
+<br>2.記事登録
+<br>情報発信者は、自身のWordpressブログをアプリに登録することで、記事を推薦対象にします。
+<br>3.タグ関連登録
+<br>情報発信者は、各々の記事についているタグ同士を関連させることで、別な発見をユーザーに提供します。
+<br>
+<br>[データセット]
+<br>(1)推薦対象の情報として:Wordpressブログの記事RDF;
+<br>(2)関連情報として:Wordpress記事から抽出した記事同士の関連を記述したRDF;
+<br>を利用しています。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr><td><a href="show_status.php?id=a031">a031</a></td><td>ほんのまくらー青空文庫ー</td><td>落合香織</td><td>青空文庫で公開されているデータを使って、紀伊国屋書店が今年の夏に行った「ほんのまくら」フェアをWeb上で真似たアプリケーションを作成しました。
+<br>青空文庫のデータを、既にデータセット部門に登録している青空文庫LODのスキーマに従って、JSON-LDの形に変換して利用しています。</td><td><img src="../challenge2012/image/cc_licence/by-nc.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a032">a032</a></td><td>法造：LOD Viewer 2　～簡単SPARQLテスト～</td><td>古崎晃司，加藤敦丈</td><td>RDFファイルを指定して，簡単に「SPARQLクエリ」のテストができるWebベースのLOD Viewerです．
+<br>SPAROLをよく知らない人でも，簡単にクエリが試せる「SPARQLクエリの入力支援機能」，「RDFトリプルが可視化」し，リソース間の「つながり」を簡単に辿って確認できる機能もあります．
+<br>
+<br>LinkData.orgなどでLOD（RDF）を簡単に作ることができるようになりましたが，SPARQLクエリを簡単に試せる環境がなかなかないために開発しました．</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=a033">a033</a></td><td>年齢検索4w</td><td>八幡政浩,  加藤寛士</td><td>年齢検索 4wでは年齢情報をキーとして関連した歴史上の出来事を一覧することができます。
+<br>
+<br>30才のとき… 
+<br>英雄ナポレオン・ボナパルトはクーデターを起こして実質的な独裁権を握り、 
+<br>アニメ監督庵野秀明はTVアニメ「不思議の海のナディア」を監督し、 
+<br>プロテニスプレーヤー松岡修造は結婚、 
+<br>大リーガーのイチローはオールスターファン投票で3年連続1位を獲得しています。
+<br>
+<br>自分と同い年のとき、あの人は何をしていたのでしょうか？ 
+<br>年齢検索4wを探検してみてください。 
+<br>
+<br>何かを夢見て頑張っている人を見ると、自分も頑張ってみたくなる。
+<br>世界的な偉人にも人間的な一面が垣間見える。
+<br>
+<br>人々に勇気を与える。
+<br>世界が愛おしく見えてくる。
+<br>
+<br>そんなアプリケーションを目指しています。
+<br>
+<br>※ 現在もテスト運用及び改良を継続しています。
+<br>応募締め切り後も、細かな変更や改善は継続中です。
+<br>
+<br>−−−− 
+<br>
+<br>１．RDF データソース
+<br>【各種LODデータソースとの連携による高い拡張性】
+<br>
+<br>年齢検索4wのコンテンツである、　　　
+<br>「出来事に紐付いたwho when where what」情報
+<br>はそれぞれ個別に単位化されて扱われます。
+<br>よってRDFを用いたデーターソースの運用や公開、
+<br> LOD連携による応用や拡張が容易かつ迅速に実現できます。 
+<br>
+<br>
+<br>２．CGMとの親和性
+<br>【小学生でも編纂に参加できるシステムを目指して】
+<br>
+<br>CGM によって知識を集積しコンテンツとした事例は既に数多く見られます。
+<br>しかし、集められた情報が「構成された文章」となると、ユーザにとって、
+<br>
+<br>『ちょっとしたコトだけどこういうことも知っているんだけどなぁ』
+<br>から
+<br>『ちょっと編集してみようか』　
+<br>
+<br>までの心理的なハードルが高くなりがちです。
+<br>
+<br>年齢検索4wでは、ユーザに提示されるコンテンツそのものが、
+<br>フォー マット化された編集可能な箇条書きやタグをメイン構成されているので、
+<br>ちょっとした編集作業に対する心理的なハードルは引く保たれています。
+<br>
+<br>老若男女広く編纂に参加し、CGMによって
+<br>データソースのRDFが成長するシステムを目指します。
+<br>
+<br>
+<br>３．年齢は最初の切り口
+<br>【派生するアプリケーション】
+<br>
+<br> 『年齢』はそのキャッチーさを理由に4wの基軸の切り口として採用していますが、
+<br>年齢とひも付く出来事情報からは、他の応用アプリケーションへの派生も見込めます。
+<br>以下に一例を示します。
+<br>
+<br>観光分野で…
+<br>「いつ 誰が どこで 何をした」という情報はそのまま、
+<br>観光や地域振興支援のアプリケーションへと応用が可能です。
+<br>CGMとの親和性を高めることで、マニアックかつローカルな
+<br>歴史上の出来事についても、観光情報として拾い上げることが可能となります。
+<br>
+<br>教育分野で…　
+<br>「 who when where whatのうちいくつかを隠す → ユーザによる回答 」
+<br>という方針で学習アプリケーションの構築が可能です。
+<br>WEBアプリケーションの特性を活かした、学習データの共有と
+<br>パーソナライズされた抽出を実現することでマニアックな要望にも答える
+<br>システムに仕上げることが可能です。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a034">a034</a></td><td>政策文書分類API</td><td>佐藤哲也</td><td>任意の文章を予め定義された13の政策分野に関して分類します。分類は「品田裕2006『選挙公約政策データについて』日本政治研究3巻2号」により定義されています。
+<br>この分類機能は,政策に基づく投票を支援するアプリケーションである日本版ボートマッチ http://votematch.jp/ のために開発されたものであり、ボートマッチの争点設定作業で必要なマニフェストの内容分析に用いられています。
+<br>機能的には予め人手で分類された教師データ（過去のマニフェストデータ）を学習させることで実現しています。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a035">a035</a></td><td>横浜検定</td><td>石塚清香、下山紗代子、須永博行、高次和樹、松本冬子、藤本椋也</td><td>2013年1月26-27日に行われた横浜オープンデータハッカソン / LODチャレンジデー in 横浜で作成したアプリです。4択形式で全12問に回答すると、あなたの「横浜力」を知ることができます。
+<br>
+<br>この横浜検定アプリによって、皆さんに横浜についてより深く知って頂き、横浜をもっと好きになってもらえたら嬉しいです。
+<br>また、このような活動によって横浜のデータ公開を進めていくきっかけを作り、地域活性化へとつなげていけたらと考えています。
+<br>
+<br>本アプリのJavaScriptプログラムは再利用可能となっており、
+<br>入力データはアプリから独立しているため、
+<br>入力データを入れ替えることで新しい検定・クイズアプリを簡単に作れるようになっています。
+<br>本アプリを再利用して、是非オリジナルのご当地検定アプリを作ってみて下さい。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a036">a036</a></td><td>PaperLOD</td><td>生島 高裕,米村卓,山口 貴弘,梶浦 美咲,三宅 明日香</td><td>PaperLODはCiNiiのRDFデータを解析し、先行研究のリサーチ、国内の学会の活動状況、参照関係、関係著者の関係を可視化するシステムです。
+<br>
+<br>PaperLodでは以下のことができます。
+<br>1.CiNiiのデータベースをバックエンドとしたフリーワード検索で論文の検索。
+<br>検索結果は論文単位でキャッシュされ、解析されます。
+<br>2.検索結果に応じ、解析結果からランキングを表示します。
+<br>ア.学会のランキング
+<br>イ.関係著者のランキング
+<br>3.検索結果から論文を選択するとその論文と関連性が強い論文が分かります。
+<br>4.一覧から論文を選んでお気に入りに入れておき、論文と論文の関連を調べられます。</td><td><img src="../challenge2012/image/cc_licence/by-nc-sa.png"/> </td></tr><tr><td><a href="show_status.php?id=a037">a037</a></td><td>PubAnnotation - 論文アノテーション構築・公開システム</td><td>金進東、山本泰智、王悦</td><td>【PubAnnotationとは】
+<br>PubAnnotationは生命科学分野の学術論文情報が収められているPubMed (タイトル及びアブストラクト) 及びPubMed Central (論文全文) に対して、人手でたんぱく質名などの専門用語を特定するアノテーション作業を誰でも簡単に行うことができ、そしてその結果をLODとして公開、共有できるアプリケーションである。機械による自動アノテーション結果も同じ形式のLODとして公開できる。これにより利用者は論文中に自然言語で書かれている知識を、より構造化したLODに対する検索という形でアクセスできるようになる。
+<br>
+<br>【背景】
+<br>・論文に書かれた膨大な生命科学知識
+<br>生命科学分野では、研究の成果は主に自然言語で書かれた論文という形で出版されるが、そこに記述されている様々な知識の量は膨大で、特定の分野の専門家ですら関連する全ての論文を読み、把握することは非常に困難な状況である。そこで、機械的な処理により、論文中から、生命科学において重要な概念である遺伝子やたんぱく質に関する記述を自動的に抽出する技術が開発されている。
+<br>
+<br>・機械を用いた解決策
+<br>より良い精度を得るために、まず最初に領域の専門家が、それらの概念を表す語(領域固有語)を特定し、機械はそれを手本として同じ結果を出すべく動作するようプログラムされる、という手法が取られている。この、領域固有語を特定する作業をここではアノテーションと呼ぶが、これは、航空写真に写る駅やレストランなどの建物にラベル付けしていく作業と似ている。現在、世界各地の様々な研究機関がアノテーションを行い、独自の形式で公開しているため、複数のアノテーションデータを集めて統合し、利用することが困難であるという問題点がある。また、アノテーションおよびそれに必要な準備の双方ともに非常に手間ひまのかかる作業である。
+<br>
+<br>・PubAnnotationの開発
+<br>そこで、1. 頻繁にアノテーションの対象となる論文情報が収められているPubMed及びPubMed Centralのテキストデータについて、予めアノテーション作業がすぐに始められるような処理を施し、2. 誰でも容易にアノテーションが行えるインターフェースを構築した上で、3. 全てのアノテーション結果を標準的なLODの形式で公開できるアプリケーション、PubAnnotationを開発した。データはRESTful HTTP経由でテーブル、JSON、RDFの各形式で取得出来るほか、Visual Editorと自動アノテーションツールとの連携も可能である。</td><td><img src="../challenge2012/image/cc_licence/by.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a038">a038</a></td><td>横浜市の予算を入力しよう</td><td>「税金はどこへ行った？」チームメンバ</td><td>既存データのLOD化の大きな壁の一つである、紙のデジタル化に挑戦します。このサービスは、横浜市の平成24年度予算の目次の一部を皆で入力・閲覧し、オープンデータ化を目指すものです。横浜市の予算は、現在完全に紙の形で提供されています。このため、手で入力しないとデータとして扱い、統計をとることなどができません。 それを、だれでもわかりやすく入力できるようにするというのが趣旨です。JSONで既に入力されたデータセットのダウンロードも可能です。</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr><td><a href="show_status.php?id=a039">a039</a></td><td>GIRLS FASHION LINK App</td><td>洞渕彩未　中尾京子</td><td>女性ファッションは種類も多く好みも分かれるため，おしゃれしたいと思っても情報が混在しており，情報を得るのが困難です。そこで，簡単におしゃれの情報を得るためのアプリケーションを開発しました。女性がファッションを選択する際に役立つことを願っています。 
+<br>
+<br>アプリの概略は，まず写真の中から好きなファッションスタイルを選びます。すると，近いスタイルが掲載された雑誌の一覧が表示されます。その雑誌の中から見たいと思うWebサイトと掲載ブランドリストを参照することができます。結果から，雑誌は違うけれど，同じブランドが掲載されたり，スタイルごとに内容が重なっている雑誌が違うといった曖昧な部分に対応できると考えています。 
+<br>
+<br> 
+<br>
+<br>※full screenでの実行を推奨します</td><td><img src="../challenge2012/image/cc_licence/public.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a040">a040</a></td><td>電子書籍リマインダー</td><td>山口琢 小林龍生 大場みち子</td><td>電子書籍リマインダーは、読書中の電子書籍のページに、事前に指定した興味に関連している記述があることを知らせてくれるシステムのデモ・アプリです。アプリケーション作品「ピンポイント・リマインダー」(a006)をEPUB形式の電子書籍に応用しました。
+<br>
+<br>エンド・ユーザーは、読書中の電子書籍のページが、事前に指定した興味に関連していることを思い出させてもらえます。
+<br>ハブ作成者は、エンド・ユーザーの関心と、思い出し対象の品揃えを考慮することで、双方に喜んでもらいます。
+<br>思い出し対象となる情報は、ハブによる関連づけによって、直接は探していないエンド・ユーザーにも、情報を思い出してもらえる可能性が増します。
+<br>
+<br>使用しているデータセットは、 
+<br>ハブとして: DBpedia Japanese; 
+<br>思い出し対象として: 青空文庫 Linked Open Data、ヨコハマ・アートLOD、PinQA、函館まちあるきルート情報、函館映画ロケ地情報、函館土木遺産情報;</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a041">a041</a></td><td>都道府県別 幸福度ランキング</td><td>須永 博行, 小林 茂</td><td>都道府県の幸福度ランキングのデータをRDF化して、そのデータを利用して、ユーザと対話的に、ユーザの出身地の幸福度を表示し、また地図に各都道府県の幸福度を表示し、全国の幸福度ランキングを可視化しました。
+<br>今回はデータは非公開としました。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a042">a042</a></td><td>ふじぶらり</td><td>伊藤　智章</td><td>　オフラインで動作する地図閲覧アプリケーションです。舞台は富士山の麓、ふじ市。「ちずぶらり」のシリーズで、全国の観光地で同様のアプリが公開されていますが、このアプリは唯一、高校で地理を教える教員が、教材開発の一貫として制作しています。 　コンセプトは、「観光案内には載りそうもないけど、勉強になりそうな地元の地図とネタを集めて載せる」ことです。地元の商店街に伝わる祭りのお囃子が、町内ごとに違うと聞けばサウンドを載せ、廃線の危機にあるローカル私鉄をなんとかしようと、コレクターが秘蔵していた古い鉄道写真を載せる等、「趣味に走りまくったフィールドワーク」の成果が凝縮されています。 　「最大公約数」的な情報発信をするのではなく、ディープでマニアックな情報を地図を通じて発信することで、若い世代の「ジモトスピリット」を盛り上げようと頑張っております。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr><td><a href="show_status.php?id=a043">a043</a></td><td>毎月大字別人口の可視化</td><td>松澤有三</td><td>d067のデータを d051 で提案するような形式のポリゴンを使って可視化するアプリです。
+<br>オープンなデータとオープンなポリゴン素材があれば短時間で有意なアプリが提供できることをアピールするのが狙いです。
+<br>なお、ポリゴン素材は e-sat の「平成17年国勢調査 町丁・字等別境界データ」を加工しています。当該データは利用規定に抵触しない範囲での利用が求められるため、アプリ全体としては All Rights Reserved として公開します。</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr><tr class="even-row"><td><a href="show_status.php?id=a044">a044</a></td><td>LDETL</td><td>井上 寛之</td><td>Linked (Open) Data として公開されている，数値・統計データを含むデータセットを，既存のOLAPシステムを用いて多次元分析可能にするアプリケーションライブラリ．</td><td><img src="../challenge2012/image/cc_licence/copyright.png"/> </td></tr>						</tbody>
+					</table>
+					
+				</div>
+			</div><!--// #mainBK //-->
+		</div><!--// #wrapperAll //-->
+
+		<div id="footerPankuzu">
+			<ul>
+				<li><a href="index.html" title="ホーム">HOME</a></li>
+				<li>アプリケーション部門</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<a id="sponsor" name="sponsor"></a>
+			<div id="footerBody">
+			<div id="btmSponsorBK">
+					<h3><img src="../challenge2012/common/img/headplatinum_wb.jpg" alt="platinum sponsors"/></h3>
+					<ul class="platinum">
+						<li><a href="http://www.goo.ne.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores/goo_p.png" alt="goo" width="180" height="180"></a></li>
+						<li><a href="http://www.ibm.com/jp/ja/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/ibm180.png" alt="日本アイ・ビー・エム株式会社" width="180" height="180"></a></li>
+						<li><a href="http://www.microsoft.com/japan" target="_blank"><img src="../challenge2012/common/img/sponsores2012/microsoft180.png" alt="日本マイクロソフト株式会社" width="180" height="180"></a></li>
+						<li><a href="http://jp.fujitsu.com/" target="_blank"><img src="../challenge2012/common/img/sponsores/fujitsu_p.png" alt="fujitsu" width="180" height="180"></a></li>
+						<li><a href="http://citydata.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/citydata.png" alt="LinkData
+独立行政法人　理化学研究所" width="180" height="180"></a></li>
+					</ul>
+					<h3><img src="../challenge2012/common/img/headgold_wb.jpg" alt="gold sponsors"></h3>
+					<ul class="gold">
+						<li><a href="http://www.imjp.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/imj140.png" alt="株式会社アイ・エム・ジェイ"></a></li>
+						<li><a href="http://www.indigo.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/indigo.png" alt="インディゴ株式会社"></a></li>
+						<li><a href="http://www.jst.go.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/jst.png" alt="独立行政法人　科学技術振興機構"></a></li>
+						<li><a href="http://live.cybozu.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/cybozulive280140.png" alt="サイボウズ株式会社"></a></li>
+						<li><a href="http://www.zenrin.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/zenrin.png" alt="株式会社ゼンリン"></a></li>
+						<li><a href="http://www.saltlux.com/jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/saltlux.png" alt="株式会社ソルトルックス"></a></li>
+						<li><a href="http://virtualtech.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/virtualteck280140.png" alt="日本仮想化技術株式会社"></a></li>
+						<li><a href="http://biosciencedbc.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/nbdc.png" alt="バイオサイエンスデータベースセンター"></a></li>
+						<li><a href="http://www.machi-j.net/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/rits.png" alt="ＮＰＯまちづくりジャパン事務局 リッツ総合研究所"></a></li>
+					</ul>
+					<h3 class="footerDataPartner">データ提供パートナー</h3>
+					<ul class="gold">
+						<li><a href="http://www.osmf.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/osmf.png" alt="オープンストリートマップ・ファウンデーション・ジャパン"/></a></li>
+						<li><a href="http://kaken.nii.ac.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/kaken.png" alt="国立情報学研究所 KAKEN: 科学研究費助成事業データベース"/></a></li>
+						<li><a href="http://ci.nii.ac.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/Cinii.png" alt="国立情報学研究所 CiNii（NII論文情報ナビゲータ[サイニィ]）"/></a></li>
+						<li><a href="http://www.city.sabae.fukui.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/sabae.png" alt="鯖江市役所"/></a></li>
+						<li><a href="http://aigid.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/agid.png" alt="社会基盤情報流通推進協議会"/></a></li>
+						<li><a href="http://www.csis.u-tokyo.ac.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/Csis.png" alt="東京大学 空間情報科学研究センター"/></a></li>
+						<li><a href="http://www.editoria.u-tokyo.ac.jp/dias/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/dias.png" alt="東京大学　地球観測データ統融合連携研究機構"/></a></li>
+						<li><a href="http://www.yaf.or.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/yaf.png" alt="公益財団法人　横浜市芸術文化振興財団"/></a></li>
+						<li><a href="http://lod.ac/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/lodac.png" alt="LODAC: Linked Open Data for Academia"/></a></li>
+					</ul>
+					<h3 class="footerDataPartner">基盤提供パートナー</h3>
+					<ul class="gold">
+						<li><a href="http://www.asial.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/asial140.png" alt="アシアル株式会社"></a></li>
+						<li><a href="http://www.microsoft.com/japan" target="_blank"><img src="../challenge2012/common/img/sponsores2012/microsoft140.png" alt="日本マイクロソフト株式会社"></a></li>
+						<li><a href="http://linkdata.org/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/linkdata140.png" alt="LinkData 独立行政法人　理化学研究所"></a></li>
+					</ul>			
+					<h3 class="footerDataPartner">メディアパートナー</h3>
+					<ul class="gold">
+						<li><a href="http://itpro.nikkeibp.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/ITpro.png" alt="ITPro" width="140" height="140"></a></li>
+						<li><a href="http://www.atmarkit.co.jp/" target="_blank"><img src="../challenge2012/common/img/sponsores2012/atIT.png" alt="at mark IT" width="140" height="140"></a></li>
+					</ul>	
+					<h3 class="footerDataPartner">サポーター（後援団体）</h3>
+					<ul class="supporter">
+						<li><a href="http://okfn.jp/" target="_blank">Open Knowledge Foundation 日本グループ</a></li>
+						<li><a href="http://creative-city.jp/" target="_blank">クリエイティブ・シティ・コンソーシアム</a></li>
+						<li><a href="http://www.meti.go.jp/" target="_blank">経済産業省</a></li>
+						<li><a href="http://www.g-contents.jp/" target="_blank">gコンテンツ流通推進協議会</a></li>
+						<li><a href="http://www.ipa.go.jp/" target="_blank">独立行政法人　情報処理推進機構</a></li>
+						<li><a href="http://www.ipsj.or.jp/" target="_blank">一般社団法人　情報処理学会</a></li>
+						<li><a href="http://sigdd.sakura.ne.jp/" target="_blank">一般社団法人　情報処理学会　デジタルドキュメント研究会</a></li>
+						<li><a href="http://www.ai-gakkai.or.jp/jsai/" target="_blank">社団法人　人工知能学会</a></li>
+						<li><a href="http://sigswo.org/" target="_blank">社団法人　人工知能学会　セマンティックウェブとオントロジー研究会</a></li>
+						<li><a href="../s-web.sfc_subdomain/index.html" target="_blank">セマンティックWeb委員会</a></li>
+						<li><a href="http://www.soumu.go.jp/" target="_blank">総務省</a></li>
+						<li><a href="http://www.jeita.or.jp/" target="_blank">一般社団法人　電子情報技術産業協会</a></li>
+						<li><a href="http://linkedopendata.jp/" target="_blank">特定非営利活動法人　リンクト・オープン・データ・イニシアティブ</a></li>
+						<li><a href="http://linkeddata.jp/" target="_blank">LinkedData勉強会</a></li>
+					</ul>
+				</div>
+				<div id="footerMenu">
+					<ul>
+						<li><a href="../challenge2012/contact.html" title="お問い合わせ">お問い合わせ</a></li>
+						<li><a href="../challenge2012/committee.html" title="実行委員会">実行委員会</a></li>
+						<li><a href="../challenge2012/rules.html" title="会則">会則</a></li>
+						<li><a href="http://www.facebook.com/LOD.challenge.Japan" title="facebookページ" target="_blank">facebookページ</a></li>
+					</ul>
+					<p id="facebook"><a href="http://www.facebook.com/LOD.challenge.Japan" title="LOD Challenge 2012 facebookページ"><img src="../challenge2012/common/img/facebook.png" alt="Facebook" width="32" height="32"/></a></p>
+				</div>
+				<div id="credit">
+					<p>Copyright&copy;2012 Linked Open Data Challenge Japan 2012.</p>
+				</div><!--// credit //-->
+			</div>
+		</div><!--// footer //-->
+	</body>
+</html>

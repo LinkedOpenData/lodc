@@ -1,0 +1,569 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>RDF Site Summary (RSS) 1.0</title>
+<link href="RDF Site Summary Abstruct(RSS) 1_0.files/rss-dev.css">
+<link href="./schema.rdf" type="text/xml" rel="meta">
+<meta content="MSHTML 5.50.4522.1800" name="GENERATOR"></head>
+<body>
+このドキュメントは<br/>
+RDF Site Summary (RSS) 1.0 (specification)<br/>
+<a href="http://groups.yahoo.com/group/rss-dev/files/specification.html">http://groups.yahoo.com/group/rss-dev/files/specification.html</a><br/>
+の和訳です。<br/>
+この文書には和訳上の誤りがありえます。<br/>
+内容の保証はいたしかねますので、必ず正式版文書を参照して下さい。<br/>
+<hr size="20">
+<h1>RDF Site Summary (RSS) 1.0</h1><!-- Abstract -->
+<h2><a name="abstract">概略</a></h2>
+<p>RDF Site Summary (RSS)とは軽量で多目的な拡張性のあるメタデータやシンジケーションフォーマットです。 RSSはW3CのRDF仕様書に従ったXMLアプリケーションであり、XMLネーム空間や、RDFに準拠したモジュール化を通じての拡張性があります。</p><!-- Authors -->
+<h2><a name="authors">著者</a></h2>
+<p>RSS-DEVのワーキンググループは以下です。</p>
+<dl>
+  <dt><a href="mailto:begeddov@jfinity.com">Gabe Beged-Dov</a>, <a href="http://www.jfinity.com/">JFinity Systems LLC</a> 
+  <dt><a href="mailto:daniel.brickley@bristol.ac.uk">Dan Brickley</a>, <a href="http://www.ilrt.bris.ac.uk/discovery/">ILRT</a> 
+  <dt><a href="mailto:rael@oreilly.com">Rael Dornfest</a>, <a href="http://www.oreilly.com/">O'Reilly & Associates</a> 
+  <dt><a href="mailto:ian@calaba.com">Ian Davis</a>, <a href="http://www.calaba.com/">Calaba, Ltd.</a> 
+  <dt><a href="mailto:ldodds@ingenta.com">Leigh Dodds</a>, <a href="http://www.xmlhack.com/">xmlhack</a> 
+  <dt><a href="mailto:eisen@pobox.com">Jonathan Eisenzopf</a>, <a href="http://www.wwind.com/">Whirlwind Interactive</a> 
+  <dt><a href="mailto:david@moreover.com">David Galbraith</a>, <a href="http://www.moreover.com/">Moreover.com</a> 
+  <dt><a href="mailto:guha@guha.com">R.V. Guha</a>, <a href="http://www.guha.com/">guha.com</a> 
+  <dt><a href="mailto:ken@bitsko.slc.ut.us">Ken MacLeod</a>, <a href="http://bitsko.slc.ut.us/">(Independent)</a> 
+  <dt><a href="mailto:emiller@oclc.org">Eric Miller</a>, <a href="http://www.oclc.org/">Online Computer Library Center, Inc.</a> 
+  <dt><a href="mailto:aaron@theinfo.org">Aaron Swartz</a>, <a href="http://www.theinfo.org/">The Info Network</a> 
+  <dt><a href="mailto:vdv@dyomedea.com">Eric van der Vlist</a>, <a href="http://www.dyomedea.com/">Dyomedea</a> </dt></dl><!-- Version -->
+<h2><a name="version">バージョン</a></h2>
+<p><strong>最新版:</strong> <a href="http://purl.org/rss/1.0/spec">http://purl.org/rss/1.0/spec</a></p>
+<div class="version">1.3.4 2001年5月30日 <a href="#s5.3.6">5.3.6章</a>の小さな誤字を訂正した。 (<a href="http://groups.yahoo.com/group/rss-dev/message/1988">告示</a><a href="http://www.aaronsw.com/">のように</a> )</div>
+<div class="version">1.3.3 2001年3月20日 mimeタイプとURIを更新した。(<a href="http://groups.yahoo.com/group/rss-dev/message/1779">告示</a><a href="mailto:aaron@theinfo.org">のように</a>) </div>
+<div class="version">1.3.2 2000年12月19日(スタイルを変更し、表題の付いたマークアップを整理した。改訂の著者: <a href="mailto:sean@mysterylights.com">SBP</a>)</div>
+<div class="version">1.3.1 2000年12月17日(誤字訂正: RSS文書ごとの制限を15項目にすることを提案したが、[<a href="#s5.5">5.5</a>]では実施していない。)</div>
+<div class="version">1.3 2000年12月09日</div><!-- Status -->
+<h2><a name="status">位置付け</a></h2>
+<p><a href="http://www.egroups.com/surveys/rss-dev?id=444214">リリース</a> </p>
+<p>コメントは<a href="http://www.egroups.com/messages/rss-dev">http://www.egroups.com/messages/rss-dev</a>にある<a href="http://purl.org/rss/1.0/mailinglist/">RSS-DEV メーリングリスト</a>へ直接お送りください。 
+</p><!-- Rights -->
+<h2><a name="rights">版権</a></h2>
+<p>Copyright &copy; 2000  by Authors.</p>
+<p>RDF Site Summary 1.0仕様書とそれに付随する文書の使用、複製、変更、そして頒布の許可はいかなる目的においても、無料で、恒久的に許諾されます。ただし、上記の版権の告示および節がすべてのコピーに表示されることを条件とします。版権所有者はいかなる目的でも本仕様書の適合性について責任を負いません。本仕様書は明示的または黙示的な保証なしに”そのままの状態”で提供されます。</p>
+<p>本版権はRDF Site Summary 1.0 仕様書とそれに付随する文書に適用され、RSSフォーマット自身に拡大されることはありません。</p><!-- TOC -->
+<h2><a name="toc">目次</a></h2>
+<dl>
+  <dt>1. <a href="#s1">はじめに</a> 
+  <dt>2. <a href="#s2">背景</a> 
+  <dt>3. <a href="#s3">モチベーション</a> 
+  <dt>4. <a href="#s4">デザインの目標</a> 
+  <dd>4.1 <a href="#s4.1">軽量</a> 
+  <dd>4.2 <a href="#s4.2">多目的</a> 
+  <dd>4.3 <a href="#s4.3">拡張性</a> 
+  <dd>4.4 <a href="#s4.4">メタデータ</a> 
+  <dd>4.5 <a href="#s4.5">シンジケーション</a> 
+  <dt>5. <a href="#s5">コア構文 
+  </a> 
+  <dd>5.1 <a href="#s5.1">&lt;?xml 
+  version="1.0"?&gt;</a> 
+  <dd>5.2 <a href="#s5.2">&lt;rdf:RDF&gt;</a> 
+  <dd>5.3 <a href="#s5.3">&lt;channel&gt;</a> 
+  <dd class="indent">5.3.1 <a href="#s5.3.1">&lt;title&gt;</a> 
+  <dd class="indent">5.3.2 <a href="#s5.3.2">&lt;link&gt;</a> 
+  <dd class="indent">5.3.3 <a href="#s5.3.3">&lt;description&gt;</a> 
+  <dd class="indent">5.3.4 <a href="#s5.3.4">&lt;image&gt;</a> 
+  <dd class="indent">5.3.5 <a href="#s5.3.5">&lt;items&gt;</a> 
+  <dd class="indent">5.3.6 <a href="#s5.3.6">&lt;textinput&gt;</a> 
+  <dd>5.4 <a href="#s5.4">&lt;image&gt;</a> 
+  <dd class="indent">5.4.1 <a href="#s5.4.1">&lt;title&gt;</a> 
+  <dd class="indent">5.4.2 <a href="#s5.4.2">&lt;url&gt;</a> 
+  <dd class="indent">5.4.3 <a href="#s5.4.3">&lt;link&gt;</a> 
+  <dd>5.5 <a href="#s5.5">&lt;item&gt;</a> 
+  <dd class="indent">5.5.1 <a href="#s5.5.1">&lt;title&gt;</a> 
+  <dd class="indent">5.5.2 <a href="#s5.5.2">&lt;link&gt;</a> 
+  <dd class="indent">5.5.3 <a href="#s5.5.3">&lt;description&gt;</a> 
+  <dd>5.6 <a href="#s5.6">&lt;textinput&gt;</a> 
+  <dd class="indent">5.6.1 <a href="#s5.6.1">&lt;title&gt;</a> 
+  <dd class="indent">5.6.2 <a href="#s5.6.2">&lt;description&gt;</a> 
+  <dd class="indent">5.6.3 <a href="#s5.6.3">&lt;name&gt;</a> 
+  <dd class="indent">5.6.4 <a href="#s5.6.4">&lt;link&gt;</a> 
+  <dt>6. <a href="#s6">モジュール</a> 
+  <dt>7. <a href="#s7">例</a> 
+  <dt>8. <a href="#s8">リソース</a> 
+  <dt>9. <a href="#s9">謝辞</a> 
+  </dt></dl><!-- Introduction -->
+<h2><a name="s1">1. はじめに</a></h2>
+<p>RDF Site Summary (RSS)は軽量で多目的な拡張性のあるメタデータ記述であり、シンジケーションフォーマットです。RSSは、W3Cの<a href="http://www.w3.org/TR/REC-rdf-syntax/">RDF</a>仕様に準拠したXMLアプリケーションで、XMLネーム空間やRDFに準拠したモジュール化を通じての拡張性を持っています。</p>
+<p>RSS summaryは、最低でも、URLで検索可能な項目で構成されている"channel"を記述している文書です。各項目はタイトル(title)、リンク(link)そして簡単な記述(brief description)で構成されています。項目(item)には 従来よりニュースヘッドラインがありますが、RSSはその短い存在の中に、リパーパスが多く見られます。 RSS 1.0 文書の例に関しては、以下の<a href="#s7">例</a> の章を参照して下さい。 </p><!-- Background -->
+<h2><a name="s2">2. 背景</a></h2>
+<p>1999年、NetscapeはRSS 0.9を<a href="http://my.netscape.com/">My 
+Netscape Network</a> (MNN)ポータルのためのchannel記述フレームワーク/コンテンツ収集機構として導入しました。文書内の簡単なスナップショットを提供することによって、Webサイト作成者はMy Netscapeのコンテンツを通じて、読者を得ていました。</p>
+<p>MNNの働きの副産物はRSSをXMLに準拠した軽量なシンジケーションフォーマットを使用することでした。そして、特定のシンジケーションシステムの実用可能な代替となり、 <a href="http://www.icestandard.org/">ICE</a> などのような重量の基準が過剰になった多くのシナリオですぐに実用的になりました。リパーパスはヘッドラインシンジケーションで打ち止めにはなりませんでした。つまり、現在のRSSフィードは、ニュースヘッドラインや、ディスカッションフォーラム、ソフトウェアの告示、さまざまな所有者のデータなど、コンテンツタイプの配列を行います。</p>
+<p>RSS 0.91は、"Rich Site Summary" と呼ばれていましたが、0.9のすぐ後に出ました。RDFにその根をおろし、<a href="http://www.userland.com/">Userland</a>の<a href="http://my.userland.com/stories/storyReader">scriptingNews</a>形式から新しい要素を発生させました。-- 最も顕著に新しい項目レベル&lt;description&gt;要素になり、RSS を(軽量な)コンテンツのシンジケーション界に導きました。</p>
+<p>NetscapeはRSSへの取り組みをやめましたが、UserlandのDave Winerが行った普及はRSSをシンジケーションフレームワークとして採用するうねりを起こしました。RSS 0.91を <a href="http://manila.userland.com/">Manila</a> 製品や関連する<a href="http://www.editthispage.com/">EditThisPage.com</a>サービスのためのシンジケーションのひとつとして組み込むことはweblogとシンジケーションの世界をまとめることになりました。</p><!-- Motivation -->
+<h2><a name="s3">3. モチベーション</a></h2>
+<p>RSSがリパーパスされ、統合され、分類され続けるにつれ、改良したメタデータのフレームワークへの必要性も高まっています。channnelレベルやitemレベルのtitle要素とdescription要素はメタデータとHTMLで負荷をかけられています。作成者の中にはRSSの貧弱なメタデータ機能を増大させようとする際に、非公式で特別な要素を挿入することに頼る人さえいます。(たとえば、
+&lt;category&gt;, &lt;date&gt;, &lt;author&gt;など。) </p>
+<p>より簡単な要素をRSSのコアに追加するということがその解決の一つとして提案されました。短期的にみれば恐らく一番簡単のように思えますが、この命令はスケーラビリティを犠牲にし、コアフォーマットへの度重なる修正や、要求された機能の追加、未使用の機能の削除が必要となります。要素使用のより具体的な表現については、Ian Davisの<a href="http://www.egroups.com/message/syndication/330">RSS Survey</a> 
+(2000-07-25) を参照して下さい。</p>
+<p>次に提案された解決は、（ここで採用していますが）特定の機能を差し込み可能なRSSもモジュールに区分することです。これは本仕様書で使用しているアプローチの一つです。つまり、モジュール化は言語を分割するための<a href="http://www.w3.org/TR/REC-xml-names/">XML ネーム空間</a> を使用してなされます。RSSの機能を追加したり、削除したりすることはタスクに一番あったモジュールの特定のセットを組み込む際の問題です。RSSコアの再生は必要ありません。</p>
+<p>RSSの進歩したアプリケーションにはintra-channel要素とinter-channel要素間の関係をより豊富に表現することが必要です。(例えば、じっくりと行った話し合いなど)　RDF (Resource Description Framework)はそういった豊富なメタデータモデリングのためのフレームワークを提供します。RSS 0.9は、さらなる構造をその上に積み重ねる基本の(だが、制限された) RDFの基礎を提供しました。</p><!-- Design Goals -->
+<h2><a name="s4">4. デザインの目標</a></h2>
+<p>RSS 1.0のデザインの目標は<a href="http://www.w3.org/TR/2000/REC-xml-20001006">XML</a>に準拠した軽量で多目的で拡張性のあるメタデータ記述およびシンジケートフォーマットです。 RSS 0.9との後方互換性は現在シンジケートされたコンテンツの作成者が簡単に採用できることを目標としています。i</p>
+<h3><a name="s4.1">4.1 軽量</a></h3>
+<p>RSSの成功は<a href="http://www.xmlnews.org/">XMLNews</a> や<a href="http://www.icestandard.org/">ICE</a>のように完全なシンジケーションフレームワークではなく、簡単なXML文書である、という事実が大きく貢献してます。</p>
+<p id="s4.1_basic"><a name="s4.1_basic"></a>以下はコアのRSS1.0要素セットだけを使用しているRSS 1.0文書の基本的な例です。</p><pre>&lt;?xml version="1.0"?&gt;
+&lt;rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://purl.org/rss/1.0/"
+&gt;
+  &lt;channel rdf:about="http://www.xml.com/xml/news.rss"&gt;
+    &lt;title&gt;XML.com&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub&lt;/link&gt;
+    &lt;description&gt;
+      XML.com の特徴はXMLコミュニティに対する情報とサービスの豊富な組み合わせです。
+    &lt;/description&gt;
+    &lt;image rdf:resource="http://xml.com/universal/images/xml_tiny.gif" /&gt;
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li resource="http://xml.com/pub/2000/08/09/xslt/xslt.html" /&gt;
+        &lt;rdf:li resource="http://xml.com/pub/2000/08/09/rdfdb/index.html" /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+  &lt;/channel&gt;
+  &lt;image rdf:about="http://xml.com/universal/images/xml_tiny.gif"&gt;
+    &lt;title&gt;XML.com&lt;/title&gt;
+    &lt;link&gt;http://www.xml.com&lt;/link&gt;
+    &lt;url&gt;http://xml.com/universal/images/xml_tiny.gif&lt;/url&gt;
+  &lt;/image&gt;
+  &lt;item rdf:about="http://xml.com/pub/2000/08/09/xslt/xslt.html"&gt;
+    &lt;title&gt;XSLTで、組み込みを処理する&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub/2000/08/09/xslt/xslt.html&lt;/link&gt;
+    &lt;description&gt;
+     一般のXMLで文書を組み込む処理は問題を含んでいるかもしれません。この条項はSAXに準拠した処理を通じて、 包括情報を保存する方法を提案します。
+    &lt;/description&gt;
+  &lt;/item&gt;
+  &lt;item rdf:about="http://xml.com/pub/2000/08/09/rdfdb/index.html"&gt;
+    &lt;title&gt;RDFを作業に加える&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub/2000/08/09/rdfdb/index.html&lt;/link&gt;
+    &lt;description&gt;
+     Resource Description FrameworkのためのツールとAPIサポートはゆっくりと成長しています。Edd Dumbill はもっとも魅力的で新しいRDFツールキットの一つであるRDFDBを調べます。
+     &lt;/description&gt;
+  &lt;/item&gt;
+&lt;/rdf:RDF&gt;</pre>
+<h3><a name="s4.2">4.2 多目的</a></h3>
+<p>バージョン0.91がリリースされて12ヶ月経ち、RSSの使用法に関するさまざまな書物も出てきています。高まるアプリケーションのニーズに合わせてRSSが必要となってきています。たとえば、収集や、話し合いの筋道、ジョブリスティング、販売用の家、(マルチプルリスティングサービス)、スポーツの点数つけ、文書のカタログ化など。XMLネーム空間に準拠したモジュール化とRDFを通して、RSS 1.0 は標準化されたリパーパスと特別なリパーパスのためのフレームワークを構築します。</p>
+<h3><a name="s4.3">4.3 拡張性</a></h3>
+<p>RSS 1.0とそれ以前(または傍系)のバージョンの重要となる相違点は<a href="http://www.w3.org/TR/REC-xml-names/">XML 
+ネーム空間</a>と <a href="http://www.w3.org/TR/REC-rdf-syntax/">RDF</a> 
+(Resource Description Framework)対応を経由しての拡張性にあります。</p>
+<p>ネーム空間に準拠した<a href="#s6">モジュール</a> は以下の点が無くても、区分化された拡張性を可能にし、RSSを拡張可能にします。</p>
+<ul>
+  <li>コア仕様書を相互に書き換える必要性。<br>
+  <li>すべて、または各要素が一致する必要性。<br>
+  <li>大部分を特定の領域やアプリケーションに使用しない要素でRSSを拡張する。<br>
+  <li>衝突を挙げる必要性。</li></ul>
+<p>RSSモジュールは<a href="#s6">モジュール</a>の章で詳細を述べています。</p> 
+<h3><a name="s4.4">4.4 メタデータ</a></h3>
+<p>メタデータとはデータについてのデータです。Webについて流布する情報は不足していませんが、それについての記述はほとんどありません。W3Cの<a href="http://www.w3.org/Metadata/Activity">Metadata Activity Statement</a> ではこの議題について以下の様に言及しています。</p>
+<blockquote>
+  <p>Webの使用の可能性は無限ですが、その技術には重大な部分が欠けています。欠けているのは情報についての情報です。それは、特にコンピュータがWebページを適切に検索し、処理する方法で構築されたラベリング、カタログ化そして記述的な情報です。</p></blockquote>
+<p><a href="http://www.w3.org/TR/REC-rdf-syntax">RDF</a>は初期の均一に組み立てられたRSSを使用してできること以上に豊富なメタデータの表現を見込んでいます。RSSの初期のバージョンにRDFを再構築することを選択する理由はRSS 0.9における現行のRDFの基礎にあります。つまり、RDFのRSSバージョン0.91 への再導入の試みは”歯磨き粉をチューブに戻す”主張を証明しました。</p>
+<h3><a name="s4.5">4.5 シンジケーション</a></h3>
+<p>シンジケーションをここでは、検索やよりよい送信、収集のためにデータをオンラインで使用可能にすることや、データをオンライン発行可能にすることとして定義します。シンジケーションシステムの複雑なさまざまの特性 (無料vs. 会費、 押す vs　引くなど) は本仕様書には述べていません。</p><!-- Core Syntax -->
+<h2><a name="s5">5. コア構文</a></h2>
+<p>RSS 1.0 のコアは<a href="http://my.netscape.com/publish/help/quickstart.html">RSS 0.9</a>上に構築されています。RSS1.0の核となっているのは、後方互換性を維持する一方で、XMLネーム空間とRDF経由での拡張性を持つことです。</p>
+<p><em>RSS 0.9との後方互換性</em><br>後方互換性は基本のRSS構文解析プログラムや、モジュールそしてライブラリが以下のことを理解するために、デザインされなかったものを無視するという仮定や規定によって成し遂げられます。</p>
+<ol>
+  <li>属性； RSS 0.9にはRDFネーム空間宣言外に属性がありません。<br>
+  <li>デフォルトネーム空間の外に存在するモジュール化された拡張子の要素メンバー<br>
+  <li>RSS0.9文書の全構造の妨げとならない特定の要素</li></ol>
+<p><em>XMLネーム空間に準拠したモジュール化を通じた拡張性</em><br>RSS 1.0 はXMLネーム空間に準拠したモジュールを通しての拡張性があります。もちろん、特定の拡張性も推奨されますが、そういった機能をカバーする一致したモジュールのコアセットが分類や集合、Dublin Coreとして現れることが望まれています。下記の<a href="#s6">モジュール</a> の章とコア<a href="http://purl.org/rss/1.0/modules/">RSS 1.0 Modules</a>のレジストリを参照してください。 </p>
+<p>トップレベルのchannelや、image、item、textinput要素[<a href="#s5.3">5.3 
+&lt;channel&gt;</a>, <a href="#s5.4">5.4 
+&lt;image&gt;</a>, <a href="#s5.5">5.5 
+&lt;item&gt;</a>, <a href="#s5.6">5.6 
+&lt;textinput&gt;</a>] のサブセットの制約は、これらの要素には繰り返しのサブセットを含むことができないという事です(例えば、<code>&lt;item&gt;&lt;dc:subject /&gt;&lt;dc:subject 
+/&gt;&lt;/item&gt;</code>など)。この提案はすぐ近くのサブセットを拘束するだけです。(豊富なコンテンツや繰り返す要素の)深さはすでにRDF構文を使用してうまく定義されています。</p>
+<p><em>RDF</em><br>RSS 1.0 はRSS0.9に見られる（RSS0.91では無くなっている）できたばかりのRDFフレームワーク上に以下の最低限の付加を媒体として構築しています。 </p>
+<ul>
+  <li>各二番目のレベルの要素 (channel、image、item、そしてtextinput)には <em><code>rdf:about</code></em>要素が含まれていなければなりません。<a href="#s5.3">5.3</a>, 
+  <a href="#s5.4">5.4</a>, 
+  <a href="#s5.5">5.5</a>, 
+  <a href="#s5.6">5.6</a> 
+  ].<br>
+  <li>imageやitem、そしてtextinputとchannelを関連付けているコンテンツのchannelレベルのRDFテーブル[<a href="#s5.3.4">5.3.4 
+  &lt;image&gt;</a>, <a href="#s5.3.5">5.3.5 
+  &lt;items&gt;</a>, <a href="#s5.3.6">5.3.6 
+  &lt;textinput&gt;</a>] </li></ul>
+<p>RDFとRSS1.0のわかり易いXML表示をできるだけ同期性に維持するためにはRSS 1.0のみが<em>core要素</em>で分類された要素のRDF構文の使用をサポートすることです。</p>
+<p><a name="s5_mimetype"><em>Mime タイプ</em></a><br>RSS1.0文書のための現在のmimeタイプの勧告はアプリケーション/xmlですが、現在その作業はRDF（および恐らくRSS)用mimeタイプを登録するためになされています。　RDF(むしろRSS)の mime-タイプは一旦登録されると使用すべきです。</p>
+<p><a name="s5_fileextension"><em>ファイル拡張子</em></a><br>RSS1.0文書用の特定のファイル拡張子は必要ありません。<code>.rdf</code> や<code>.xml</code>をお勧めしますが、前者の方がより好まれます。</p>
+<p><a name="s5_encoding"><em>符号化</em></a><br> RSS 0.9はASCII符号化のみをサポートしていましたが、RSS 1.0 はUTF-8を採用します。US-ASCII (つまり、127以上の文字は&#nnn;として符号化します。)はUTF-8 (とISO-8859-1、HTTPのデフォルトヘッダ符号化)と適合します。 </p>
+<p><em>URL</em><br>RSS 0.9との後方互換性を保証するための方法として、以下のスキーマがurl要素およびlink要素で使用できます。http:, 
+https:, ftp:. mailto: はテキスト入力のリンクでのみ使用できます。</p>
+<p><em>エンティティ:</em><br>XMLにはマークアップのための特定の文字が保存されています。これらの文字をRSS文書に組み込むためには、以下のように、それらのエンティティ参照と入れ替えなければなりません。</p>
+<ul>
+  <li><code>&lt;</code>は<code>&lt;</code>になります。 
+  <li><code>&gt;</code>は<code>&gt;</code>になります。 
+  <li><code>&</code>は<code>&amp;</code>になります。</li></ul>
+<p>また、以下の二つのエンティティ参照も準拠するXML構文解析プログラムで認識されます。共通ですがオプションです。しかし、引用された文字列の中に同じ文字を使用して引用文字を組み込む場合は必須の文字です。例えば、""こんにちは、" と彼女は言った。" は"&quot;こんにちは、&quot;と彼女は言った。"と符号化して下さい。 
+</p>
+<ul>
+  <li><code>'</code>は<code>&apos;になります。</code> 
+  <li><code>"</code>は<code>&quot;になります。</code> </li></ul>
+<p>注意: RSS 1.0にはDTDは必要ではありませんので、必ず使用されているエンティティのインライン宣言を上記5つを除いて、組み込んで下さい。以下のDTDフラグメントはHMLと互換性のあるエンティティのソースとして非常に便利です。 </p>
+<ul>
+  <li><a href="http://www.w3.org/TR/xhtml1/DTD/xhtml-special.ent">http://www.w3.org/TR/xhtml1/DTD/xhtml-special.ent</a> 
+  <li><a href="http://www.w3.org/TR/xhtml1/DTD/xhtml-symbol.ent">http://www.w3.org/TR/xhtml1/DTD/xhtml-symbol.ent</a> 
+  <li><a href="http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent">http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent</a> 
+  </li></ul>
+<p>使用例: </p><pre>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE rdf:RDF [
+&lt;!ENTITY % HTMLlat1 PUBLIC
+ "-//W3C//ENTITIES Latin 1 for XHTML//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent"&gt;
+%HTMLlat1;
+]&gt;
+&lt;rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+&gt;
+...</pre>
+<p><em>コンテンツの長さ:</em><br>RSS 1.0は、タイトルやリンク、アプリケーションへの記述などの要素のための条件にあったコンテンツの長さを残していますが、RSS 0.9の文字の最大の長さは、後方互換性に厳しくこだわる提案された最良のプラクティスの状態には反しています。</p>
+<p><em>表記:</em><br>以下のコア要素の記述では、以下の表記が使用されます。</p>
+<ul>
+  <li><code>{something}</code>はURIや値などの単なるプレースホルダーです。 
+  <li>モデル記述ではDTDのような構文が使用されていますが、これは表示だけを目的としており、順番を示しては<em>いません</em>。要素の順序は重要ではありません。
+  <li>モデル記述では、 <code>?</code>は要素や属性がオプションであることを示しています。
+  <li>モデル記述では、 <code>+</code>はこの要素や属性の"一つ以上の" インスタンスが使用できることを意味しています。
+  <li>モデル記述では、<code>*</code> はこの要素や属性の"0以上の" インスタンスが
+使用できることを意味しています。 </li></ul>
+<h3><a name="s5.1">5.1 &lt;?xml version="1.0"?&gt;</a></h3>
+<p>XMLアプリケーションのように、RSS文書はXML宣言で始める必要はありません。一番良いプラクティスの提案であり、RSS 0.9 との後方互換性をより保証するものとして、本仕様書はXML宣言で始めることを推奨します(0.9の仕様書では必須です。)</p>
+<p><em>構文:</em> &lt;?xml version="1.0"?&gt;<br><em>要件:</em> 
+ (符号化を指定しない限り)オプションです。<br></p>
+<h3><a name="s5.2">5.2 &lt;rdf:RDF&gt;</a></h3>
+<p>RSS 1.0に対応した各文書の最上のレベルはRDF要素です。
+RDF開始タグはrdf: ネーム空間の接頭辞とRDF構文スキーマを関連付けし、RSS 1.0のスキーマをその文書のデフォルトのネーム空間として確立します。</p>
+<p>有効なネーム空間の接頭辞が使用されるかもしれませんが、文書作成者は"rdf:"を標準準拠であるとみなすよう推奨されます。RSS 0.9との後方互換性を強く求めている人は"rdf:"を使用しなければなりません。 </p>
+<p><em>構文:</em> &lt;rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns="http://purl.org/rss/1.0/"&gt;<br><em>要件:</em> 他の付加的なネーム空間宣言とは別に、示しているように厳密に必須です。<br><em>モデル:</em> 
+(channnel、image?、items+, textinput?) </p>
+<h3><a name="s5.3">5.3 &lt;channel&gt;</a></h3>
+<p>channel要素にはタイトル(title)や簡潔な記述(brief description)、記述されているリソース（例えば、channelプロバイダのホームページなど）へのURLリンクなどを含むchannel自身を記述するメタデータが含まれています。
+channel要素のrdf:about属性の{resource} URLは、RSS文書の他のrdf:aboutに関して一意でなければなりません。また、channelを識別するURIです。 ほとんどの場合、これは記述されているホームページのURLか、または、RSSファイルが検索されたURLです。</p>
+<p></p>
+<p><em>構文:</em> &lt;channel 
+rdf:about="{resource}"&gt;<br><em>要件:</em> 必須<br><em>必須の属性 
+:</em> rdf:about<br><em>モデル:</em> (title、link、descripsion、image?、items、textinput?)<br><em>例:</em><br></p><pre>  &lt;channel rdf:about="http://www.xml.com/xml/news.rss"&gt;
+    &lt;title&gt;XML.com&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub&lt;/link&gt;
+    &lt;description&gt;
+      XML.com の特徴はXMLコミュニティに対する情報とサービスの豊富な組み合わせです。
+    &lt;/description&gt;
+    &lt;image rdf:resource="http://xml.com/universal/images/xml_tiny.gif" /&gt;
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li resource="http://xml.com/pub/2000/08/09/xslt/xslt.html" /&gt;
+        &lt;rdf:li resource="http://xml.com/pub/2000/08/09/rdfdb/index.html" /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+    &lt;textinput rdf:resource="http://search.xml.com" /&gt;
+  &lt;/channel&gt;</pre>
+<h3><a name="s5.3.1">5.3.1 &lt;title&gt;</a></h3>
+<p>channelのための記述的なタイトル。</p>
+<p><em>構文:</em> 
+&lt;title&gt;{channel_title}&lt;/title&gt;<br><em>要件:</em> 
+必須<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 40 
+(文字)<br></p>
+<h3><a name="s5.3.2">5.3.2 &lt;link&gt;</a></h3>
+<p>channel titleのHTMLレンダリングがリンクするURL。通常、親サイトのホームページやニュースページ。</p>
+<p><em>構文:</em> 
+&lt;link&gt;{channel_link}&lt;/link&gt;<br><em>要件:</em> 
+必須<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 
+500<br></p>
+<h3><a name="s5.3.3">5.3.3 &lt;description&gt;</a></h3>
+<p>channelのコンテンツや機能、ソースなどの簡単な記述。</p>
+<p><em>構文:</em> 
+&lt;description&gt;{channel_description}&lt;/description&gt;<br><em>要件:</em> 
+必須<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 
+500<br></p>
+<h3><a name="s5.3.4">5.3.4 &lt;image&gt;</a></h3>
+<p>オプションのimage要素[<a href="#s5.4">5.4</a>] とこの特定のRSSchannelとのRDF関係を確立します。rdf:resourceの{image_uri} はimage要素のrdf:about {image_uri}と同じでなければなりません</p>
+<p><em>構文:</em> &lt;image rdf:resource="{image_uri}" 
+/&gt;<br><em>要件:</em> image要素が存在する場合は必須です。<br><em>モデル:</em> Empty<br></p>
+<h3><a name="s5.3.5">5.3.5 &lt;items&gt;</a></h3>
+<p>文書の項目[<a href="#s5.5">5.5</a>] とこの特定のRSSchannelを関連付けるRDFの目次。各itemのrdf:resource {item_uri} は関連するitem要素のrdf:about {item_uri}と同じでなければなりません。</p>
+<p>レンダリングや再構築のためのitem順序を示すためのRDF Bagではなく、全itemを含めるためにRDF Seq (シーケンス)を使用します。 i</p>
+<p>channelレベルのitemシーケンスとしてではなく、文書内現れるitemはRDF構文解析プログラムが破棄する可能性があるということにご注意下さい。</p>
+<p><em>構文:</em> &lt;items&gt;&lt;rdf:Seq&gt;&lt;rdf:li resource="{item_uri}" 
+/&gt; ... &lt;/rdf:Seq&gt;&lt;/items&gt;<br><em>要件:</em> 
+必須<br></p>
+<h3><a name="s5.3.6">5.3.6 &lt;textinput&gt;</a></h3>
+<p>オプションのtextinput要素[<a href="#s5.6">5.6</a>] とこの特定のRSSチャンネルとのRDF関係を確立します。{textinput_uri} rdf:resourceはtextinput要素のrdf:about {textinput_uri}は同じでなければなりません。</p>
+<p><em>構文:</em> &lt;textinput rdf:resource="{textinput_uri}" 
+/&gt;<br><em>要件:</em>texinput要素が存在する場合は必須です。<br><em>モデル:</em> Empty<br></p>
+<h3><a name="s5.4">5.4 &lt;image&gt;</a></h3>
+<p>channelのHTMLレンダリングと関連付けられるimageです。このimageは大部分のWebブラウザがサポートしているフォーマットであることを推奨します。後の0.91仕様では幅1-144、高さ1-400を有効としていますが、従来は(そして、0.9仕様) 88x31を指示しています。</p>
+<p><em>構文:</em> &lt;image 
+rdf:about="{image_uri}"&gt;<br><em>要件:</em> オプショナルですが、もし存在するならchannel要素[<a href="#s5.3.4">5.3.4</a>]内でなければなりません。<br><em>必須
+の要素:</em> rdf:about<br><em>モデル:</em> (title, url, 
+link)<br><em>例:</em><br></p><pre>  &lt;image rdf:about="http://xml.com/universal/images/xml_tiny.gif"&gt;
+    &lt;title&gt;XML.com&lt;/title&gt;
+    &lt;link&gt;http://www.xml.com&lt;/link&gt;
+    &lt;url&gt;http://xml.com/universal/images/xml_tiny.gif&lt;/url&gt;
+  &lt;/image&gt;</pre>
+<h3><a name="s5.4.1">5.4.1 &lt;title&gt;</a></h3>
+<p>HTMLとしてレンダされる際、channelのimageタグと関連付けれられる代替テキスト。("alt" 属性)</p>
+<p><em>構文:</em> 
+&lt;title&gt;{image_alt_text}&lt;/title&gt;<br><em>要件:</em> image要素が存在する場合は必須です。<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 40<br></p>
+<h3><a name="s5.4.2">5.4.2 &lt;url&gt;</a></h3>
+<p>HTMLとしてレンダされる際、channelのimageタグの"src"属性で使用されるimageのURL。 </p>
+<p><em>構文:</em> &lt;url&gt;{image_url}&lt;/url&gt;<br><em>要件:</em> 
+image要素が存在する場合は必須です。<br><em>モデル:</em> 
+(#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 500<br></p>
+<h3><a name="s5.4.3">5.4.3 &lt;link&gt;</a></h3>
+<p>channel imageのHTMLレンダリングがリンクするURL。 channelのtitleのlinkと同じように、これは通常、親サイトのホームページやニュースページです。
+</p>
+<p><em>構文:</em> 
+&lt;link&gt;{image_link}&lt;/link&gt;<br><em>要件:</em> image要素が存在する場合は必須です。<br><em>モデル:</em> (#PCDATA)<br><em>所属:</em> 
+image<br><em>（提案されている) 最大の長さ:</em> 500<br></p>
+<h3><a name="s5.5">5.5 &lt;item&gt;</a></h3>
+<p>通常はRSS1.0のモジュラーの拡張性をもつニュースヘッドラインですが、何にでもなれます。例えば、審議の提示や、ジョブリスティング、ソフトウェアパッチなど-- URIを持つオブジェクト。RSS文書ごとに最低一つのitemがあります。RSS 1.0では上限はありませんが、RSS 0.9や0.91との後方互換性を考えると、最大15がお勧めです。</p>
+<p> RSS文書のその他のrdf:about属性に関して、{item_uri}は一意でなければなりません。また、これはitemを識別するURIです。可能であれば、{item_uri} は&lt;item&gt;要素の&lt;link&gt;サブ要素の値に一致したほうがよいでしょう。</p>
+<p><em>構文:</em> &lt;item rdf:about="{item_uri}"&gt;<br><em>要件:</em> 
+&gt;= 1<br><em>(0.9xとの後方互換性を考えると)推奨:</em> 
+1-15<br><em>必須の属性:</em> rdf:about<br><em>モデル:</em> (title, 
+link, description?)<br><em>例:</em><br></p><pre>  &lt;item rdf:about="http://xml.com/pub/2000/08/09/xslt/xslt.html"&gt;
+    &lt;title&gt;XSLTで、組み込みを処理する&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub/2000/08/09/xslt/xslt.html&lt;/link&gt;
+    &lt;description&gt;
+     一般のXMLで文書を組み込む処理は問題を含んでいるかもしれません。この条項はSAXに準拠した処理を通じて、 包括情報を保存する方法を提案します。
+  &lt;/description&gt;
+  &lt;/item&gt;</pre>
+<h3><a name="s5.5.1">5.5.1 &lt;title&gt;</a></h3>
+<p>itemのタイトル。</p>
+<p><em>構文:</em> 
+&lt;title&gt;{item_title}&lt;/title&gt;<br><em>要件:</em> 
+必須。<br><em>モデル:</em> (#PCDATA)<br><em>（提案されている) 最大の長さ:</em> 
+100<br></p>
+<h3><a name="s5.5.2">5.5.2 &lt;link&gt;</a></h3>
+<p>itemのURL。</p>
+<p><em>構文:</em> 
+&lt;link&gt;{item_link}&lt;/link&gt;<br><em>要件:</em> 
+必須。<br><em>モデル:</em> (#PCDATA)<br><em>（提案されている) 最大の長さ:</em> 
+500<br></p>
+<h3><a name="s5.5.3">5.5.3 &lt;description&gt;</a></h3>
+<p>itemの簡単な記述/概要。</p>
+<p><em>構文:</em> 
+&lt;description&gt;{item_description}&lt;/description&gt;<br><em>要件:</em> 
+オプションです。<br><em>モデル:</em> (#PCDATA)<br><em>提案されている) 最大の長さ:</em> 
+500<br></p>
+<h3><a name="s5.6">5.6 &lt;textinput&gt;</a></h3>
+<p>textinput要素はフォームデータを任意のURLに提示する方法を提供します。-- 通常、親となるWebサイトにあります。末尾のみを受け取る際のフォームプロセッサはHTTP GET方式を処理すると思われます。</p>
+<p>フィールドは-- その他の中では、一般的に検索ボックスや応募フォームとして使用されます。このフィールドはRSS文書がchannel(<a href="http://my.netscape.com/">MNN</a>を参照して下さい。) としてレンダーされ、人間が読むことができるタイトルや記述と一緒になっている際にはいくつか使用されますが、この過負荷な要素の意味を自動決定する際の両義性によって、その他の場合ではそのフィールドが特に不便なものになります。そのため、RSS 1.0 はRSS 0.9との後方互換性を保つ一方で、将来のバージョンではこの要素のリソース発見のフォームをいくつか減らすか、または、拡大するかを提案します。</p>
+<p>{textinput_uri} はRSS文書の他のrdf:about要素に関して一意でなければなりません。また、textinputを識別するURIです。可能であれば、{textinput_uri} は&lt;textinput&gt;要素の&lt;link&gt;サブ要素の値と一致すべきです。</p>
+<p><em>構文:</em> &lt;textinput 
+rdf:about="{textinput_uri}"&gt;<br><em>要件:</em> オプションですが、もし存在するなら、channel要素[<a href="#s5.3.6">5.3.6</a>]内でなければなりません。<br><em>必須の要素:</em> rdf:about<br><em>Model:</em> (title, description, name, 
+link)<br><em>例:</em><br></p><pre>  &lt;textinput rdf:about="http://search.xml.com"&gt;
+    &lt;title&gt;XML.comを検索する&lt;/title&gt;
+    &lt;description&gt; XML.comのXML収集を検索する&lt;/description&gt;
+    &lt;name&gt;s&lt;/name&gt;
+    &lt;link&gt;http://search.xml.com&lt;/link&gt;
+  &lt;/textinput&gt;</pre>
+<h3><a name="s5.6.1">5.6.1 &lt;title&gt;</a></h3>
+<p>textinputフィールドのための記述的なフィールドです。例えば、"購読" or 
+"検索!" などです。</p>
+<p><em>構文:</em> 
+&lt;title&gt;{textinput_title}&lt;/title&gt;<br><em>記述:</em> Textinput 
+title<br><em>要件:</em> textinputの場合、必須です。<br><em>モデル:</em> 
+(#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 40<br></p>
+<h3><a name="s5.6.2">5.6.2 &lt;description&gt;</a></h3>
+<p>textinputフィールドの目的の簡単な記述。例えば、"...についてのニュースレターを購読する。" または、"...のサイトのアーカイブを検索する。"など。</p>
+<p><em>構文:</em> 
+&lt;description&gt;{textinput_description}&lt;/description&gt;<br><em>要件:</em>textinputの場合、必須です。<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 100<br></p>
+<h3><a name="s5.6.3">5.6.3 &lt;name&gt;</a></h3>
+<p>text inputフィールドの(可変の) 名前です。</p>
+<p><em>構文:</em> 
+&lt;name&gt;{textinput_varname}&lt;/name&gt;<br><em>要件:</em>textinputの場合、必須です。<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 500<br></p>
+<h3><a name="s5.6.4">5.6.4 &lt;link&gt;</a></h3>
+<p>（GETを使用して）textinput提出のあて先となるURL</p>
+<p><em>構文:</em> 
+&lt;link&gt;{textinput_action_url}&lt;/link&gt;<br><em>記述:</em> 
+textinputのアクションURL<br><em>要件:</em>textinputの場合、必須です。<br><em>モデル:</em> (#PCDATA)<br><em>(提案されている) 最大の長さ:</em> 
+500<br></p><!-- Modules -->
+<h2><a name="s6">6. モジュール</a></h2>
+<p>ネーム空間に準拠したモジュール化はRSS 1.0に、区分された拡張性を提供します。 </p>
+<p>RSS 1.0で"ボックスに"送る唯一のモジュール群は、<a href="http://purl.org/rss/1.0/modules/dc/">Dublin Core</a>と<a href="http://purl.org/rss/1.0/modules/syndication/">Syndication</a>です。
+詳細は該当するモジュールの文書をご覧下さい。</p>
+<p>モジュール作成のガイドラインと登録されたコアのRSS 1.0モジュールについては、<a href="http://purl.org/rss/1.0/modules/">RSS 1.0 Modules</a> を参照して下さい。</p>
+<p>モジュール使用例は次の章の<a href="#s7">例</a>にいくつか掲載されています。 </p><!-- Examples -->
+<h2><a name="s7">7. 例</a></h2><!-- Examples: 0.9 -->
+<p id="s7_1.0"><a name="s7_1.0"></a>コアのRSS 1.0の要素セットだけを使用している基本の(0.9のような)RSS 1.0 文書です。 </p><pre>&lt;?xml version="1.0"?&gt;
+&lt;rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://purl.org/rss/1.0/"
+&gt;
+  &lt;channel rdf:about="http://www.xml.com/xml/news.rss"&gt;
+    &lt;title&gt;XML.com&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub&lt;/link&gt;
+    &lt;description&gt;
+      XML.com の特徴はXMLコミュニティに対する情報とサービスの豊富な組み合わせです。
+    &lt;/description&gt;
+    &lt;image rdf:resource="http://xml.com/universal/images/xml_tiny.gif" /&gt;
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li resource="http://xml.com/pub/2000/08/09/xslt/xslt.html" /&gt;
+        &lt;rdf:li resource="http://xml.com/pub/2000/08/09/rdfdb/index.html" /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+    &lt;textinput rdf:resource="http://search.xml.com" /&gt;
+  &lt;/channel&gt;
+  &lt;image rdf:about="http://xml.com/universal/images/xml_tiny.gif"&gt;
+    &lt;title&gt;XML.com&lt;/title&gt;
+    &lt;link&gt;http://www.xml.com&lt;/link&gt;
+    &lt;url&gt;http://xml.com/universal/images/xml_tiny.gif&lt;/url&gt;
+  &lt;/image&gt;
+  &lt;item rdf:about="http://xml.com/pub/2000/08/09/xslt/xslt.html"&gt;
+    &lt;title&gt;XSLTで、組み込みを処理する&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub/2000/08/09/xslt/xslt.html&lt;/link&gt;
+    &lt;description&gt;
+     一般のXMLで文書を組み込む処理は問題を含んでいるかもしれません。この条項はSAXに準拠した処理を通じて、 包括情報を保存する方法を提案します。
+    &lt;/description&gt;
+  &lt;/item&gt;
+  &lt;item rdf:about="http://xml.com/pub/2000/08/09/rdfdb/index.html"&gt;
+    &lt;title&gt;RDFを作業に入れる&lt;/title&gt;
+    &lt;link&gt;http://xml.com/pub/2000/08/09/rdfdb/index.html&lt;/link&gt;
+    &lt;description&gt;
+     Resource Description FrameworkのためのツールとAPIサポートはゆっくりと成長しています。Edd Dumbill はもっとも魅力的で新しいRDFツールキットの一つであるRDFDBを調べます。
+     &lt;/description&gt;
+  &lt;/item&gt;
+  &lt;textinput rdf:about="http://search.xml.com"&gt;
+    &lt;title&gt;Search XML.com&lt;/title&gt;
+    &lt;description&gt;XML.comのXML収集を検索する&lt;/description&gt;
+    &lt;name&gt;s&lt;/name&gt;
+    &lt;link&gt;http://search.xml.com&lt;/link&gt;
+  &lt;/textinput&gt;
+&lt;/rdf:RDF&gt;</pre><!-- Examples: 1.0 w/ Modules -->
+<p id="s7_1.0w_modules"><a name="s7_1.0w_modules"></a>（異なる色で強調された）さまざまなモジュールから要素に進むRSS 1.0文書。注意: この例のモジュールは実例を示すだけのものです。完成したモジュールの詳細は<a href="http://purl.org/rss/1.0/modules/">RSS 1.0 Modules</a>をご覧下さい。</p><pre>&lt;?xml version="1.0" encoding="utf-8"?&gt; 
+&lt;rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  <span class="example-dc">xmlns:dc="http://purl.org/dc/elements/1.1/"</span>
+  <span class="example-syn">xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"</span>
+  <span class="example-co">xmlns:co="http://purl.org/rss/1.0/modules/company/"</span>
+  <span class="example-ti">xmlns:ti="http://purl.org/rss/1.0/modules/textinput/"</span>
+  xmlns="http://purl.org/rss/1.0/"
+&gt; 
+  &lt;channel rdf:about="http://meerkat.oreillynet.com/?_fl=rss1.0"&gt;
+    &lt;title&gt;Meerkat&lt;/title&gt;
+    &lt;link&gt;http://meerkat.oreillynet.com&lt;/link&gt;
+    &lt;description&gt;Meerkat: An Open Wire Service&lt;/description&gt;
+    <span class="example-dc">&lt;dc:publisher&gt;The O'Reilly Network&lt;/dc:publisher&gt;
+    &lt;dc:creator&gt;Rael Dornfest (mailto:rael@oreilly.com)&lt;/dc:creator&gt;
+    &lt;dc:rights&gt;Copyright &#169; 2000 O'Reilly &amp; Associates, Inc.&lt;/dc:rights&gt;
+    &lt;dc:date&gt;2000-01-01T12:00+00:00&lt;/dc:date&gt;</span>
+    <span class="example-syn">&lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt;
+    &lt;sy:updateFrequency&gt;2&lt;/sy:updateFrequency&gt;
+    &lt;sy:updateBase&gt;2000-01-01T12:00+00:00&lt;/sy:updateBase&gt;</span>
+    &lt;image rdf:resource="http://meerkat.oreillynet.com/icons/meerkat-powered.jpg" /&gt;
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li resource="http://c.moreover.com/click/here.pl?r123" /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+    &lt;textinput rdf:resource="http://meerkat.oreillynet.com" /&gt;
+  &lt;/channel&gt;
+  &lt;image rdf:about="http://meerkat.oreillynet.com/icons/meerkat-powered.jpg"&gt;
+    &lt;title&gt;Meerkat Powered!&lt;/title&gt;
+    &lt;url&gt;http://meerkat.oreillynet.com/icons/meerkat-powered.jpg&lt;/url&gt;
+    &lt;link&gt;http://meerkat.oreillynet.com&lt;/link&gt;
+  &lt;/image&gt;
+  &lt;item rdf:about="http://c.moreover.com/click/here.pl?r123"&gt;
+    &lt;title&gt;XML: 記述的な技術&lt;/title&gt; 
+    &lt;link&gt;http://c.moreover.com/click/here.pl?r123&lt;/link&gt;
+    <span class="example-dc">&lt;dc:description&gt;
+      XMLが現行のインターネットの技術的なインフラストラクチャー上にかける負荷が増加しています。
+    &lt;/dc:description&gt;
+    &lt;dc:publisher&gt;The O'Reilly Network&lt;/dc:publisher&gt;
+    &lt;dc:creator&gt;Simon St.Laurent (mailto:simonstl@simonstl.com)&lt;/dc:creator&gt;
+    &lt;dc:rights&gt;Copyright &#169; 2000 O'Reilly &amp; Associates, Inc.&lt;/dc:rights&gt;</span>
+    <span class="example-dc">&lt;dc:subject&gt;XML&lt;/dc:subject&gt;</span>
+    <span class="example-co">&lt;co:name&gt;XML.com&lt;/co:name&gt;
+    &lt;co:market&gt;NASDAQ&lt;/co:market&gt;
+    &lt;co:symbol&gt;XML&lt;/co:symbol&gt;</span>
+  &lt;/item&gt; 
+  &lt;textinput rdf:about="http://meerkat.oreillynet.com"&gt;
+    &lt;title&gt;Meerkatを検索する&lt;/title&gt;
+    &lt;description&gt;MeerkatのRSSデータベースを検索する...&lt;/description&gt;
+    &lt;name&gt;s&lt;/name&gt;
+    &lt;link&gt;http://meerkat.oreillynet.com/&lt;/link&gt;
+    <span class="example-ti">&lt;ti:function&gt;search&lt;/ti:function&gt;
+    &lt;ti:inputType&gt;regex&lt;/ti:inputType&gt;</span>
+  &lt;/textinput&gt;
+&lt;/rdf:RDF&gt;</pre><!-- Resources -->
+<h2><a name="s8">8. リソース</a></h2>
+<ul>
+  <li>背景 
+  <ul>
+    <li><a href="http://www.xml.com/pub/2000/07/17/syndication/rss.html">"RSS: 
+    Lightweight Web Syndication"</a> 
+    <li>XML Deviant: <a href="http://www.xml.com/pub/2000/07/05/deviant/rss.html">"RSS 
+    Modularization"</a> 
+    <li><a href="http://www.xmlhack.com/read.php?item=621">"Will RSS Fork?"</a> 
+    </li></ul>
+  <li>RSS 
+  <ul>
+    <li><a href="http://my.netscape.com/publish/help/quickstart.html">Netscape's 
+    RSS 0.9 Specification</a> 
+    <li><a href="http://my.netscape.com/publish/help/mnn20/quickstart.html">Netscape's 
+    RSS 0.91 Specification</a> 
+    <li><a href="http://my.netscape.com/publish/formats/rss-spec-0.91.html">Netscape's 
+    RSS 0.91 Specification, Revision 3</a> 
+    <li><a href="http://my.netscape.com/publish/help/futures.html">Netscape's 
+    RSS/MNN Future Directions</a> 
+    <li><a href="http://backend.userland.com/rss091">Userland's RSS 0.91 
+    Specification</a> 
+    <li><a href="http://www.egroups.com/message/syndication/330">RSS Usage 
+    Survey</a> (25 July 2000) 
+    <li><a href="http://www.xmltree.com/xml/rootSchema.xml?schema=11">xmlTree's 
+    Directory of RSS channels</a> </li></ul>
+  <li>RDF & Metadata 
+  <ul>
+    <li><a href="http://www.w3.org/RDF/">Resource Description Framework 
+    (RDF)</a> 
+    <li><a href="http://www.w3.org/Metadata/Activity">W3C Metadata Activity 
+    Statement</a> 
+    <li><a href="http://www.ilrt.bris.ac.uk/discovery/rdf-dev/rudolf/rdfviz/">RDFViz</a> 
+    </li></ul>
+  <li>XML ネーム空間 
+  <ul>
+    <li><a href="http://www.w3.org/TR/REC-xml-names/">Namespaces in XML</a> 
+  </li></ul>
+  <li>詳細は以下へ... 
+  <ul>
+    <li><a href="http://www.oreillynet.com/rss/">O'Reilly Network RSS 
+    DevCenter</a> 
+    <li><a href="http://www.blogspace.com/rss/">RSS Info -- News and information 
+    on the RSS format</a> 
+    <li><a href="http://www.webreference.com/perl/tutorial/rss1/">"RSS 1.0: The 
+    New Syndication Format"</a> 
+    <li><a href="http://xmlhack.com/search.php?q=rss">xmlhack</a> 
+    <li><a href="http://xmlfr.org/index/object.title/RSS_1.0/">XMLfr</a> 
+</li></ul>
+  <li>メーリングリスト
+  <ul>
+    <li><a href="http://purl.org/rss/1.0/mailinglist/">[RSS-DEV] Mailing 
+    List</a> 
+    <li><a href="http://www.egroups.com/group/syndication">[Syndication] Mailing 
+    List</a> 
+    <li><a href="http://www.topica.com/lists/alchemy/read">[Alchemy] Mailing 
+    List</a> </li></ul></li></ul><!-- Acknowledgements -->
+<h2><a name="s9">9. 謝辞</a></h2>
+<ul>
+  <li><a href="http://purl.org/rss/1.0/mailinglist/">[RSS-DEV]</a>、<a href="http://www.egroups.com/group/syndication">[Syndication]</a> そして <a href="http://www.oreillynet.com/pub/a/rss/rss-ml.html">[RSS]</a> のメーリングリストのメンバーの皆さんの引き続きの審議とインプットに対して、
+  <li>RSS 0.9および0.91に関する"Brooklyn" チームのメンバーの皆さん<a href="http://my.netscape.com/publish/help/mnn20/quickstart.html">My Netscape 
+  Network</a> (Eckart Walther, Jeff 
+  Treuhaft、Wade Hennesey、Rafael Cedano、Bill Turpin、Dan Libby、そしてMike 
+  Homer)に対して、 
+  <li><a href="mailto:james@xmltree.com">James Carlyle</a> 
+  <li><a href="mailto:dale@oreilly.com">Dale Dougherty</a> 
+  <li><a href="mailto:edd@usefulinc.com">Edd Dumbill</a> 
+  <li><a href="mailto:peter@oreilly.com">Peter Wiggin</a> 
+  <li><a href="mailto:dave@userland.com">Dave Winer</a> </li></ul></body></html>

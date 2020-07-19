@@ -1,0 +1,1512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0076)http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm --><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>XML Topic Maps and Semantic Web Mining</title>
+<style>A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #6c5cc4; FONT-FAMILY: Arial, Helvetica; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #d21430
+}
+A.topic {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: white; COLOR: #6c5cc4; FONT-FAMILY: Arial, Helvetica; TEXT-DECORATION: none
+}
+A.topic:hover {
+	COLOR: red
+}
+A.bigtopic {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; BACKGROUND: white; COLOR: #6c5cc4; FONT-FAMILY: Arial, Helvetica; TEXT-DECORATION: none
+}
+A.bigtopic:hover {
+	COLOR: red
+}
+A.topicInText {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; BACKGROUND: black; COLOR: orange; FONT-FAMILY: Arial, Helvetica; TEXT-DECORATION: none
+}
+A.topicInText:hover {
+	COLOR: blue
+}
+A.navigbar {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: orange; FONT-FAMILY: Arial, Helvetica
+}
+A.navigbar:hover {
+	COLOR: yellow
+}
+H1 {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px; FONT-FAMILY: Arial, Helvetica, Geneva
+}
+H2 {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px; FONT-FAMILY: Arial, Helvetica, Geneva
+}
+H3 {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px; FONT-FAMILY: Arial, Helvetica, Geneva
+}
+H4 {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px; FONT-FAMILY: Arial, Helvetica, Geneva
+}
+H5 {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px; FONT-FAMILY: Arial, Helvetica, Geneva
+}
+P {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+LI {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+TABLE {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+TITLE {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+PRE {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+DL {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+DT {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+DD {
+	MARGIN-LEFT: 30px; MARGIN-RIGHT: 20px
+}
+</style>
+<meta content="MSHTML 6.00.2800.1141" name="GENERATOR"></head>
+<body>
+このドキュメントは<br><strong>XML Topic Maps and Semantic Web Mining</strong><br>
+<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm">http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm</a><br>
+の和訳です。<br>
+この文書には和訳上の誤りがありえます。<br>
+内容の保証はいたしかねますので、必ず正式版文書を参照して下さい。<br>
+<hr size="10">
+<table style="BACKGROUND: black" width="700">
+  <tbody>
+  <tr width="600">
+    <td align="left"><a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-04/FREESE-HOLM%20XML%202001.htm">&nbsp;</a></td>
+    <td align="middle"><b><a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/orlantoc.htm">Table 
+      of contents</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx0.htm">Author</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx1.htm">City</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx2.htm">Company</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx3.htm">Country</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx4.htm">State/Province</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx5.htm">Term</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/xtmdoc.htm">Interchange</a></b></td>
+    <td align="right"><a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-06/04-04-06.htm">&nbsp;</a></td></tr></tbody></table><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp388.htm">DAML-OIL</a>&nbsp;&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp390.htm">OpenCyc</a>&nbsp;&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-04/FREESE-HOLM%20XML%202001.htm#N23">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp385.htm">Topic 
+maps</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-04/FREESE-HOLM%20XML%202001.htm#N23">&nbsp;</a>&nbsp;&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp387.htm">conceptual 
+classification</a>&nbsp;&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp386.htm">semantic 
+Web</a>&nbsp;&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp389.htm">visual 
+reification</a>&nbsp;&nbsp;<a name="N1"></a> 
+<h1>XML Topic Maps and Semantic Web Mining</h1>
+<p><a class="bigtopic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp391.htm">Le 
+Grand, Benedicte</a> <a name="N2"></a>,&nbsp; <a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N9">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp392.htm">Laboratoire 
+d'Informatique de Paris 6, Universite Pierre et Marie Curie</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N9">&nbsp;</a><a name="N3"></a>,&nbsp; &nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-02/xml2001orlandopaper.htm#N4">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp393.htm">Paris</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N10">&nbsp;</a><a name="N4"></a> 
+&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/03-04-02/03-04-02.htm#N17">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp134.htm">France</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N11">&nbsp;</a><a name="N5"></a> 
+<p>Email: <a href="mailto:Benedicte.Le-Grand@lip6.fr">Benedicte.Le-Grand@lip6.fr</a></p>
+<p>Web site:<a href="http://www-rp.lip6.fr/‾blegrand">http://www-rp.lip6.fr/‾blegrand</a></p>
+<h4>Biography</h4><a name="N6"></a>
+<p><a name="N7"></a>Benedicte Le Grand 1975年生まれ。彼女は1997年にthe Institut National des 
+Telecommunicationsを卒業し、現在 LIP6 (Laboratoire d'Informatique de Paris 6)Network 
+Departmentの博士課程に在学中。 Virtual Realityおよび複雑なシステムの可視化におけるVirtual 
+Realityの活用に関して研究を行っている。現在はマークアップ技術とりわけXMLに関心をもつ;Kansas City にて開催されたACM CIKM'99 
+(Conference on Information およびPhiladelphiaでのMarkup Technologies'99にて発表を行った。 </p>
+<p></p>
+<p><a class="bigtopic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp394.htm">Soto, 
+Michel</a> <a name="N8"></a>,&nbsp; <a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N3">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp392.htm">Laboratoire 
+d'Informatique de Paris 6, Universite Pierre et Marie Curie</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N3">&nbsp;</a><a name="N9"></a>,&nbsp; &nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N4">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp393.htm">Paris</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-02-03/04-02-03.htm#N4">&nbsp;</a><a name="N10"></a> 
+&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#N5">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp134.htm">France</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/03-05-02/Guil-paper.htm#N5">&nbsp;</a><a name="N11"></a> 
+<p>Email: <a href="mailto:Michel.Soto@lip6.fr">Michel.Soto@lip6.fr</a></p>
+<p>Web site:<a href="http://www-rp.lip6.fr/‾ms">http://www-rp.lip6.fr/‾ms</a></p>
+<h4>Biography</h4><a name="N12"></a>
+<p><a name="N13"></a>Michel Soto助教授 the LIP6 Laboratory (Laboratoire 
+d'Informatique de Paris 6), University Pierre et Marie Curie, Paris, 
+France。主な研究領域は仮想世界の相互作用及び複雑なシステムの可視化である。 </p>
+<p></p>
+<p><a class="bigtopic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp395.htm">Dodds, 
+David</a> <a name="N14"></a>,&nbsp; <a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp396.htm">Blue 
+Shield</a><a name="N15"></a>,&nbsp; &nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/06-02-04/06-02-04.htm#N4">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp397.htm">San 
+Francisco</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/06-02-04/06-02-04.htm#N4">&nbsp;</a><a name="N16"></a> 
+&nbsp;<a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/03-04-06/03-04-06.htm#N4">&nbsp;</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/ts0/tp14.htm">U.S.A.</a><a class="topic" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-05-05/04-05-05.htm#N6">&nbsp;</a><a name="N17"></a> 
+<p>Email: <a href="mailto:drdodds42@hotmail.com">drdodds42@hotmail.com</a></p>
+<p>Web site:<a href="http://www.openmeta.org/">http://www.openmeta.org/</a></p>
+<h4>Biography</h4><a name="N18"></a>
+<p><a name="N19"></a>David Doddsは1968年にContinuous Systems 
+Modelsを記して以来、計算機の分野で研究を続けている。後に彼はマルチチャンネルを扱うことのできるアナログスピーチシンセサイザを開発しており、それは認知可能なCoast 
+Salish, an (West Coast) Indian 
+languageを生成するものであった。彼はまた1972年にニューラルネットワークシミュレーションについても論文がある。人の個性のタイプをモデル化するためにプログラムに触れたのち、町の評議会をシミュレートするためのコードを作成し、しばらく大学の教壇にてコンピュータサイエンスを教えた後、Nortel 
+(Northern 
+Telecom)にて文書理解のソフトウェアならびにエキスパートシステムをCとPrologにより作成した。彼のここ数年の研究対象は、新たに現われるさまざまなXML技術であり、W3C 
+SVG workgroupにてSVG 1.0の仕様を策定に携わった；またIdealliance committeeにてXML Tpoic 
+Map仕様の策定にも携わっている。ロボティクスおよびファジイシステムの分野において膨大な数の論文を著している。また表現システムについて研究しており、UKL(Unified 
+Knowledge Language)の設計、そしてメタデータとメタプログラミングのシステム設計を追及している。直近では書籍WROX Professional 
+XML Meta Dataの共著者である。 </p>
+<p></p>
+<h3>概要</h3>
+<div>
+<p><a name="N20"></a>Webにおけるナビゲーションと情報検索は容易なタスクではない；入手可能である膨大な量のデータからの情報抽出という手ごたえのある問題である。データの大半に構造がないために、既存のデータマイニング技術を適用することは非常に困難である。しかしながら、ウェブマイニングの結果を改善するような新しい意味構造がWebにおいて現在開発されている。この論文ではこれらの意味構造のひとつ 
+-XML topic maps 
+-がWeb上の関連情報を発見するユーザの手助けとしてどのように利用されているかを示す。この論文は次のように構成されている：はじめに、XML topic 
+mapをTim Berners-LeeのセマンティックWebの視点から紹介する。次に、どのようにtopic 
+mapsがプロファイルの定義を通じて"clean"なWebデータを特徴づけるかを示す；これは分類アルゴリズム-ガロアアルゴリズムと呼ばれる-によって生成された束を分析することによって成し遂げることができる。このプロファイルは従来のサーチエンジンにおける特有の要請であるウェブサイトの関連度評価に用いられる。最終的にどのようにWebデータが分類・統合されるのか、あるいはユーザのナビゲーションやウェブの文書理解を高めるために異なった方法でどのように可視化が行われるのかを説明する。 
+Webデータに対するさらなる特徴付けは、この論文の共著者であるDavid Doddsのコンテキストと類似性を計算する手法で行われている。それはOpenCYC 
+DAML-OILとUpper Ontologyにおいて、理解力の強化と特徴づけをより発展させるために用いられている。 topic 
+mapsを用いて得られた結果を示す。また我々の類似尺度およびクラスタを用いた比較・対比を行う。ひとつはガロア束を用いて得られた結果であり、他方はOpenCYC 
+DAML-OILを用いて得られた結果である。 </p></div><br><br>
+<div class="section"><a name="N21"></a>
+<h2>1 序章</h2>
+<p><a name="N22"></a>Webにおけるナビゲーションと情報検索は容易なタスクではない；入手可能である膨大な量のデータからの情報抽出という手ごたえのある問題である。データの大半に構造がないために、既存のデータマイニング技術の適用は非常に困難である。しかしながら、ウェブマイニングの結果を改善するような新しい意味構造がWebにおいて現在開発されている。 
+</p>
+<p><a name="N23"></a>この論文ではどのようにこれらの意味構造のひとつ -XML topic maps 
+-がWeb上の関連情報を発見するユーザの手助けとして利用されているかを示す。この論文は次のように構成されている：はじめに、XML topic mapをTim 
+Berners-LeeのセマンティックWebの視点から紹介する。 &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib2"></a>. それから、どのようにtopic 
+mapsがプロファイルの定義を通じてWebサイトを特徴付けるのかを示す。このプロファイルは従来の検索エンジンにおける特有の要求としての観点からウェブサイトの関連度評価に用いられ得るものである。最後にどのようにWeb上のデータが分類され、統合され、また、ユーザのナビゲーションとこれら文書に対する理解を促進させるために、異なった手段で可視化されるのかを説明する。 
+</p></div>
+<div class="section"><a name="N24"></a>
+<h2>2 XML Topic Maps and the Semantic Web</h2>
+<p><a name="N25"></a>Webにおける情報の発見は大変難しい。正しいキーワードを用いても検索エンジンはユーザの問いに対して数百やそれ以上の回答を返す。最も関連のあるWebサイトを選ぶことは些細なことではない。なぜならば、各々の該当結果に対する関連度の評価となる意味的な手助けがないからである。次のステップはさらに容易ではない：一旦、あるリンクが選ばれたなら、ナビゲーションはいつも直感的であるとは限らない。ユーザは簡単に迷ってしまう：ユーザは探していた情報が存在するとしても、それを見つけることができない恐れがある。ユーザは時々既に訪れたページにさえも戻ろうとしない場合がある。これはWebにおける構造の欠落による。それゆえに、Web上のより詳細なデータを可能とするようなメカニズムを提供することと同様に、Webに対して構造とセマンティクスを付与することが必要であろう　 
+W3CのTim Berners-Leeによれば &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib2"></a>: </p>
+<blockquote>
+  <p><a name="N26"></a>"セマンティックWebはvisionである：その概念とは機械によって利用可能なリンクが定義されたweb上にデータを持つことであり- 
+  それは単に表示を目的とするのみではなく、様々な応用分野での利用を目的とする。 </p></blockquote>
+<p><a name="N27"></a>このセマンティックWebは、現在のWebに対して意味的な構造を付与することにより可能となる。多くの可能性のある技術が提案されており、意味ネットワークもその一つである。 
+&nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib16"></a>, 概念グラフ &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib5"></a>, the W3C Resource 
+Description Framework (RDF) &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib14"></a> および XML Topic Maps 
+&nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib11"></a>. </p>
+<p><a name="N28"></a>意味ネットワークは基本的に有効グラフ（ネットワーク）であり、頂点をedgeで結んだものからなる。 
+edgeは頂点間の意味的な関連を表現する。 </p>
+<p><a name="N29"></a>Sowaによって発展した概念グラフ理論は&nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib10"></a> 
+言語学、心理学、哲学等に基礎を置いている知識表現のための言語である。 </p>
+<p><a name="N30"></a>RDFデータはノードとそれに付随する属性/値のペアからなる。あるノードはあらゆるリソース(ページ、サーバ等、基本的にURIを付与できるものであれば全て）であるか、メタデータの他のインスタンスである。属性はノードのプロパティと名づけられ、それらの値はメタデータのアトミック(文字列、数、その他）なインスタンスか、あるいは他のリソースである。このメカニズムにより、ラベル付き有効グラフを構成することが可能である。 
+</p>
+<p><a name="N31"></a>Topic mapsはISO/IEC 13250で定められており&nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib10"></a> 
+ナビゲーションのために、情報を効果的に纏め上げる目的で使用される。 Topic 
+mapsは多大な量の未整理情報を扱うという問題を解決する為に設計された。情報というものは、見つからなかったりリンクがなければ有用ではない。 
+paper-publishingな世界においては、本や文書に含まれている情報を纏め上げ、索引付けるいくつかのメカニズムが存在する。索引によって、読み手は必要とする情報と関連した文書の一部を直接参照することが可能である。 
+Topic 
+mapsは印刷された索引と等価なものをオンラインで実現したものだと考えられている。用語集、相互参照、シソーラスやカタログが紙の世界で有益であるが、それと同じように有益なリンク情報というものを扱う際にもTopic 
+mapsは強力な手段である。 Topic 
+Mapsによってユーザは多大な量のメタデータと密に相互連結されたデータの作成が可能となる。それらはデータ自身の上に、ある種の意味ネットワークを構築しているものである。 
+</p>
+<p><a name="N32"></a>topic mapをWebに適用する目的で新しい仕様が作成されている。 ;この新しい動きはXTM(XML Topic 
+Maps)と呼ばれている。 <a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib11"></a> XML Topic 
+MapsによってWeb上のデータに構造が与えられ，その結果Web miningがより効果的となった。 </p>
+<p><a name="N33"></a>RDFとTopic Mapモデルは基礎的なレベルで相互に関連しているということが最近証明された。 &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib9"></a> 
+両スタンダード共に、エンティティとアイデンティティ間の関係を定義することに関連している。各々の言語は互いに他をモデルとして用いることができる。 </p>
+<p><a name="N34"></a>先に述べた全ての技術は同様のゴールを持っており、それらのは多くは互換性がある。我々は、XML Topic 
+Mapsを更に深く調査し、それらがどのようのSemantic Web Miningを促進するのかを研究することとした。 </p>
+<p><a name="N35"></a>我々の目的は、ユーザが関連情報を発見する際の手助けを行うことであり、以下の3つのレベルにおいて、困難なタスクに対する貢献を行う。 
+</p>
+<ol>
+  <li>
+  <p><a name="N36"></a>意味的な基準をベースにして、ユーザのニーズに対するWebサイトの関連度評価を行う。 </p>
+  <li>
+  <p><a name="N37"></a>topic mapのフィルタリングによる;topic 
+  mapプロファイルは最も意味的に明確なオブジェクト（レギュラーオブジェクトと呼称する）を選ぶことのできるリファレンスからなる;これによってtopic 
+  mapが扱っている主題を特定することができ関連の少ないtopicsは棄却できる。 </p>
+  <li>
+  <p><a name="N38"></a>概念的に関連付けられたtopicsの集合を通じて、また異なったスケール-あるいは詳細度のレベル-による可視化を通じてWebに対するナビゲーションの強化を行う。 
+  </p></li></ol>
+<p><a name="N39"></a>topic maps - あるいはWebサイト <a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#ftn1">Note</a> 
+<p><a name="ftn1"><i>Note</i></a>: </p><a name="ftn1"></a>
+<p><a name="N40"></a>続く箇所では、我々は語"topic map"は"Web site"よりもより一般的であるとして用いる。topic 
+mapsはあらゆる種類のデータに適用可能であると思われるからである。 </p>- の分析におけるそれぞれのステップをfigure 1に示す。 
+<p></p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N41"></a>
+      <blockquote><i>Fig. 1. Web site分析アルゴリズム</i></blockquote>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N42"></a>我々は第一のゴールをtopic 
+mapのプロファイルを定義することによって達成する事とする。そして後にそれをWebサイトに適用することとする。これらのプロファイルはtopic 
+mapsを特徴づけ、ユーザの情報に対するニーズとの関連度を評価するのに役立つ。この種のtoipc map"DNA"の計算とその解釈はsection 
+4にて説明する。 </p>
+<p><a name="N43"></a>topic 
+mapは、意味的に明確ではないものや、他と多く関連しているわけではないtopicをも含む。我々はそれらをsingular 
+topicsと呼ぶこととする。これらはsection 4.2で説明するようにtopic mapをクリーンにする際に削除される。それが我々の第二のゴールである。 
+</p>
+<p><a name="N44"></a>我々の三番目のコントリビューションはナビゲーションの強化とWebサイトからの情報検索強化からなる。情報検索はユーザのニーズによって変化するものである。もし、ユーザがある質問に対する回答を探しているならば、クエリー言語 
+("tolog"のような &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib6"></a>)が適切である。それらの強みはオブジェクト間の関連、それは質問により良く答えることを可能とするものであるが、それを利用する点にある。例えば、人がJohn 
+Lennonによって書かれたものではないビートルズの曲を探す場合に相当する。この種の情報は、従来のサーチエンジンでは発見するのが困難であった。 </p>
+<p><a name="N45"></a>もし、興味の主題が明確に特定できるならば、topic 
+map中から関連のあるtopicを探索することは容易である。このtopicはtipicsのリスト、例えばアルファベット順のリストから到達することができる。 
+topic mapsをナビゲートするツールが設計されており、それはあらゆるtopicに対し最大でも7回のマウスボタンクリックにより到達できるものである。 
+</p>
+<p><a name="N46"></a>もしユーザが正確な質問を持たず、興味に対する明確な主題をも持っていないのならば、上で示したような探索技術はどれも適用できない。これは、どこからナビゲーションを始めるかを決定する為にtopic 
+maps概要を把握したいと思う初心者の場合である。それゆえに、ユーザの最初のニーズはtopic 
+mapの単純化して可視化することにあり、詳細は不要である。それからユーザは興味のある主題を明確にするのと同じように、より正確な情報を決定することができるこれと地理的な地図とを比較すると：非常に特化されたデータを表す点は地図上の世界には存在しないが、ユーザが地図の一部に対してフォーカスを宛てるとより詳細が明らかになる。我々はクラスタリングアルゴリズムを用いて、意味的に関連あるtopicsを異なる抽象化レベルでまとめることを提案する。クラスタ計算と可視化はsection 
+5にて説明する。 </p>
+<p><a name="N47"></a>Figure 1 はtopic maps - あるいはweb sites 
+-の特徴付けした結果を示している、フィルタリングとクラスタリングはFormal Concept AnalysisとGalois 
+connectionsを基礎に置いた概念分類アルゴリズムの結果から導出される。このアルゴリズムはsection 3にて示す。 </p></div>
+<div class="section"><a name="N48"></a>
+<h2>3 概念分類アルゴリズム</h2>
+<p><a name="N49"></a>Web解析の始点はFormal Concept AnalysisとGalois 
+connectionsを基礎に置いた概念分類アルゴリズムである。 FCAは構造つきの情報を提供するデータ分析に対する数学的なアプローチである。 
+FCAは次に示すように概念クラスタリングにも用いられる &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib4"></a> and &nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib12"></a>. 初めにいくつかの語について定義を行う 
+</p>
+<ul>
+  <li>
+  <p><a name="N50"></a>オブジェクトとはtopicであるかtopic mapにおけるassociationのことである </p>
+  <li>
+  <p><a name="N51"></a>オブジェクトはプロパティと呼ばれる特徴を持つ。これらのプロパティはどのように決定されるかを3.1にて示す。 
+  </p></li></ul>
+<p><a name="N52"></a>プロファイルによって、topic 
+mapをある構造化の手段で特徴付けることが可能となる。この足跡によって、我々はあるtopic 
+mapが特化されたものか一般的なものかを判断できる。また、topic 
+mapの特定のオブジェクトが類似しているのか、非常に異なったものであるかを見分けることも可能である。オブジェクトを特徴づけることを目的として、オブジェクトを概念的に分類するためにはガロアアルゴリズムを用いる。このアルゴリズムは、オブジェクトが保持する共通のプロパティによって、オブジェクトをグループ化する。明示的な意味記述を与えることなしに、意味的な分類を行うことが可能であるために、非常に強力なアルゴリズムとなっている。まず初めに、オブジェクトとそれらのプロパティがtopic 
+mapよりどのように生成されるかを示す。次に、ガロア束に付いて述べ、オブジェクトに対する統計的計算の詳細を記述する。最後にどのようにプロファイルが決定されるかを説明する。 
+</p>
+<div class="subsec1"><a name="N53"></a>
+<h3>3.1 オブジェクトとプロパティの生成</h3>
+<p><a name="N54"></a>オブジェクトとプロパティの生成は2-stepの処理である。</p>
+<ul>
+  <li>
+  <p><a name="N55"></a>First step</p>
+  <p><a name="N56"></a>常に、あるエレメントにはidentifierが存在し（すなわちid 
+  属性である）、新しいオブジェクトが生成される。新しいオブジェクトの名前はidentifierの値である。 DTD(Document Type 
+  Definition)で述べられているように、全てのtopicsとtopic 
+  mapのassociationsはidentifierを持っているため、topicsとassociationsと同数のオブジェクトが存在することになる。 
+  </p>
+  <p><a name="N57"></a>あるオブジェクトのプロパティはその子属性の値と同様に、このオブジェクトの属性（id 
+  属性の値を含む）の値に相当する。これらのプロパティーは重み付けされている（例えば、属性instanceOfの値は、属性hrefよりも重く設定できる） 
+</p>
+  <p><a name="N58"></a>オブジェクトとプロパティの生成（first step）: </p>
+  <p><a name="N59"></a>例:Kal Ahmedによって書かれたある音楽についてのtopic mapから、次のような抜粋をしたとする <a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#ftn2">Note</a> 
+  <p><a name="ftn2"><i>Note</i></a>: </p><a name="ftn2"></a>
+  <p><a name="N60"></a>Kal Ahmed works for Ontopia, http://www.ontopia.net</p>XML 
+  document: 
+  <p></p>
+  <p><a name="N61"></a>&lt;topic id="t-the-clash"&gt; &lt;instanceOf&gt; 
+  &lt;topicRef xlink:href="tt-band"/&gt; &lt;/instanceOf&gt; &lt;baseName&gt; 
+  &lt;baseNameString&gt;The Clash&lt;/baseNameString&gt; &lt;variant&gt; 
+  &lt;parameters&gt; &lt;topicRef 
+  xlink:href="http://www.topicmaps.org/xtm/1.0/psi-sort"/&gt; 
+  &lt;/parameters&gt; &lt;variantName&gt; &lt;resourceData&gt;clash 
+  the&lt;/resourceData&gt; &lt;/variantName&gt; &lt;/variant&gt; &lt;variant&gt; 
+  &lt;parameters&gt; &lt;topicRef 
+  xlink:href="http://www.topicmaps.org/xtm/1.0/psi-sort"/&gt; 
+  &lt;/parameters&gt; &lt;variantName&gt; &lt;resourceData&gt;Clash, 
+  The&lt;/resourceData&gt; &lt;/variantName&gt; &lt;/variant&gt; 
+  &lt;/baseName&gt; &lt;/topic&gt; </p>
+  <p><a name="N62"></a>ひとつのXML文書は、タグで区切られた要素からなっており、階層的に構造化されている。上の例では、topic、instanceOfとbaseNameが要素である。一つの要素は属性という特徴をもつことができる。ある要素の属性は、その要素の開始タグの内部で宣言される。要素tipicは属性idをもち、その値はtt-clashである。要素instanceOfには属性がない。 
+  </p>
+  <p><a name="N63"></a>このtopic 
+  mapを解析した場合には、t-the-clashという値のidentifierを有するtopicが見つかる。そこでオブジェクトt-the-clashが生成される。 
+  </p>
+  <p><a name="N64"></a>これらのオブジェクトの値を決定するために、この要素の全ての属性を探す。この場合には、ただ一つidentifierが存在する。 
+  </p>
+  <p><a name="N65"></a>それから、属性を見つけるために、この要素の子要素（すなわちその要素に含まれる全てのXML要素のことである）を探す。この手順を全ての子に対して繰り返す。 
+  </p>
+  <p><a name="N66"></a>この例においては、このtopic 
+  mapの抜粋より分析された結果、オブジェクトt-the-clashが生成され、そのプロパティはt-the-clash (重み 例として0.5), 
+  tt-band (重み　例として2)そしてhttp://www.topicmaps.org/xtm/1.0/psi-sort(重み 
+  例として0.2)となった。ここで示した重み付けは、ある一つの例であり、それはtopic(重み 2)の型はname(重み 
+  0.5)の型よりも、またoccurrences(重み 0.2)やそのassociations(重み 1)よりも重要であるとしている。 </p>
+  <p><a name="N67"></a>同様にして、次の抜粋箇所についての解析： </p>
+  <p><a name="N68"></a>&lt;topic id="tt-band"&gt; &lt;instanceOf&gt; &lt;topicRef 
+  xlink:href="tt-music"/&gt; &lt;/instanceOf&gt; &lt;baseName&gt; 
+  &lt;baseNameString&gt;Band&lt;/baseNameString&gt; &lt;/baseName&gt; 
+  &lt;/topic&gt; </p>
+  <p><a name="N69"></a>はオブジェクトtt-bandを生成しそのプロパティはtt-band (重み 例として0.5)とtt-music 
+  (例として　重み2)である。</p>
+  <p><a name="N70"></a>最後にassociationに関して記述された例である:</p>
+  <p><a name="N71"></a>&lt;association id="assoc6"&gt; &lt;instanceOf&gt; 
+  &lt;topicRef xlink:href="at-recorded"/&gt; &lt;/instanceOf&gt; &lt;member&gt; 
+  &lt;instanceOf&gt; &lt;topicRef xlink:href="tt-band"/&gt; &lt;/instanceOf&gt; 
+  &lt;topicRef xlink:href="t-the-clash"/&gt; &lt;/member&gt; &lt;member&gt; 
+  &lt;instanceOf&gt; &lt;topicRef xlink:href="tt-track"/&gt; &lt;/instanceOf&gt; 
+  &lt;topicRef xlink:href="t-i-fought-the-law"/&gt; &lt;/member&gt; 
+  &lt;/association&gt; </p>
+  <p><a name="N72"></a>オブジェクトassoc6が生成され、そのプロパティはassoc6(重み 例として0.5), at-recorded 
+  (重み 例として2), tt-band, t-the-clash, tt-track そしてt-i-fought-the-lawである。</p>
+  <p><a name="N73"></a>ここまでにおいて、オブジェクトのプロパティは本来備わっているプロパティである。例えば、オブジェクトt-the-clashはassociation 
+  assoc6と関係している、しかしこれはそのプロパティとしては現れない、なぜならassociationはidentifier 
+  t-the-clashのtopic内部では宣言されていないからである。第二のステップではこれらの特徴付けを考慮に入れる。 </p>
+  <li>
+  <p><a name="N74"></a>Second step</p>
+  <p><a name="N75"></a>オブジェクトとプロパティの生成(second step): </p>
+  <p><a name="N76"></a>第二のステップでは、データの相互参照によって、元々備わっていないプロパティをオブジェクトに加える。実際には、プロパティの集合Pを有するあるオブジェクトOに関して、各々のプロパティPが(数あるうちで)Oをプロパティとして持つオブジェクトになる。オブジェクトのプロパティは元々備わっているプロパティとなるので、全てのプロパティが再帰的に付加されることになる。 
+  </p>
+  <p><a name="N77"></a>前の例では、オブジェクトassoc6はプロパティassoc6、tt-bandとt-the-clashをもつ。プロパティassoc6はオブジェクトtt-bandとt-the-clashに加えられる。そのようにして全てのオブジェクトは内部に出現するassciationを知ることができる。 
+  </p>
+  <p><a name="N78"></a>そのうえ、オブジェクトt-the-clashはプロパティtt-bandを持つ。 
+  t-the-clashをオブジェクトtt-bandに加えることでデータは相互参照される。この例は新しい型情報を図示しており、その新しい型情報は第一のステップでは存在しないものであった：オブジェクトtt-bandは今やt-the-clashをインスタンスに持つ。続くシナリオではt-the-clashはそのメンバーシップを知る唯一のものである。 
+  </p>
+  <p><a name="N79"></a>最後には、tt-bandはプロパティtt-band (重み 例0.5)、tt-music(重み 
+  例2)、t-the-clash (重み 例1)、assoc1 (重み 例1)、assoc2 (重み 例1)そしてassoc6 (重み 
+  例1)を持つ。オブジェクトt-the-clashは特徴としてhttp://www.topicmaps.org/xtm/1.0/psi-sort (重み 
+  例0.2)、 tt-band、 t-the-clash (重み 例0.5)、assoc1(重み 例1)、 assoc2 (重み 例1)そしてassoc6 
+  (重み 例1)を持つ。</p>
+  <p><a name="N80"></a>プロパティassoc1とassoc2は内部にtt-bandとt-the-clashが出現する他のassociationsに一致することに注意する。これらのassociationsはtopic 
+  mapには存在しているが、我々が提示した抽出部分には存在していない。 </p></li></ul></div>
+<div class="subsec1"><a name="N81"></a>
+<h3>3.2 ガロア束の概説</h3>
+<p><a name="N82"></a>二つの集合の間の関係を表現するガロア束の考え方は、いくつかの概念分類手段の基本となるものである。この考え方はBirkhoff[3]とBarbutおよびMonjardet 
+[1]によって導入された。ガロア束は、検討しているドメインの概念を具体化するようなクラスへとオブジェクトをグループ化することに本質がある。個々のオブジェクトは共通に所有しているプロパティに従って区別される。このアルゴリズムは意味的な分類を行うので大変強力である。 
+topic 
+maps自体が意味的な構造であるけれども、それらは大変巨大で複雑なものであり、それゆえこのアルゴリズムはそれからより多くの意味を抽出する点で興味深い。我々が実装したアルゴリズムは[7]にて提示されたものを基盤としている。 
+</p>
+<p><a name="N83"></a>ガロア束の基本概念を紹介する。</p>
+<p><a name="N84"></a>EとE'を二つの有限集合とする(Eはオブジェクトの集合からなり、E'はこれらのオブジェクトのプロパティの集合からなる）、そしてR 
+ E x E' はこれら二つの集合の間の二項関係とする。 Figure 
+2は二つの集合間の二項関係の例を示している。 Willesのターミノロジ[13]によれば、三つ組(E, E', 
+R)はある一意のガロア束と一致する形式的なコンテクストである。それはEとE'要素に対する自然な再編成を表している。 </p>
+<p><a name="N85"></a>P(E)をEのべき集合とし、P(E')をE'のべき集合とする。各々の束の要素は対を為しており、概念(コンセプト)と呼ばれ、(X,X')と表す。ある概念は二つの集合からなり 
+X  P(E) とX'  P(E')は続く二つのプロパティを満たす:</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N86"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N87"></a>概念上の半順序は次のように定義される:</p>
+<p><a name="N88"></a>C1=(X1, X'1)、 C2=(X2, X'2)と仮定したときに:</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N89"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N90"></a>この半順序は、fugre 2で示すようにHasse 
+diagramと呼ばれるグラフを描く際に用いられる。二つの概念C1とC2間にedgeがあり、もしC1&lt;C2 
+で、C1&lt;C3&lt;C2となるような要素C3が束に存在しない。 Hasse 
+diagramにおいて、edgeの方向は上向きである。このグラフは、対の間を一般化/精密化する表現として解釈できる。そこではC1&lt;C2はC1がC2より一般的であることを意味する（C1はダイアグラム中でC2より上位にある）。 
+</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N91"></a>
+      <blockquote><i>Fig. 2. 二項関係と関連するガロア束表現(Hasse diagram) </i></blockquote>
+      <blockquote></blockquote></td></tr></tbody></table>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N92"></a>
+      <blockquote><i>Fig. 3. 音楽に関するtopic mapについての概念束 </i></blockquote>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N93"></a>概念束はコンテクスト中の概念間の共有性をあらわしている。ある概念の第一の部分はオブジェクトの集合であり、概念のインスタンスとなっているそれを概念エクステンションと呼ぶ。第二の部分 
+- 概念インテンション -は概念を特徴づける共通のプロパティを明らかにしている。 Figure 3は音楽から抽出した我々のtopic mapの例を示している。 
+</p></div></div>
+<div class="section"><a name="N94"></a>
+<h2>4 topic mapの特徴づけ: 概念プロファイル</h2>
+<div class="subsec1"><a name="N95"></a>
+<h3>4.1 全てのオブジェクトに対する統計量計算</h3>
+<p><a name="N96"></a>topic 
+mapの全てのオブジェクトに関し、統計量を計算する。これらの統計量の重み付けられた平均を計算する。全てのオブジェクトは重みを持っており、その重みはtopic 
+map中の重要度に応じて割り当てられている。（XMLソースファイル中におけるオブジェクトの出現回数である） </p>
+<p><a name="N97"></a>どのオブジェクトOに関しても、６成分からなる一つのベクトルによって特徴づけられる</p>
+<ul>
+  <li>
+  <p><a name="N98"></a>第一の成分(A1)は、エクステンションにそのオブジェクトを含むような束中の概念の割合である。この値は、Oが束の多くの概念中に存在するかを伝えるものである。 
+  A1が低い値であればOは他のオブジェクトと共通の特徴をほとんど持たないことを表している。しかしながら、他の成分によって我々が得る情報を増加させることができる。 
+  </p>
+  <li>
+  <p><a name="N99"></a>第二の成分はOがグループ化されるオブジェクトの最大値であり、オブジェクトの総数で割ったものである。最も数の多いオブジェクトOを含む概念を選択する必要がある。この概念には制約を加えることができる：少なくともひとつのプロパティを持たなければならないという制約である。共通のプロパティにてオブジェクトをグループしたいという思うことがままある。この成分A2はOが他の多くのオブジェクトとグループ化されるかを示すものである。しかしながら、この値は最大値である。A2の妥当性はA3を用いて検証される。 
+  </p>
+  <li>
+  <p><a name="N100"></a>A3はOがグループ化されるオブジェクトの平均値であり、オブジェクトの数で割ったものである。ここでは、Oが多数のオブジェクトとリンク付けられているならばA2の重要性を決定することができる。もしA3の値が高いならば、Oとその他の多くの概念を含む概念が存在する。一方、A3が低いならば、Oはほとんど他のオブジェクトと一緒にグループ化されないことになる。その概念はこうした例外であり、こうした概念を基準として分析を行うべきではない。 
+  </p>
+  <li>
+  <p><a name="N101"></a>束の一つ以上の概念の中において、Oと一緒にグループ化されるオブジェクトの集合をSとする;これらのオブジェクトは少なくとも一つのOのプロパティを所有する。 
+  A4はSに含まれるオブジェクトとOが共有するプロパティの最大値であり、束におけるオブジェクトの総数で割ったものである。この成分はオブジェクトOを含む概念から導かれ、そのオブジェクトOはプロパティの最大値を含むものである。再度、この概念には制約を付与することができる:少なくとも二つのオブジェクトを含まなければならず、少なくとも一つはOと異なるオブジェクトでなければならない。共有されたプロパティの数を評価したいが、それにはOとプロパティを共有するオブジェクトが少なくとも一つ必要となる。 
+  A4とは、Oに近いオブジェクトがOと共通のプロパティを多く持っているか否かを明らかにする尺度である。オブジェクトは、多くの共通プロパティを共有している場合に、より類似しているといえる、この類似性は構造的であり概念的でもある。しかしながら、この値はA5によって検証されるべき最大値である。 
+  </p>
+  <li>
+  <p><a name="N102"></a>A5はOが他のオブジェクトと共有するプロパティの平均値であり、プロパティの総数で割ったものである。これはA4の重要性の度合いを示すものである。 
+  </p>
+  <li>
+  <p><a name="N103"></a>最後に、A6はtopic mapそれ自身に関するものであり、束に関するものではない。 topic 
+  mapにおけるオブジェクトの出現数を同じ型（topic あるいはassociation）のオブジェクトの出現数で割ったものである。 A6はtopic 
+  mapのプロファイルを計算する際に用いられれる。このプロファイルは平均的なオブジェクトの特徴を示すものである。このベクトルの各々の成分は、topic 
+  mapにおける各々のオブジェクトの成分の平均であり、A6の重みがこれらのオブジェクトの各々に与えられる。こうしてtopic 
+  mapにおいて出現頻度の高いオブジェクトは、ほとんど出現しないオブジェクトよりプロファイルに対して多くの影響を与えることになる。 </p></li></ul>
+<p><a name="N104"></a>はじめの5つの成分は束の分析から導かれるものであり、最後の成分はXML文書そのもののみに依存して導かれることに注意しておく。 
+</p></div>
+<div class="subsec1"><a name="N105"></a>
+<h3>4.2 Topic map プロファイルとオブジェクトの選択</h3>
+<p><a name="N106"></a>すべてのtopicとassociationに関して統計量が計算されたときに、プロファイルを導くことができる。それは各成分が各オブジェクトの重みづけA6があってすべてのオブジェクトにおける成分の平均となっているようなベクトルである。 
+N個のオブジェクトO1、O2...ONに関して、プロファイルベクトルPの各成分Aiは次のようにして計算できる: </p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N107"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N108"></a>Oj.Aiはj番目のオブジェクトの成分Aiであるとする。 </p>
+<p><a name="N109"></a>もっとも妥当なオブジェクトを保持したいと考えた場合、それはすなわち"多くの"他のオブジェクトと"多くの"共通プロパティを共有するものである。これらのオブジェクトはレギュラーオブジェクトと呼ばれる。なぜならばそれらは意味的に他のものよりも重要であるためである。 
+"多くの"(プロパティ）と"多くの"（オブジェクト）という語の重要性はtopic 
+mapプロファイルによって与えられる。レギュラーオブジェクトは少なくともプロファイルと同じくらい多くのオブジェクトと関連づけられており、プロファイルと同じくらい多くのプロパティを共有している。 
+</p>
+<p><a name="N110"></a>4.1節で示されたような統計量において、A3とA5の値はA2とA4より妥当性が高い：最大値は例外と一致する場合があるので、信頼できる情報を与えない場合がある。そのためオブジェクトとプロファイルの比較はA3とA5で行われる。 
+</p>
+<p><a name="N111"></a>レギュラーオブジェクトOについては次の条件が確認されていなければならない: </p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N112"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N113"></a>これは標準偏差を用いて精錬されるべきである。このA3に関する標準偏差は、あるオブジェクトのA3の値とA3のプロファイルの値の間の平均の距離である。 
+</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N114"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N115"></a>A5に関して、標準偏差は同様にして計算できる：</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N116"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N117"></a>このようにして、レギュラーオブジェクトは次のように定義される:</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N118"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N119"></a>正規であることの条件は係数(C)を用いて変更され得る（多かれ少なかれ制限される）。このようにして、レギュラーオブジェクトは次の二つの要求を満たす: 
+</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N120"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N121"></a>レギュラーオブジェクトでないものはシンギュラーオブジェクトと呼ばれ - それはほとんど意味を伝えない。 topic 
+mapのオブジェクトがこれらの条件を満たすとき、シンギュラーオブジェクトは削除される。 
+Cを増加させたとき、条件がより厳しくなるため、より多くのオブジェクトが削除される。 </p>
+<p><a name="N122"></a>この選択を終えると、ガロア分類アルゴリズムの入力として用いられたオブジェクトに関する新しいリストが得られる。新しい束が生成され、新しいオブジェクトから計算された統計量によって、新しいプロファイルが生成される。そのようにしてtopic 
+mapの新しい足跡から再びレギュラーオブジェクトを選択することができる。新しいレギュラーオブジェクトは再びガロアアルゴリズムの入力などとしてすべてのオブジェクトがレギュラーになるまで用いることができる。すべてがレギュラーオブジェクトになった場合というのは、削除されるオブジェクトが無くなった場合である。アルゴリズムは停止し、グループ化して一緒にまとめるべきレギュラーオブジェクトの安定したリストを得る。 
+</p></div>
+<div class="subsec1"><a name="N123"></a>
+<h3>4.3 結果</h3>
+<p><a name="N124"></a>いくつかのtopic maps - サイズや主題が異なる - に対し分析を行った。 figure 4は3つのtopic 
+mapsにおけるオブジェクトの分布を示したものである。円盤の中心の座標はA3の値とA5属性に対応している。円の直径はA3とA5の値をもつオブジェクト数の割合である。単純なtopic 
+mapにおけるすべてのオブジェクトは非常に隣接している。このtopic 
+mapは"homogeneous"と認められ、それはすべてのtopicsが同じ意味的な重要度を持っていることを意味している。音楽とiccは"heterogeneous"な構造である。左下隅のオブジェクトはA3とA5に関して低い値を持つものである:これらは"singular"である、すなわちtopic 
+mapにおいて他のオブジェクトと多くは関連していないものである。これらのtopic 
+mapsはこれらのシンギュラーオブジェクトを削除することで簡単にフィルタをかけることができる。 </p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N125"></a>
+      <blockquote><i>Fig. 4. Topicsの概念分布</i></blockquote>
+      <blockquote></blockquote></td></tr></tbody></table>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N126"></a>
+      <blockquote><i>Fig. 5. Topic map filtering </i></blockquote>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N127"></a>Figure 5は6つのtopic mapsをフィルタリングした図解である。いくつかのtopic 
+mapsは非常に単純化することができている;これはdiscoveryの場合である。一方では、最後の繰り返しの後も、xmle99mpは未だにほぼ70%もそのtopicsを含んでいる。この結果は、このtopic 
+map:すべてのtopicsが同じ意味的な値を持つようなtopic mapに対しては、フィルタをかけることがより困難であることを意味する。 
+</p></div></div>
+<div class="section"><a name="N128"></a>
+<h2>5 Topic map クラスタリングと可視化</h2>
+<div class="subsec1"><a name="N129"></a>
+<h3>5.1 クラスタリングアルゴリズム</h3>
+<p><a name="N130"></a>topic 
+mapから生成されたガロア束は、共通のプロパティを有するようなtopicsの集合から作られたいくつかの概念を含んでいる。束は入力データと非常に多く生成されたであろう概念数に対し余すところの無い記述を与える。 
+figure 3で示した概念束はまったく複雑なものであるけれども小さなtopic map（46オブジェクトを含むもの）から生成されたものである。 topic 
+mapの異なった詳細度（あるいはスケール）のレベルを提供するために、topicsを一緒にまとめてクラスターにしたいと考える。ガロア束からある木を抽出することを提案する。この木に含まれる概念はクラスターである。そのようにして、クラスターの階層を得ることができる。木の根はすべてのtopicsを含む;それは何の付加情報も提供しない全体を表すクラスターである。次のレベルではいくつかのtopicsを一緒にまとめており、その次のレベルではtopicsのより良いグループ化を実行している。詳細化のレベル数は木の深さとして与えられる。 
+</p>
+<p><a name="N131"></a>多くのクラスタリングアルゴリズムが存在している;我々はガロア概念分類を元にしたアルゴリズムの実装を選択した。我々が生成したこのクラスターは概念的そして意味的に妥当である。このアルゴリズムによりガロア束に内在する一般化/詳細化の関係を用いることができる。 
+</p>
+<p><a name="N132"></a>クラスターの木を構築するために、詳細の最も大きいレベルを与える表現から始める。どのクラスターも一つのオブジェクトに対応する:複数のオブジェクトは一緒にグループ化されない。木の葉を構築する:これらのクラスターは側の上界の父親に対応する（それはHasse 
+diagramにおける束のボトムで表現されている）。これは最も特化されたレベルである。 </p>
+<p><a name="N133"></a>各葉に関して、概念の一般化となるような一意となる父親を選ぶ。この選択は、次に展開する階層の基準に応じて行われる。各選択されたノードに対しては一つの父親が選ばれ、束の下界に到達するまで続けられる。このプロセスの最後には、木が生成される。木の各レベルは詳細化のレベルと対応したクラスターを含む。 
+</p>
+<p><a name="N134"></a>束中において概念が複数の父親を持つ場合の階層構造における選択基準を定義する。 </p>
+<ul>
+  <li>
+  <p><a name="N135"></a>はじめに、各父親の間の距離と束の下界との距離を考える（この距離はそれらの間の最小のedgeの数と対応する） </p>
+  <li>
+  <p><a name="N136"></a>もし下界への父親の距離の一つが他のものよりも小さい場合には、このノードが選択される。下界からより短い距離というのはこの概念が意味的に豊かであることを意味する。 
+  </p>
+  <li>
+  <p><a name="N137"></a>もしいくつかのノードにおいて下界からの距離が最小であったなら、それらのintentionに含まれるプロパティの重みの総和を比較する。もっとも高い値のノードが選択される。 
+  </p>
+  <li>
+  <p><a name="N138"></a>もし複数の父親がこれらの要求を満たすのならば、アルゴリズムは木の枝の合計が最小となるようなものを選ぶ。もしこの条件でも一意に決まらない場合は、異なるシナリオが考慮され各父親候補に関してひとつが選ばれる。 
+  </p></li></ul></div>
+<div class="subsec1"><a name="N139"></a>
+<h3>5.2 クラスター分析</h3>
+<p><a name="N140"></a>一度クラスターの木が生成されれば、ことなる尺度が計算され得る。例えばクラスターとして選択されなかった初期の束における概念の割合などである。 
+</p>
+<p><a name="N141"></a>木の深さは重要なものである。なぜならば、ユーザに提供するナビゲーションのレベルを示すものであるためである。 
+我々はまた各抽象レベルにおいてクラスターの分布を調べる。もしクラスターが父親を持たないならば、一般化され得ないことを意味する。一方で、子を持たないクラスターというのは、最も特化されたレベルに対応する。 
+</p>
+<p><a name="N142"></a>我々はまたクラスター間の距離も計算することができる。二つのクラスターの距離は平均であると思われる - 
+最小であろうと、最大であろうと - 二つのオブジェクト間の距離である（オブジェクトは各クラスターにある）。 O1とO2を二つのオブジェクトとする。 
+P1をO1のプロパティの集合とし、P2をO2のプロパティの集合とする。 INTERをP1とP2の積とし、UNIONをP1とP2の和とする。 
+O1とO2の間の類似度は次のように定義される: </p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N143"></a>
+      <blockquote></blockquote></td></tr></tbody></table>
+<p><a name="N144"></a>O1とO2の間の距離は(2)によって与えられる:</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N145"></a>
+      <blockquote></blockquote></td></tr></tbody></table></div>
+<div class="subsec1"><a name="N146"></a>
+<h3>5.3 クラスター表示</h3>
+<p><a name="N147"></a>詳細のレベルは異なった色で記号化されている。各抽象化レベルにおいて、クラスターはfigure 
+6に示すように円盤の一部分として表現されている。各クラスターのサイズはこの概念が持つ子供の数に比例している。マウスのポインターがクラスターの上を通過すると、そのエクステンション 
+- このクラスターに含まれるtopicsの集合 - あるいはインテンション - これらのtopicsのプロパティの集合が - 
+表示される。ユーザが円盤のある一部をクリックした時には、該当クラスターが現在のコンテクストとなる - すなわち - 円盤の全部 - 
+そしてその内容がより大規模な詳細が表示される。この円盤の左上隅は特化したクラスターにフォーカスを当てる前のグローバルな視点を表している。</p>
+<p><a name="N148"></a>figure 6は音楽に関する我々のtopic 
+map例に関して、このクラスタリングアルゴリズムを適用した結果を示したものである。これらはSVG(Scalable Vector 
+Graphics)で表現される。&nbsp;<a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-05/04-04-05.htm#bib15"></a> 
+SVGはXMLにおいて2次元の画像を記述するための言語である。 SVGはインタラクティブにかつダイナミックに描くことができる。 
+SVGは他のW3C仕様と標準化の運動に影響を与え統一化している。他の標準に影響を与え従うことによって、SVGはより強力となり、ユーザにとって各自のウェブサイトとに組み入れることがより簡単となる。 
+</p>
+<table border="1">
+  <tbody>
+  <tr>
+    <td><a name="N149"></a>
+      <blockquote><i>Fig. 6. クラスターの可視化</i></blockquote>
+      <blockquote></blockquote></td></tr></tbody></table></div>
+<div class="subsec1"><a name="N150"></a>
+<h3>5.4 David Dodds Topic Map Code and SVG Code</h3>
+<p><a name="N151"></a>Further code and discussion of David Dodds material may be 
+found at openmeta.org "XML 2001 December presentation". (after Dec 4 2001) </p><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;?xml version="1.0"?&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;!-- notice: at the web site = http://www.openmeta.org, there will be further--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;!-- code and descriptive text as of Dec 2001 --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;!DOCTYPE topicMap
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  PUBLIC "-//TopicMaps.Org//DTD XML Topic Map (XTM) 1.0//EN"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                 "file://usr/local/home/gromit/xml/xtm/xtm1.dtd"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;!-- the "file usr.." above  was used as an illustration file location for the dtd, that file--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;!-- instance occurs in the XTM home site example, of an XML program "shell" for a TM --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;!-The topics, occurrences, and associations  below are not from the XTM home site --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;topicMap xmlns='http://www.topicmaps.org/xtm/1.0/'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   xmlns:xlink='http://www.w3.org/1999/xlink'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   xml:base='http://www.openmeta.org/People/David/Circuit25v7'&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;!-- topics, associations, and merge map directives if any go here next--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;!-- mytopref ignore a.r.m.s. photographs circles arrows paragraphs--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="Gravitic-Anomalizer-circuit"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electronic Circuit Schematic&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-graviticanomalizer"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             &lt;baseNameString&gt;circuit&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="battery"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electronic Circuit Battery&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-power-source"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;battery&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="ground"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electric Circuit Ground &lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-ground"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;ground&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="battery-ground-connection"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#connected-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#battery"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#ground"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#battery-atright-ground"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#atright-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#battery"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#ground"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="variableresistor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electronic Circuit Variableresistor&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-resistance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;variableresistor&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="ground-variable-resistor-connection"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#connected-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#ground"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#variable-resistor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#ground-atright-variable-resistor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#atright-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#ground"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#variable-resistor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="inductor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electronic Circuit Inductor&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-inductance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;inductor&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="variable-resistor-inductor-connection"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#connected-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#variable-resistor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#inductor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#variable-resistor-atright-inductor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#atright-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#variable-resistor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#inductor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="capacitor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electronic Circuit Capacitor&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-capacitance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;capacitor&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="inductor-capacitor-connection"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#connected-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#inductor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#capacitor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#inductor-atright-capacitor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#atright-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#inductor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#capacitor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="antenna"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electronic Circuit Antenna&lt;/baseNameString&gt;   &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electrical-antenna"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;antenna&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="capacitor-antenna-connection"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#connected-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;subjectIndicatorRef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#capacitor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;topicRef xlink:href="#antenna"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class-instance"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#capacitor-atright-antenna"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#class"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#atright-pairs"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;subjectIndicatorRef xlink:href="http://www.topicmaps.org/xtm/1.0/core.xtm#instance"/&gt;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/roleSpec&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#capacitor"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;topicRef xlink:href="#antenna"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;/member&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/association&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="electrical-power-source"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electrical Power Source&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;electrical-power-source&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#mention"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/contentschema ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#appears-in"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#visible-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href="www.openmeta.org/2001/svgpicture.svg ..."/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#book-content"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/instanceOf&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#text-thing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#published-book"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;resourceRef xlink:href=" URL of this WROX Pro Metadata book ..."/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/occurrence&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topic&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;topic id="circuit-design"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;Electrical Circuit Design&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseNameString&gt;circuit-design&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;topic id="electronic-circuit"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseNameString&gt;electronic circuitry&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;topicRef xlink:href="#electrical-power-source"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseNameString&gt;electronic-circuit&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;topic id="line-drawing"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;Line Drawing&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#electrical-power-source"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;line-drawing&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;topic id="picture"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;Picture&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#svg-program-output"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;picture&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             &lt;topic id="text-thing"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;baseNameString&gt;TextThing&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#rdf-schema"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#clips-electronic-circuit-code"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;baseNameString&gt;text-thing&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;topic id="rdf-schema"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;rdf-schema&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#svg-program"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;rdf-schema&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;topic id="visible-thing"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;Visible Thing&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#svg-program-output"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseNameString&gt;visible-thing&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             &lt;topic id="svg-program"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;baseNameString&gt;svg-program&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  &lt;baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#circuit-design"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#electronic-circuit"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#line-drawing"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        &lt;topicRef xlink:href="#picture"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;/scope&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     &lt;baseNameString&gt;svg-program&lt;/baseNameString&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;/baseName&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/topicMap&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/xml&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;!-- this SVG file is the picture/diagram of the electronic schematic --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;svg width="9in" height="7in" viewBox="0 0 640 344"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;g id="battery"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;path d="M 42 214 L 110 214 M 110 200 L 110 226 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   M 122 206 L 122 220 M 122 214 L 166 214 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           style="fill:none; stroke:black; stroke-width:2"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;g id="ground"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;path d="M 166 214 L 166 292 M 174 292 L 158 292 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   L 146 306 M 166 292 L 156 306 M 174 292 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   L 166 306 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           style="fill:none; stroke:black; stroke-width:2"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;g id="variableresistor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;path d="M 166 214 L 204 214 212 196 218 234 226 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   196 236 234 242 196 252 234 260 196 270 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   234 274 214 M 212 240 L 262 192 M 274 214 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   L 314 214 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           style="fill:none; stroke:black; stroke-width:2"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;g id="inductor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;path d="M 314 214 L 320 200 334 194 348 200 352 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   222 358 200 372 194 384 200 392 222 398 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   200 410 194 422 200 428 222 434 200 448 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   194 464 200 468 222 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           style="fill:none; stroke:black; stroke-width:2"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;g id="capacitor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;path d="M 468 222 L 522 222 516 214 M 516 234 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   L 522 222 M 533 214 L 533 234 M 533 222 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   L 591 222 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           style="fill:none; stroke:black; stroke-width:2"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;g id="antenna"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;path d="M 591 222 L 590 182 536 182 536 114 604 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   114 604 148 568 148 568 80 636 80 636 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   182 596 182 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           style="fill:none; stroke:black; stroke-width:2"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/svg&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;!--This SVG file (next) is a static version of deBono atl_016.gif
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ("inefficiency") ["deBono diagram"] --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;svg width="9in" height="7in" viewBox="0 0 254 179"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;g id="leftfunnelside"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;path d="M 24 19 L 90 85 90 179 " 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       style="fill:none; stroke:black; stroke-width:3"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;g id="rightfunnelside"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;path d="M 208 21 L 144 85 144 179 " 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       style="fill:none; stroke:black; stroke-width:3"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;g id="arrowhead"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;path d="M 118 99 L 112 87 M 118 99 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               L 128 85 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       style="fill:none; stroke:black; stroke-width:1"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;g id="bumpyspiral"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;path d="M 32 9 L 66 39 114 47 162 37 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               185 25 176 11 148 53 118 67 80 51
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               48 19 62 11 84 23 88 39 128 59
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               126 71 120 87 118 99 "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       style="fill:none; stroke:black; stroke-width:1"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/svg&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;?xml version="1.0" standalone="no"?&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010719//EN" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;svg width="18cm" height="13cm"  viewBox="0 0 255 201"&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;desc&gt;Example anim01 - demonstrate deBono diagram animation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  and use of SVG as visual reification of Lakoff metaphors&lt;/desc&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;rect x="1" y="1" width="253" height="199" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          fill="none" stroke="blue" stroke-width="2" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;text id="uplabel" x="230" y="20"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         style="font-family:Verdana; font-size:12.333; fill:darkblue"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         UP
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/text&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;text id="downlabel" x="230" y="180"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         style="font-family:Verdana; font-size:12.333; fill:darkblue"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         DOWN
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/text&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;text id="goallabel" x="125" y="42"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         style="font-family:Verdana; font-size:12.333; fill:darkblue"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         GOAL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/text&gt;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;g id="leftfunnelside"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;path d="M 99 180 L 99 57"  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       style="fill:none; stroke:black; stroke-width:10"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/g&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;g id="rightfunnelside"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;path d="M 153 57 L 153 180 " 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       style="fill:none; stroke:black; stroke-width:10"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/g&gt;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;rect id="arrowstreamer" x="108" y="190" width="5" height="5" &gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;animate attributeName="x" attributeType="XML"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 begin="0s" dur="9s" fill="freeze" from="108" to="142" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;animate attributeName="height" attributeType="XML"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 begin="0s" dur="9s" fill="freeze" from="5" to="-157" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;animateColor attributeName="fill" attributeType="CSS"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             from="rgb(0,0,255)" to="rgb(128,0,0)"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             begin="0s" dur="9s" fill="freeze" /&gt;         
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/rect&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;rect id="particlestreamer" x="147" y="190" width="5" height="5" &gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;animate attributeName="y" attributeType="XML"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 begin="0s" dur="9s" fill="freeze" from="190" to="42" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;animateColor attributeName="fill" attributeType="CSS"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               from="rgb(0,0,255)" to="rgb(128,0,0)"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               begin="0s" dur="9s" fill="freeze" /&gt;         
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/rect&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;rect id="misdirectedbehaviourstreamer" x="147" y="190" width="5" height="5" &gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &nbsp;&nbsp;&nbsp;&nbsp;&lt;animate attributeName="y" attributeType="XML"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    begin="0s" dur="9s" fill="freeze" from="190" to="182" /&gt;lowest y=42
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             &lt;animate attributeName="x" attributeType="XML"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    begin="0s" dur="9s" fill="freeze" from="147" to="230" /
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             &lt;animateColor attributeName="fill" attributeType="CSS"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  from="rgb(0,0,255)" to="rgb(128,0,0)"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  begin="0s" dur="9s" fill="freeze" /&gt;         
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/rect&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;rect id="obstructor" x="30" y="30" width="50" height="9" &gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;animate attributeName="x" attributeType="XML"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   begin="0s" dur="9s" fill="freeze" from="30" to="80" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &lt;animateColor attributeName="fill" attributeType="CSS"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               from="rgb(10,0,0)" to="rgb(128,0,0)"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               begin="0s" dur="9s" fill="freeze" /&gt;         
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/rect&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/svg&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </pre></div></div>
+<div class="section"><a name="N152"></a>
+<h2>6 結論と今後の課題</h2>
+<p><a name="N153"></a>この論文では、Web上においてユーザが適切な情報を探すのを助けるために、どのようにXML topic 
+mapsが利用されうるかを提示した。ここでのコントリビューションはいくつかのレベルにある:はじめに、我々はウェブサイトをそれらのプロファイルを定義することによって特徴付けた。これは特化されたクエリーという点においてウェブサイトの妥当性を評価するのに用いられると思われる。次に、我々の分析は重要でないtopicを特定した 
+- 意味的に言えば、それによってtopic 
+mapが"clean"となった。最後に我々はWebページをクラスタリングしそれらを異なった詳細のレベルで表示することによって、ナビゲーションをどのように高めることが出来るかを示した。 
+</p>
+<p><a name="N154"></a>これらの結果は、概念分類アルゴリズムによりWebサイトから生成したガロア束を解析することによって導かれた。このアルゴリズムは大変強力であり、意味的にtopicsをまとめることができる。 
+</p>
+<p><a name="N155"></a>将来的には、我々はより詳細なWebサイトクラスターについて研究を行うつもりである。例えば、いくつかのクラスターは他のものよりも関連性が低いという点に注目している;それはもし本当にウェブサイトが大きすぎるものであるのならば、より程度の進んだフィルタが可能になるであろう。 
+</p>
+<p><a name="N156"></a>我々はまた、オントロジーが我々のクラスターをどのように特徴付けるかについても調査するつもりである。ガロアアルゴリズムは、意味を明示すること無しに意味的な値をもつクラスターを生成する。オントロジーはこの情報を明示する上で役立つものと思われる。 
+</p></div><br>
+<h2>参考文献</h2>
+<div class="bibliography">
+<blockquote><a name="bib1"></a>[1] &nbsp;Barbut, M., Monjardet, B., Ordre et 
+  classification, Algebre et combinatoire, Tome 2, Hachette, 1970. </blockquote>
+<blockquote><a name="bib2"></a>[2] &nbsp;Berners-Lee, T., A roadmap to the 
+  Semantic Web, http://www.w3.org/DesignIssues/Semantic.html, Sept 1998. 
+</blockquote>
+<blockquote><a name="bib3"></a>[3] &nbsp;Birkhoff, G., Lattice Theory, First 
+  Edition, Amer. Math. Soc. Pub. 25, Providence, R. I., 1940. </blockquote>
+<blockquote><a name="bib4"></a>[4] &nbsp;Carpineto, C., Romano, G., Galois: An 
+  order-theoretic approach to conceptual clustering, Proc. Of the 10th 
+  Conference on Machine Learning, Amherst, MA, Kaufmann, pp. 33-40, 1993. 
+</blockquote>
+<blockquote><a name="bib5"></a>[5] &nbsp;Chein, M., Mugnier M.-L., Conceptual 
+  Graphs : Fundamental Notions, Revue d'intelligence artificielle, Volume 6 - 
+  number 4/1992, pp365-406, 1992. </blockquote>
+<blockquote><a name="bib6"></a>[6] &nbsp;Garshol, L. M., "tolog" - A Topic Map 
+  Query Language, XML Europe 2001, Berlin, Germany, 21-25 May 2001. </blockquote>
+<blockquote><a name="bib7"></a>[7] &nbsp;Godin, R, Chau, T.-T., Incremental 
+  concept formation algorithms based on Galois Lattices, Computational 
+  intelligence, 11, number 2, p246 -267, 1998. </blockquote>
+<blockquote><a name="bib8"></a>[8] &nbsp;International Organization for 
+  Standardization, ISO/IEC 13250, Information Technology-SGML Applications-Topic 
+  Maps, Geneva: ISO, 1998. </blockquote>
+<blockquote><a name="bib9"></a>[9] &nbsp;Moore, G., RDF and Topic Maps, An 
+  Exercise in Convergence, XML Europe 2001, Berlin, Germany, 21-25 May 2001. 
+</blockquote>
+<blockquote><a name="bib10"></a>[10] &nbsp;Sowa, J. F., Conceptual Information 
+  Processing in Mind and Machine, Reading, Massachusetts, Addison-Wesley, 1984. 
+</blockquote>
+<blockquote><a name="bib11"></a>[11] &nbsp;TopicMaps.Org XTM Authoring Group, 
+  XTM: XML Topic Maps (XTM) 1.0: TopicMaps.Org Specification, 3 March 2001. 
+</blockquote>
+<blockquote><a name="bib12"></a>[12] &nbsp;Wille, R., Line diagrams of 
+  hierarchical concept systems, Int. Classif. 11, pp. 77-86, 1984. </blockquote>
+<blockquote><a name="bib13"></a>[13] &nbsp;Wille, R., Concept lattices and 
+  conceptual knowledge systems, Computers and Mathematics Applications, 23, 
+  number 6-9, pp. 493-515, 1992. </blockquote>
+<blockquote><a name="bib14"></a>[14] &nbsp;World Wide Web Consortium, Resource 
+  Description Framework (RDF) Model and Syntax Specification, W3C 
+  Recommendation, 22 February 1999. </blockquote>
+<blockquote><a name="bib15"></a>[15] &nbsp;World Wide Web Consortium, Scalable 
+  Vector Graphics (SVG) 1.0 Specification, W3C Candidate Recommendation, 2 
+  November 2000. </blockquote>
+<blockquote><a name="bib16"></a>[16] &nbsp;Woods, W.A., What's in a link: 
+  foundations for semantic networks, In D.G. Bobrow and A.M. Collins, (Eds.), 
+  Representation and Understanding: Studies in Cognitive Science,. New York: 
+  Academic Press. p. 35-82, 1975. </blockquote></div></td>
+<table style="BACKGROUND: black" width="700">
+  <tbody>
+  <tr width="600">
+    <td align="left"><a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-04/FREESE-HOLM%20XML%202001.htm">&nbsp;</a></td>
+    <td align="middle"><b><a href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/orlantoc.htm">Table 
+      of contents</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx0.htm">Author</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx1.htm">City</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx2.htm">Company</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx3.htm">Country</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx4.htm">State/Province</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/nidx5.htm">Term</a></b></td>
+    <td align="middle"><b><a class="navigbar" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/xtmdoc.htm">Interchange</a></b></td>
+    <td align="right"><a class="topicInText" href="http://www.idealliance.org/papers/xml2001papers/tm/WEB/04-04-06/04-04-06.htm">&nbsp;</a></td></tr></tbody></table></body></html>

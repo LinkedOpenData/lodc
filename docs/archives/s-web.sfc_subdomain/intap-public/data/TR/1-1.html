@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>RDF Site Summary (RSS) 1.0</title>
+<link href="RDF Site Summary (RSS) 1_0.files/rss-dev.css">
+</head>
+<body>
+このドキュメントは<br/>
+RDF Site Summary (RSS) 1.0 (namespace)<br/>
+<a href="http://groups.yahoo.com/group/rss-dev/files/namespace.html">http://groups.yahoo.com/group/rss-dev/files/namespace.html</a><br/>
+の和訳です。<br/>
+この文書には和訳上の誤りがありえます。<br/>
+内容の保証はいたしかねますので、必ず正式版文書を参照して下さい。<br/>
+<hr size="20">
+<h1>RDF Site Summary (RSS) 1.0</h1>
+<h2>公式の仕様書</h2><rddl:resource xlink:arcrole="http://www.rddl.org/purposes#normative-specification" xlink:title="RDF Site Summary (RSS) 1.0 Specification" xlink:href="http://purl.org/rss/1.0/spec">
+<p><a href="../../../../s-web.sfc_subdomain/intap-public/data/TR/1-2.html">RSS 1.0 仕様書は2000年12月6日にリリースされました</a>。</p></rddl:resource><rddl:resource xlink:arcrole="http://www.rddl.org/purposes#normative-specification" xlink:title="RDF Site Summary (RSS) 1.0 Modules" xlink:href="http://purl.org/rss/1.0/modules/">
+<p>その仕様書はRSSが容易に拡張できるように<a href="http://purl.org/rss/1.0/modules/">RSSモジュールのデザインのためのガイドライン</a>と一緒に発行されました。</p></rddl:resource>
+<h2>モジュール</h2><rddl:resource xlink:arcrole="http://www.rddl.org/purposes#definition" xlink:title="RDF Site Summary (RSS) 1.0 Module" xlink:href="http://purl.org/rss/1.0/modules/" xlink:role="http://www.rddl.org/natures#term">
+<p>URI <code>http://purl.org/rss/1.0/modules/</code>を使用してRSSモジュールのクラスを表現することができます。</p></rddl:resource>
+<p>以下はRSS-DEVワーキンググループの公式のモジュールです。</p>
+<ul>
+  <li><rddl:resource xlink:title="RSS Dublin Core Module" xlink:href="http://purl.org/rss/1.0/modules/dc/" xlink:role="http://purl.org/rss/1.0/modules/"><a href="http://purl.org/rss/1.0/modules/dc/">Dublin Core</a></rddl:resource> 
+  <li><rddl:resource xlink:title="RSS Syndication Module" xlink:href="http://purl.org/rss/1.0/modules/syndication/" xlink:role="http://purl.org/rss/1.0/modules/"><a href="http://purl.org/rss/1.0/modules/syndication/">Syndication</a></rddl:resource> 
+  <li><rddl:resource xlink:title="RSS Content Module" xlink:href="http://purl.org/rss/1.0/modules/content/" xlink:role="http://purl.org/rss/1.0/modules/"><a href="http://purl.org/rss/1.0/modules/content/">Content</a></rddl:resource> 
+  </li></ul>
+<h2>スキーマ</h2><rddl:resource xlink:title="RDF Site Summary (RSS) 1.0 RDF Schema" xlink:href="http://purl.org/rss/1.0/schema.rdf" xlink:role="http://www.w3.org/2000/01/rdf-schema#">
+<p>RSSを使用することによって<a href="http://purl.org/rss/1.0/schema.rdf">RDFスキーマ</a>が利用できます。 
+本文書にはコピーも埋め込まれています。</p></rddl:resource><!-- 
+RDF Schema declaration for Rich Site Summary (RSS) 1.0 <http://purl.org/rss/1.0/>
+note: This schema currently is defining RSS-specific constructs 
+(resource and relationship types) only. No contraints have been 
+introduced.
+Note: this schema is represented in the RDF M&S abbreviated 
+syntax <http://www.w3.org/TR/REC-rdf-syntax/#abbreviatedSyntax> for 
+syntactic inclusion in an HTML/XHTML document
+ --><rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><!--  Class declarations   --><rdfs:class rdfs:comment="An RSS information channel." rdfs:label="Channel" rdf:about="http://purl.org/rss/1.0/channel"><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdfs:class><rdfs:class rdfs:comment="An RSS image." rdfs:label="Image" rdf:about="http://purl.org/rss/1.0/image"><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdfs:class><rdfs:class rdfs:comment="An RSS item." rdfs:label="Item" rdf:about="http://purl.org/rss/1.0/item"><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdfs:class><rdfs:class rdfs:comment="An RSS text input." rdfs:label="Text Input" rdf:about="http://purl.org/rss/1.0/textinput"><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdfs:class><!--  Property declarations   --><rdfs:property rdfs:comment="Points to a list of rss:item elements that are members of the subject channel." rdfs:label="Items" rdf:about="http://purl.org/rss/1.0/items"><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdfs:property><rdf:property rdfs:comment="A descriptive title for the channel." rdfs:label="Title" rdf:about="http://purl.org/rss/1.0/title"><rdfs:subpropertyof rdf:resource="http://purl.org/dc/elements/1.1/title"/><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdf:property><rdf:property rdfs:comment="The URL to which an HTML rendering of the subject will link." rdfs:label="Link" rdf:about="http://purl.org/rss/1.0/link"><rdfs:subpropertyof rdf:resource="http://purl.org/dc/elements/1.1/identifier"/><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdf:property><rdf:property rdfs:comment="The URL of the image to used in the 'src' attribute of the channel's image tag when rendered as HTML." rdfs:label="URL" rdf:about="http://purl.org/rss/1.0/url"><rdfs:subpropertyof rdf:resource="http://purl.org/dc/elements/1.1/identifier"/><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdf:property><rdf:property rdfs:comment="A short text description of the subject." rdfs:label="Description" rdf:about="http://purl.org/rss/1.0/description"><rdfs:subpropertyof rdf:resource="http://purl.org/dc/elements/1.1/description"/><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdf:property><rdf:property rdfs:comment="The text input field's (variable) name." rdfs:label="Name" rdf:about="http://purl.org/rss/1.0/name"><rdfs:isdefinedby rdf:resource="http://purl.org/rss/1.0/"/></rdf:property></rdf:rdf><rddl:resource xlink:title="RSS 1.0 Schematron Schema" xlink:href="http://www.bath.ac.uk/‾ccslrd/rss_validator/1.0/rss_1_0_validator.xml" xlink:role="http://www.ascc.net/xml/schematron">
+<p>Leigh DoddsはRSS 1.0の<a href="http://www.bath.ac.uk/‾ccslrd/rss_validator/1.0/">Schematron Schema</a> 
+を作成しました。</p></rddl:resource>
+<h2>詳細</h2><rddl:resource xlink:arcrole="http://www.rddl.org/purposes#mailing-list" xlink:title="RSS-DEV Mailing List" xlink:href="http://purl.org/rss/1.0/mailinglist/">
+<p>RSSの開発とディスカッションは<a href="http://purl.org/rss/1.0/mailinglist/">RSS-DEV メーリングリスト</a>へどうぞ。RSSに関してご質問等ありましたら、ご遠慮なくこのメーリングリスト宛にご連絡下さい。本ネーム空間への提案や訂正も受け付けております。</p></rddl:resource>
+<p>以下のサイトにもRSSに関する詳細を掲載しています。</p>
+<ul>
+  <li><rddl:resource xlink:arcrole="http://www.rddl.org/purposes#reference" xlink:title="RSS Info" xlink:href="http://blogspace.com/rss/"><a href="http://blogspace.com/rss/">RSS Info</a> - RSS形式に関してのニュースと情報</rddl:resource>
+  <li><rddl:resource xlink:arcrole="http://www.rddl.org/purposes#reference" xlink:title="RSS Info" xlink:href="http://www.oreillynet.com/rss/"><a href="http://www.oreillynet.com/rss/">RSS DevCenter</a> - O'Reilly 
+  ネットワークの一部</rddl:resource></li></ul>
+<h2>その他</h2><rddl:resource xlink:title="CSS Stylesheet" xlink:href="http://purl.org/rss/1.0/style" xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/text/css">
+<p>RSS　<a href="RDF Site Summary (RSS) 1_0.files/rss-dev.css">CSS 
+Stylesheet</a>を使用すれば、仕様書を正しく表示できます。 </p></rddl:resource></body></html>

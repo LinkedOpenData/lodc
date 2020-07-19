@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<!DOCTYPE dex [
+<!ENTITY dex "http://www.net.intap.org/INTAP/s-web/2008/03/dex#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+]>
+<rdf:RDF
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.net.intap.or.jp/INTAP/s-web/2008/03/dex#"
+    xml:base="http://www.net.intap.or.jp/INTAP/s-web/2008/03/dex">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Ver. 0.8, 7 March 2008</owl:versionInfo> 
+  </owl:Ontology>
+<!-- 基本語彙 -->
+  <owl:Class rdf:ID="Degree">
+    <rdfs:label rdf:datatype="&xsd;string">Degree</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">程度</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="DiscreteDegree">
+    <rdfs:subClassOf rdf:resource="#Degree"/>
+    <rdfs:label rdf:datatype="&xsd;string">Discrete Degree</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">離散的程度</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Value">
+    <rdfs:label rdf:datatype="&xsd;string">Value</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">程度値</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="isSubsequentTo">
+    <rdfs:label rdf:datatype="&xsd;string">is subsequent to</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">後方に位置する</rdfs:label>
+    <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    <rdfs:domain rdf:resource="#Value"/>
+    <rdfs:range rdf:resource="#Value"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isSubsequentToDirectly">
+    <rdfs:label rdf:datatype="&xsd;string">is directly subsequent to</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">直後に位置する</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#isSubsequentTo"/>
+    <rdfs:domain rdf:resource="#Value"/>
+    <rdfs:range rdf:resource="#Value"/>
+  </owl:ObjectProperty>
+<!-- 程度値クラス -->
+  <owl:Class rdf:ID="Positive">
+    <rdfs:label rdf:datatype="&xsd;string">Positive</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">肯定的</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Value"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Neutral">
+    <rdfs:label rdf:datatype="&xsd;string">Neutral</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">中立</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Value"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isSubsequentToDirectly"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Positive"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Negative">
+    <rdfs:label rdf:datatype="&xsd;string">Negative</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">否定的</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Value"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isSubsequentToDirectly"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Neutral"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="StrongPositive">
+    <rdfs:label rdf:datatype="&xsd;string">Strongly Positive</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">とても肯定的</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Positive"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WeakPositive">
+    <rdfs:label rdf:datatype="&xsd;string">Weakly Positive</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">やや肯定的</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isSubsequentToDirectly"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#StrongPositive"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WeakNegative">
+    <rdfs:label rdf:datatype="&xsd;string">Weakly Negative</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">やや否定的</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Negative"/>
+  </owl:Class>
+  <owl:Class rdf:ID="StrongNegative">
+    <rdfs:label rdf:datatype="&xsd;string">Strongly Negative</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">とても否定的</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isSubsequentToDirectly"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#WeakNegative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Plus4">
+    <rdfs:label rdf:datatype="&xsd;string">Plus 4</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">プラス4</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#StrongPositive"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Plus3">
+    <rdfs:label rdf:datatype="&xsd;string">Plus 3</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">プラス3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#StrongPositive"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isSubsequentToDirectly"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Plus4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Plus2">
+    <rdfs:label rdf:datatype="&xsd;string">Plus 2</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">プラス2</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#WeakPositive"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Plus1">
+    <rdfs:label rdf:datatype="&xsd;string">Plus 1</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">プラス1</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#WeakPositive"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isSubsequentToDirectly"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Plus2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Zero">
+    <rdfs:label rdf:datatype="&xsd;string">Zero</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">ゼロ</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Neutral"/>
+  </owl:Class>
+<!-- 程度クラス -->
+  <!-- 程度クラス／フラグ（Flag）クラス -->
+  <owl:Class rdf:ID="Flag">
+    <rdfs:label rdf:datatype="&xsd;string">Flag</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">フラグクラス</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DiscreteDegree"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Positive"/>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- 程度クラス／投票（Vote）クラス -->
+  <owl:Class rdf:ID="Vote">
+    <rdfs:label rdf:datatype="&xsd;string">Vote</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">投票クラス</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DiscreteDegree"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Positive"/>
+          <owl:Class rdf:about="#Neutral"/>
+          <owl:Class rdf:about="#Negative"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- 程度クラス／バランス（Balance）クラス -->
+  <owl:Class rdf:ID="Balance">
+    <rdfs:label rdf:datatype="&xsd;string">Balance</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">バランスクラス</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DiscreteDegree"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#StrongPositive"/>
+          <owl:Class rdf:about="#WeakPositive"/>
+          <owl:Class rdf:about="#WeakNegative"/>
+          <owl:Class rdf:about="#StrongNegative"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- 程度クラス／スコア（Score）クラス -->
+  <owl:Class rdf:ID="Score">
+    <rdfs:label rdf:datatype="&xsd;string">Score</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">スコアクラス</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DiscreteDegree"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Plus4"/>
+          <owl:Class rdf:about="#Plus3"/>
+          <owl:Class rdf:about="#Plus2"/>
+          <owl:Class rdf:about="#Plus1"/>
+          <owl:Class rdf:about="#Zero"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+<!-- 評価クラス -->
+  <owl:Class rdf:ID="Rate">
+    <rdfs:label rdf:datatype="&xsd;string">Rate</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">評価</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasTheme"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDegree"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Value"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasPublisher"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="&owl;Thing"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasDate"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="&xsd;date"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+<!-- 評価記述用プロパティ -->
+  <owl:ObjectProperty rdf:about="#hasTheme">
+    <rdfs:label rdf:datatype="&xsd;string">theme is</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">評価対象</rdfs:label>
+    <rdfs:domain rdf:resource="#Rate"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasRate">
+    <rdfs:label rdf:datatype="&xsd;string">rating is</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">評価</rdfs:label>
+    <rdfs:range rdf:resource="#Rate"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasDegree">
+    <rdfs:label rdf:datatype="&xsd;string">rating degree is</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">程度</rdfs:label>
+    <rdfs:domain rdf:resource="#Rate"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Degree"/>
+          <owl:Class rdf:about="#Value"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasPublisher">
+    <rdfs:label rdf:datatype="&xsd;string">publisher is</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">発信者</rdfs:label>
+    <rdfs:domain rdf:resource="#Rate"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="#hasDate">
+    <rdfs:label rdf:datatype="&xsd;string">date is</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">日付</rdfs:label>
+    <rdfs:domain rdf:resource="#Rate"/>
+    <rdfs:range rdf:resource="&xsd;date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasDateTime">
+    <rdfs:label rdf:datatype="&xsd;string">datetime is</rdfs:label>
+    <rdfs:label rdf:datatype="&xsd;string" xml:lang="ja">日時</rdfs:label>
+    <rdfs:domain rdf:resource="#Rate"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
